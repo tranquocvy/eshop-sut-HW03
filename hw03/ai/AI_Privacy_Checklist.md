@@ -12,27 +12,39 @@
 
 ## **1\. Trước khi dùng AI**
 
-* \[ \] Đã xác nhận Cấp độ AI cho bài tập này.  
-* \[ \] Dùng tài khoản Claude Pro tự chọn (không phải tài khoản cá nhân).  
-* \[ \] Đã đọc Thoả thuận AI của môn học.  
-* \[ \] Hiểu rõ artifact nào KHÔNG được sinh bằng AI.
+* [ ] Đã xác nhận Cấp độ AI cho bài tập này.  
+* [ ] Dùng tài khoản Claude Pro tự chọn (không phải tài khoản cá nhân).  
+* [ ] Đã đọc Thoả thuận AI của môn học.  
+* [ ] Hiểu rõ artifact nào KHÔNG được sinh bằng AI.
 
 ## **2\. Trong khi dùng AI**
 
-* \[ \] Không nhập dữ liệu cá nhân của bạn, khách hàng, bệnh nhân.  
-* \[ \] Không paste nguyên si tài liệu có bản quyền lên AI.  
-* \[ \] Không paste code công ty / code open-source giới hạn license.  
-* \[ \] Đã ghi mọi prompt \+ phản hồi AI vào prompt\_log.md có timestamp.
+* [ ] Không nhập dữ liệu cá nhân của bạn, khách hàng, bệnh nhân.  
+* [ ] Không paste nguyên si tài liệu có bản quyền lên AI.  
+* [ ] Không paste code công ty / code open-source giới hạn license.  
+* [ ] Đã ghi mọi prompt \+ phản hồi AI vào prompt\_log.md có timestamp.
 
 ## **3\. Trước khi nộp bài**
 
-* \[ \] Mọi artifact AI sinh đã được gắn tag trong AI Audit Report.  
-* \[ \] Mọi trích dẫn AI đã được xác minh (nguồn thực sự tồn tại).  
-* \[ \] Mọi code AI sinh đã được thực thi và test.  
-* \[ \] AI Critique 200–300 chữ đã có trong báo cáo.  
-* \[ \] Đoạn Mandatory Disclosure ở cuối báo cáo.  
-* \[ \] Đính kèm AI Use Disclosure Form.  
-* \[ \] Sẵn sàng cho vấn đáp ngẫu nhiên 5–7 phút tuần kế nộp bài.
+* [ ] Mọi artifact AI sinh đã được gắn tag trong AI Audit Report.  
+* [ ] Mọi trích dẫn AI đã được xác minh (nguồn thực sự tồn tại).  
+* [ ] Mọi code AI sinh đã được thực thi và test.  
+* [ ] AI Critique 200–300 chữ đã có trong báo cáo.  
+* [ ] Đoạn Mandatory Disclosure ở cuối báo cáo.  
+* [x] Đính kèm AI Use Disclosure Form.  
+* [ ] Sẵn sàng cho vấn đáp ngẫu nhiên 5–7 phút tuần kế nộp bài.
+
+**Căn cứ tại giai đoạn chuẩn bị**
+
+| Nội dung | Bằng chứng / trạng thái thực tế |
+| :---- | :---- |
+| Công cụ AI | OpenClaw / OpenAI gpt-6.1-sol và PDF extractor / gpt-6-astra. Mục “Claude Pro” trong mẫu không áp dụng cho các công cụ này; HW03 §8 cho phép chọn công cụ AI bất kỳ. |
+| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-01 INCOMPLETE (chấp nhận sau sửa), A-00 VALID. |
+| Log tương tác | [PromptLog](PromptLog.md) có P-000 và P-002; output P-000 thiếu phần cuối do nguồn lịch sử bị cắt. |
+| Code và thực thi | Không có code SUT/test mới do AI sinh trong giai đoạn này; chưa thực thi GUI/cross-platform hoặc phiên usability. |
+| AI Critique và Mandatory Disclosure | Chưa có báo cáo chính hoặc AI Critique 200–300 từ; Mandatory Disclosure trong Audit còn placeholder. |
+| Disclosure | [AI_Disclosure.md](AI_Disclosure.md) đi cùng hồ sơ này; chữ ký chưa điền. |
+| Dữ liệu cá nhân | Hồ sơ hiện có họ tên, MSSV và lớp của sinh viên; chưa có dữ liệu người tham gia usability. |
 
 ## **4\. Cam đoan Cuối cùng**
 
@@ -40,10 +52,10 @@
 
 ## **Chữ ký**
 
-| Họ tên sinh viên (in hoa): |  |
+| Họ tên sinh viên (in hoa): | TRẦN QUỐC VỸ |
 | :---- | :---- |
-| **MSSV:** |  |
-| **Lớp / Khoá:** |  |
+| **MSSV:** | 23120410 |
+| **Lớp / Khoá:** | 23_3 |
 | **Môn học:** | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Giảng viên:** |  |
 | **Ngày:** |  |

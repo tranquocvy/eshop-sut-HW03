@@ -14,13 +14,13 @@
 
 | Mục | Giá trị |
 | :---- | :---- |
-| **Họ tên sinh viên (in hoa):** |  |
-| **MSSV:** |  |
-| **Lớp / Khoá:** |  |
-| **Mã bài tập (ví dụ HW\#00, HW\#02):** |  |
-| **Ngày làm bài:** |  |
-| **Công cụ AI đã dùng:** |  |
-| **Công cụ AI đã dùng:** | \[ \] Có  \[ \] Không |
+| **Họ tên sinh viên (in hoa):** | TRẦN QUỐC VỸ |
+| **MSSV:** | 23120410 |
+| **Lớp / Khoá:** | 23_3 |
+| **Mã bài tập (ví dụ HW\#00, HW\#02):** | HW03-AI — GUI & Usability |
+| **Ngày làm bài:** | 05/11/2026 |
+| **Công cụ AI đã dùng:** | OpenClaw — OpenAI gpt-6.1-sol; PDF extractor — OpenAI gpt-6-astra (đối chiếu nguồn) |
+| **Công cụ AI đã dùng:** | [x] Có  [ ] Không |
 
 ## **2\. Hướng dẫn (đọc trước khi điền)**
 
@@ -36,18 +36,8 @@
 
 | (1) Prompt \+ Công cụ | (2) Output AI | (3) Verdict | (4) Lý do (ISTQB) | (5) Bản SV sửa |
 | :---- | :---- | :---- | :---- | :---- |
-| **Mẫu (italic) — thay trước khi nộp:** |  |  |  |  |
-| **Tool: AI Tool (e.g., ChatGPT, Claude, Gemini)Thời gian: 14:32 25/02/2026Prompt:"Sinh test case cho hàm parsePhoneNumberVN…"** | TC01: parsePhoneNumberVN("0912345678")Kỳ vọng: {prefix:84, number:912345678, valid:true}… | INCOMPLETE | AI bỏ qua định dạng RFC 3966\. ISTQB FL §4.3 Boundary Value Analysis yêu cầu test ranh giới định dạng. | Thêm TC: parsePhoneNumberVN("+84-91-234-5678")Kỳ vọng: {prefix:84, number:912345678, valid:true} |
-| **Artifact \#1** |  |  |  |  |
-| **Artifact \#2** |  |  |  |  |
-| **Artifact \#3** |  |  |  |  |
-| **Artifact \#4** |  |  |  |  |
-| **Artifact \#5** |  |  |  |  |
-| **Artifact \#6** |  |  |  |  |
-| **Artifact \#7** |  |  |  |  |
-| **Artifact \#8** |  |  |  |  |
-| **Artifact \#9** |  |  |  |  |
-| **Artifact \#10** |  |  |  |  |
+| **A-01 — Cơ sở lập kế hoạch và kế hoạch HW03**<br>OpenClaw / gpt-6.1-sol.<br>P-000: 12:34:01 04/11/2026 (UTC+07:00).<br>[Prompt nguyên văn](PromptLog.md#p-000--a-01-đọc-đề-và-cơ-sở-lập-kế-hoạch). | [Output tóm tắt đề gốc](PromptLog.md#p-000--a-01-đọc-đề-và-cơ-sở-lập-kế-hoạch), phần cuối bị cắt trong nguồn.<br>P-000 cung cấp cơ sở yêu cầu; file kế hoạch được soạn ở lượt sau.<br>Bản được chấp nhận: [PLAN v0.3](../PLAN.md). | **INCOMPLETE** | Chấp nhận sau khi sửa. HW03 §5–7 yêu cầu phạm vi, GUI/usability và cross-platform; §14–15 quy định hồ sơ và rubric. Bản kế hoạch đã được bổ sung nguồn chính sách, làm rõ căn cứ đối chiếu rồi rút gọn cấu trúc; sinh viên xác nhận chấp nhận bản cuối trong trao đổi ngày 05/11/2026. | AI bổ sung **nguồn AI-05/AI-06 và căn cứ đối chiếu đề** ở v0.2; theo góp ý sinh viên **rút gọn cấu trúc** ở v0.3. [Bản cuối](../PLAN.md) giữ FR-05/FR-06 và T00–T07. |
+| **A-00 — Lựa chọn phạm vi**<br>OpenClaw / gpt-6.1-sol.<br>P-002: 13:05:55 04/11/2026 (UTC+07:00).<br>[Prompt nguyên văn](PromptLog.md#p-002--a-00-lựa-chọn-phạm-vi). | [Output nguyên văn](PromptLog.md#p-002--a-00-lựa-chọn-phạm-vi).<br>Màn hình chính Home / Product Listing & Search (FR-05), bổ trợ Product Detail (FR-06); kết thúc luồng ở lựa chọn sản phẩm. | **VALID** | Giữ nguyên đề xuất phạm vi sau review. HW03 §5 cho chọn màn hình và luồng end-to-end; §6.1 yêu cầu đủ IA-01–04. Phạm vi có UI, form tìm kiếm, navigation và feedback để thiết kế checklist; tiêu chí hoàn thành scenario sẽ được cụ thể hoá từ dữ liệu SUT. | Không sửa nội dung phạm vi; giữ nguyên [PLAN §1](../PLAN.md#1-phạm-vi). |
 
 ## **4\. Tổng kết Độ chính xác AI**
 
@@ -55,26 +45,14 @@ Tổng hợp verdict từ Mục 3 và điền vào bảng dưới.
 
 | Chỉ số | Số lượng | Tỉ lệ |
 | :---- | :---- | :---- |
-| **Tổng artifact AI sinh đã audit** |  |  |
-| **VALID (đúng, dùng nguyên)** |  | % |
-| **INVALID (sai; loại bỏ)** |  | % |
-| **INCOMPLETE (chấp nhận sau khi sửa)** |  | % |
+| **Tổng artifact AI sinh đã audit** | 2 | 100% |
+| **VALID (đúng, dùng nguyên)** | 1 | 50% |
+| **INVALID (sai; loại bỏ)** | 0 | 0% |
+| **INCOMPLETE (chấp nhận sau khi sửa)** | 1 | 50% |
 
 ## **5\. Kết luận — Khi nào nên / không nên dùng AI?**
 
-Viết 80–150 chữ mô tả pattern quan sát được. AI mạnh ở đâu? AI sai ở đâu? Khuyến nghị của bạn cho việc dùng AI trong loại công việc này?
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Trong hai artifact chuẩn bị, AI hỗ trợ chọn phạm vi ít phụ thuộc tài khoản và tổ chức kế hoạch theo các đầu ra của đề. Đề xuất phạm vi được giữ nguyên, còn kế hoạch cần bổ sung nguồn chính sách và làm rõ căn cứ trước khi rút gọn cấu trúc. Các thay đổi này không làm đổi luồng Home/Search đến Product Detail. AI phù hợp cho việc tổng hợp yêu cầu và đề xuất trình tự, nhưng cần đối chiếu nguồn để tránh thiếu nghĩa vụ hồ sơ. Việc chấp nhận kế hoạch không chứng minh test đã chạy hoặc usability đã đạt; các kết quả đó phải dựa trên thực thi và dữ liệu người thật.
 
 ## **6\. Mandatory Disclosure (dán nguyên văn)**
 
@@ -82,10 +60,10 @@ Viết 80–150 chữ mô tả pattern quan sát được. AI mạnh ở đâu? 
 
 ## **Chữ ký**
 
-| Họ tên sinh viên (in hoa): |  |
+| Họ tên sinh viên (in hoa): | TRẦN QUỐC VỸ |
 | :---- | :---- |
-| **MSSV:** |  |
-| **Lớp / Khoá:** |  |
+| **MSSV:** | 23120410 |
+| **Lớp / Khoá:** | 23_3 |
 | **Môn học:** | CS423 / CSC13003 – Kiểm chứng Phần mềm |
 | **Giảng viên:** |  |
 | **Ngày:** |  |
