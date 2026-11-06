@@ -18,7 +18,7 @@
 | **Mã bài tập:** | HW03-AI |
 | **Tên bài tập:** | GUI & Usability |
 | **Cấp độ AI (1–5):** | Cấp \_\_\_\_ |
-| **Ngày:** | 05/11/2026 |
+| **Ngày:** | 07/11/2026 |
 | **Họ tên sinh viên:** | TRẦN QUỐC VỸ |
 |  |  |
 | **MSSV:** | 23120410 |
@@ -29,14 +29,14 @@
 
 *Liệt kê mọi công cụ AI dùng cho bài tập này (ví dụ AI Tool (e.g., ChatGPT, Claude, Gemini), ChatGPT, GitHub Copilot, Cursor, Gemini).*
 
-- **OpenClaw / OpenAI gpt-6.1-sol:** đọc và tổng hợp yêu cầu, đề xuất phạm vi, soạn kế hoạch, AI review và hỗ trợ sửa tài liệu.
-- **PDF extractor / OpenAI gpt-6-astra:** trích xuất và đối chiếu đề gốc.
+- **OpenClaw main và worker reviewer / OpenAI gpt-6.1-sol:** tổng hợp yêu cầu, chọn phạm vi, soạn kế hoạch và checklist, AI review, khảo sát UI chuẩn bị và hỗ trợ sửa tài liệu.
+- **PDF extractor / OpenAI gpt-6-astra:** trích xuất và đối chiếu đề gốc, slide S13; extraction văn bản 55 trang theo các dải, chỉ có một số ảnh slide. Worker review không xác minh trực quan toàn bộ PDF.
 
 ### **2\. Giai đoạn nào của bài tập có dùng AI:**
 
-*Tick tất cả: [x] brainstorm  [x] outline  [x] viết nháp  [x] phản hồi  [x] sửa chữa  [ ] code  [ ] phân tích dữ liệu  [ ] thiết kế đồ hoạ  [x] khác (ghi rõ: đọc đề/template, chọn phạm vi và setup repo).*
+*Tick tất cả: [x] brainstorm  [x] outline  [x] viết nháp  [x] phản hồi  [x] sửa chữa  [x] code  [ ] phân tích dữ liệu  [ ] thiết kế đồ hoạ  [x] khác (ghi rõ: đọc đề/template, chọn phạm vi và setup repo).*
 
-Phạm vi sửa chữa là kế hoạch, setup repo và hồ sơ AI, không phải production code hoặc kết quả kiểm thử. Chưa có phân tích dữ liệu usability.
+Phạm vi sửa chữa là kế hoạch, checklist, setup repo và hồ sơ AI; không sửa production code để làm test đạt. AI có tạo launcher khảo sát riêng mở fixture READONLY mà không tải initializer/seed; launcher không dùng để kết luận đường ghi dữ liệu. Chưa có execution checklist/cross-platform hoặc phân tích dữ liệu usability.
 
 ### **3\. Prompt / nhiệm vụ chính cho AI:**
 
@@ -54,7 +54,13 @@ session này focus vào các HW của môn software testing, môn này có yêu 
 bước 1 hãy chọn "Màn hình chính và luồng usability không được trùng với thành viên cùng nhóm". mình là ngời đầu tiên chọn nên hãy chọn cái dễ nhất. chưa impelement ở bước này
 ```
 
-[Prompt Log](PromptLog.md) lưu prompt, timestamp và phần output nguồn hiện có; output P-000 bị cắt ở cuối.
+**P-004 — Tạo GUI checklist**
+
+```text
+hãy thực hiện T01 theo plan, tôi đã đính kèm "S13_GUI Testing & Usability Testing.pdf" ở root của src code
+```
+
+[Prompt Log](PromptLog.md) là **bản trích tuyển 3 tương tác** P-000/P-002/P-004, không phải toàn bộ lịch sử. P-000 bị cắt ở cuối; nguồn phản hồi P-004 cũng báo cờ cắt khi truy xuất riêng. Các đóng góp AI review/sửa checklist vẫn được khai bên dưới dù không chép toàn văn mọi lượt review.
 
 ### **4\. Phần cụ thể AI đóng góp:**
 
@@ -62,7 +68,9 @@ bước 1 hãy chọn "Màn hình chính và luồng usability không được t
 
 AI đề xuất Home / Product Listing & Search (FR-05), với Product Detail (FR-06) là màn hình bổ trợ và luồng kết thúc ở lựa chọn sản phẩm (A-00). AI soạn kế hoạch T00–T07, bổ sung nguồn chính sách và căn cứ đối chiếu rồi rút gọn cấu trúc (A-01). Ngoài hai artifact này, AI hỗ trợ thiết lập repo riêng và chuẩn bị biểu mẫu.
 
-Code SUT giữ nguyên từ nguồn giảng viên. Chưa có checklist, script kiểm thử, dữ liệu người tham gia hoặc kết quả test/usability mới.
+**A-02:** AI tạo bản checklist đầu 48 mục. Worker AI review đề xuất GUI-049 về dấu `*`; main AI bổ sung GUI-050 về badge. AI sửa validation/oracle, keyboard, điều kiện context/request và căn cứ R/H; sau khảo sát Home/Detail ở hai viewport trong cùng Edge, làm rõ GUI-012. Bản v0.4 hiện có 50 mục; lý do giữ 049/050 do AI diễn đạt từ yêu cầu và khoảng trống bản đầu. AI còn hỗ trợ ôn lý thuyết và làm rõ yêu cầu bài.
+
+Code SUT giữ nguyên từ nguồn giảng viên. Launcher khảo sát do AI tạo nằm ngoài SUT; không phải script đã thực thi toàn bộ checklist. Không có dữ liệu người tham gia hoặc kết quả execution GUI/cross-platform/usability mới.
 
 ### **5\. Cách tôi rà soát / chỉnh sửa / xác minh đầu ra AI:**
 
@@ -70,7 +78,9 @@ Code SUT giữ nguyên từ nguồn giảng viên. Chưa có checklist, script k
 
 Tôi đã review và chấp nhận phạm vi FR-05/FR-06 và PLAN v0.3. Tôi giữ nguyên đề xuất phạm vi; đối với kế hoạch, tôi yêu cầu làm gọn cách trình bày, AI thực hiện chỉnh sửa. Việc bổ sung nguồn/căn cứ và kiểm tra kỹ thuật do AI hỗ trợ thực hiện.
 
-[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**, A-01 **INCOMPLETE — chấp nhận sau khi sửa**. Hai verdict này áp dụng cho artifact chuẩn bị, không phải kết quả execution.
+Tôi xác nhận đã đọc và kiểm tra checklist v0.3, đề nghị giữ GUI-049/050. Hai mục có nguồn phát hiện ban đầu là AI; đóng góp của tôi là review và lựa chọn giữ lại, không khai là tự phát hiện. AI cập nhật lý do thành v0.4 mà không đổi 50 mục kiểm tra.
+
+[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**, A-01 và A-02 **INCOMPLETE — chấp nhận sau sửa**. Các verdict đánh giá artifact chuẩn bị/thiết kế, không phải kết quả execution và không tự chứng minh đã đáp ứng toàn bộ yêu cầu về phần bổ sung của sinh viên.
 
 ### **6\. Trích dẫn (nếu môn yêu cầu):**
 
@@ -83,6 +93,8 @@ Tôi đã review và chấp nhận phạm vi FR-05/FR-06 và PLAN v0.3. Tôi gi�
 [3] FIT@HCMUS, “AI-02 AI Audit Report; AI-03 AI Disclosure Form; AI-05 Privacy & Responsible Use Checklist,” AI Policy · Templates 2026 v1.0.
 
 [4] ttbhanh, “eshop-sut,” GitHub. [Trực tuyến]. Có tại: https://github.com/ttbhanh/eshop-sut .
+
+[5] FIT@HCMUS, “S13_GUI Testing & Usability Testing,” tr.7–8, 11–20, 22–28.
 
 ## **3\. Cam đoan Trung thực**
 

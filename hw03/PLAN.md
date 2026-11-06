@@ -12,7 +12,7 @@
 ## 2. Nguồn và baseline
 
 - Đề gốc: 2026.HW03.GUI Usability_En.pdf, tại thư mục HW03 cha repo; §5–7 (scope/tasks/skills), §9–12 (AI/commit), §14–15/17 (nộp/rubric/quy định).
-- Slide GUI Checklist và Usability Evaluation: chưa được cung cấp; cần đọc trước khi chốt phương pháp thiết kế.
+- Slide `S13_GUI Testing & Usability Testing.pdf`: đã cung cấp tại thư mục HW03 cha repo; đã đọc qua ba dải trang 1–20, 21–40, 41–55. Phương pháp thiết kế GUI dựa trên tr.7–8, 11–20, 22–28.
 - [README/spec SUT](../README.md), [API specification](../api_specification.md). Source code chỉ cho biết triển khai, không tự trở thành expected.
 - Baseline nguồn https://github.com/ttbhanh/eshop-sut : commit 85af3ba875c88283615e22cb108f13e2fccaf0e9.
 - Repo riêng https://github.com/tranquocvy/eshop-sut-HW03 ; origin là repo này, upstream là nguồn giảng viên. Giữ HW02 riêng, không sửa production code để làm test pass.
@@ -22,7 +22,7 @@
 | ID | Sản phẩm / phạm vi | Điều kiện hoàn tất | Trạng thái |
 |---|---|---|---|
 | T00 | Baseline, kế hoạch và hồ sơ AI | Repo gốc riêng; nguồn/thiếu nguồn rõ; log có nguồn; sinh viên review kế hoạch | Repo đã xác minh; kế hoạch và hồ sơ đã tạo |
-| T01 | Thiết kế GUI checklist | Đọc slide/spec; >40 mục không lặp, phủ IA-01–04; giữ bản AI đầu; review và sửa có truy vết | Chưa cập nhật |
+| T01 | Thiết kế GUI checklist | Đọc slide/spec; >40 mục không lặp, phủ IA-01–04; giữ bản AI đầu; review và sửa có truy vết | [50 mục thiết kế v0.4](gui/GUI_Checklist.md); bản AI đầu 48 mục được bảo toàn. Sinh viên đã xác nhận review v0.3 và đề nghị giữ GUI-049/050; v0.4 bổ sung lý do, không đổi nội dung kiểm tra. Đã khảo sát UI; chưa thực thi checklist |
 | T02 | Thực thi GUI và cross-platform | Checklist được review; kết quả tách theo ≥3 nền tảng; notes/ảnh Failed; bug Markdown + GitHub Issues có ảnh | Chưa cập nhật |
 | T03 | Bộ chuẩn bị usability và pilot | Mục tiêu, scenario theo goal, SUS/UEQ-S, probe clarity/recovery/speed/trust; review; pilot người thật và sửa | Chưa cập nhật |
 | T04 | 7 phiên usability | Đúng 7 người ngoài lớp, consent, phiên thật, notes và phản hồi thang đo; ghi từng phiên riêng | Chưa cập nhật |
@@ -34,12 +34,13 @@ Task 1 và Task 3 thực thi cùng quy trình, nhưng kết quả tách rõ từ
 
 ## 4. Gate của việc tiếp theo — T01
 
-- [ ] Đọc slide/spec, xác định screen/state/viewport và expected có căn cứ.
-- [ ] Kiểm tra SUT/data riêng tại baseline, không sửa code sản phẩm.
-- [ ] Tạo bản AI đầu **ít nhất 41 mục**, không lặp, phủ IA-01–04: UI standards, Forms, Navigation, Feedback/state.
-- [ ] Mỗi mục có ID, IA, màn hình/trạng thái, điều kiện/thao tác và expected quan sát được.
-- [ ] AI tự kiểm tra; worker có thể pre-review, nhưng sinh viên phải review bản cuối, tìm/bổ sung thiếu sót của AI và giải thích nguyên nhân.
-- [ ] Giữ bản đầu và thay đổi sau review; ghi đúng người góp ý/người sửa.
+- [x] Đọc slide/spec, xác định screen/state/viewport và expected có căn cứ.
+- [x] Kiểm tra SUT/data riêng tại baseline, không sửa code sản phẩm. Đã đọc database read-only và khảo sát UI render trên bản sao; backend mở database hiện có READONLY, không chạy lại initializer/seed.
+- [x] Tạo bản AI đầu **ít nhất 41 mục**, không lặp, phủ IA-01–04: UI standards, Forms, Navigation, Feedback/state. Bản đầu có 48 mục.
+- [x] Mỗi mục có ID, IA, màn hình/trạng thái, điều kiện/thao tác và expected quan sát được.
+- [x] AI tự kiểm tra và worker pre-review; sinh viên xác nhận đã đọc/kiểm tra checklist v0.3 và đề nghị giữ GUI-049/050 ngày 07/11/2026.
+- [ ] Xác nhận đáp ứng yêu cầu “add further items of your own” và giải thích phần AI bỏ sót theo HW03 §6. GUI-049/050 do AI phát hiện, sinh viên đã review/chọn giữ; đề chưa làm rõ việc tiếp nhận gợi ý AI ở vòng review sau có được tính cho yêu cầu này hay không.
+- [x] Giữ bản đầu 48 mục trong PromptLog (A-02-initial), ghi thay đổi theo phiên bản và đúng nguồn phát hiện/người sửa trong Audit/Disclosure.
 - [ ] Xuất Excel sau review thiết kế; chưa điền actual/pass trước execution.
 
 ## 5. Điều kiện thực thi và evidence

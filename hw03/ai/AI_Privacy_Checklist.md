@@ -34,14 +34,14 @@
 * [x] Đính kèm AI Use Disclosure Form.  
 * [ ] Sẵn sàng cho vấn đáp ngẫu nhiên 5–7 phút tuần kế nộp bài.
 
-**Căn cứ tại giai đoạn chuẩn bị**
+**Căn cứ tại giai đoạn chuẩn bị / thiết kế GUI**
 
 | Nội dung | Bằng chứng / trạng thái thực tế |
 | :---- | :---- |
-| Công cụ AI | OpenClaw / OpenAI gpt-6.1-sol và PDF extractor / gpt-6-astra. Mục “Claude Pro” trong mẫu không áp dụng cho các công cụ này; HW03 §8 cho phép chọn công cụ AI bất kỳ. |
-| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-01 INCOMPLETE (chấp nhận sau sửa), A-00 VALID. |
-| Log tương tác | [PromptLog](PromptLog.md) có P-000 và P-002; output P-000 thiếu phần cuối do nguồn lịch sử bị cắt. |
-| Code và thực thi | Không có code SUT/test mới do AI sinh trong giai đoạn này; chưa thực thi GUI/cross-platform hoặc phiên usability. |
+| Công cụ AI | OpenClaw main/worker reviewer / OpenAI gpt-6.1-sol và PDF extractor / gpt-6-astra. Mục “Claude Pro” trong mẫu không áp dụng cho các công cụ này; HW03 §8 cho phép chọn công cụ AI bất kỳ. |
+| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-00 VALID; A-01 và A-02 INCOMPLETE (chấp nhận sau sửa). Checklist đầu 48 mục, hiện hành 50 mục; nguồn phát hiện GUI-049/050 là AI. |
+| Log tương tác | [PromptLog](PromptLog.md) là bản trích tuyển 3 tương tác P-000/P-002/P-004, không phải toàn bộ lịch sử theo HW03 §9. P-000 thiếu cuối; nguồn P-004 báo cờ cắt. Chưa xác nhận log đủ mọi prompt/phản hồi. |
+| Code và thực thi | Không sửa code SUT. AI tạo launcher khảo sát READONLY riêng ngoài SUT, không tải initializer/seed trong lượt khảo sát lại; đã khảo sát Home/Detail nhưng chưa thực thi checklist GUI/cross-platform hoặc phiên usability. |
 | AI Critique và Mandatory Disclosure | Chưa có báo cáo chính hoặc AI Critique 200–300 từ; Mandatory Disclosure trong Audit còn placeholder. |
 | Disclosure | [AI_Disclosure.md](AI_Disclosure.md) đi cùng hồ sơ này; chữ ký chưa điền. |
 | Dữ liệu cá nhân | Hồ sơ hiện có họ tên, MSSV và lớp của sinh viên; chưa có dữ liệu người tham gia usability. |
