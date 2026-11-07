@@ -1,0 +1,6 @@
+import {test,home,detail} from '../../lib/evidence.mjs';
+for(const screen of ['home','detail'])test('GUI-032::tab-order--'+screen,async({browser,evidence:ev})=>{
+ ev.expected('Tab order khớp trật tự hiển thị, không tới control ẩn; cần review vị trí/focus thật ở VD.');const page=await ev.open(browser);await(screen==='home'?home(page):detail(page));await ev.shot('01-before');const n=await page.locator('a,button,input,select,textarea,[tabindex]').count();const chain=[];
+ for(let i=0;i<n+1;i++){await page.keyboard.press('Tab');const state=await page.evaluate(()=>{const e=document.activeElement;const r=e.getBoundingClientRect();return {tag:e.tagName,text:e.innerText||e.getAttribute('placeholder')||e.getAttribute('type'),href:e.getAttribute('href'),tabIndex:e.tabIndex,rect:{x:r.x,y:r.y,width:r.width,height:r.height},visible:!!r.width&&!!r.height&&getComputedStyle(e).visibility!=='hidden'};});chain.push(state);ev.step('Tab',{index:i+1,...state});ev.actual({chain});if(i<6)await ev.shot('focus-'+String(i+1).padStart(2,'0'));if(state.tag!=='BODY')ev.assert('focus-not-hidden-'+(i+1),state.visible,{chain},'Không focus control bị ẩn; thứ tự hình học còn chờ review',{class:'R',refs:['GUI-032','FR-21']});}
+ ev.review({chain},'visual-order-and-focus-review-required');
+});

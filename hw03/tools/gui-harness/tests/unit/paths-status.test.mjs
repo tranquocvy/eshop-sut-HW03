@@ -1,0 +1,12 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {inside,filesUnder} from '../../lib/paths.mjs';import {assess} from '../../lib/status.mjs';
+const root=fs.mkdtempSync(path.join(os.tmpdir(),'gui-harness-unit-'));fs.mkdirSync(path.join(root,'attempt'));fs.writeFileSync(path.join(root,'attempt','ok.json'),'{}');
+process.on('exit',()=>fs.rmSync(root,{recursive:true,force:true}));
+test('Artifact inside root accepted',()=>assert.equal(inside(root,'attempt/ok.json'),path.join(root,'attempt/ok.json')));
+test('Traversal refused',()=>assert.throws(()=>inside(root,'../escape')));
+test('Absolute artifact refused',()=>assert.throws(()=>inside(root,path.join(root,'attempt/ok.json'))));
+test('Inventory includes all artifact files',()=>assert.deepEqual(filesUnder(root),[path.join('attempt','ok.json')]));
+test('Junction escape refused',()=>{const outer=fs.mkdtempSync(path.join(os.tmpdir(),'gui-outer-'));try{fs.writeFileSync(path.join(outer,'secret.json'),'{}');fs.symlinkSync(outer,path.join(root,'junction'),'junction');assert.throws(()=>inside(root,'junction/secret.json'));assert.throws(()=>filesUnder(root));}finally{fs.rmSync(path.join(root,'junction'),{force:true,recursive:true});fs.rmSync(outer,{force:true,recursive:true});}});
+test('Navigation exception is blocked, not SUT fail',()=>assert.equal(assess({nativeStatus:'failed',requested:null,actual:null,errors:[{message:'page.goto: connection refused'}]}).assessment,'blocked'));
+test('Oracle failure with observation is SUT fail',()=>assert.equal(assess({nativeStatus:'failed',requested:null,oracleFailure:true}).assessment,'fail'));
+test('Timeout never turns into SUT fail',()=>assert.equal(assess({nativeStatus:'timedOut',actual:{text:'data'},errors:[]}).assessment,'blocked'));
+test('Hybrid native passed remains needs-review',()=>assert.equal(assess({nativeStatus:'passed',requested:'needs-review',actual:{rects:[]}}).assessment,'needs-review'));

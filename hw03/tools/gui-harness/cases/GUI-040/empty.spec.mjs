@@ -1,0 +1,6 @@
+import {test,home} from '../../lib/evidence.mjs';import {observeUntil} from '../../lib/observe.mjs';
+test('GUI-040::no-match--home',async({browser,evidence:ev})=>{
+ ev.expected('Kết quả rỗng có message thân thiện và icon/hình minh họa, không lưới trắng/giữ card cũ (FR-05/24).');const page=await ev.open(browser);await home(page);await ev.shot('01-before');await page.getByPlaceholder('Tìm kiếm...').fill('zzzz_T01_no_match_23120410');const response=page.waitForResponse(r=>r.request().method()==='GET'&&new URL(r.url()).searchParams.get('search')==='zzzz_T01_no_match_23120410');await page.getByRole('button',{name:'Tìm',exact:true}).click();const error=await(await response).finished();if(error)throw Error('Empty result response incomplete: '+error);
+ const observation=await observeUntil(async()=>({cards:await page.locator('main h2').count(),mainText:await page.locator('main').innerText()}),o=>o.cards===0);ev.actual(observation);await ev.shot('02-empty-result');
+ ev.assert('empty-state-message',observation.cards===0&&/không tìm thấy|không có sản phẩm|không có kết quả|không tìm được/iu.test(observation.mainText),observation,'Lưới rỗng phải có message; nhãn từ khóa không thay message',{class:'R',refs:['GUI-040','FR-05','FR-24']});ev.review(observation,'empty-message-and-illustration-review-required');
+});

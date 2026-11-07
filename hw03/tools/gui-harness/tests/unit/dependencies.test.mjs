@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {dependencyKey,gate} from '../../lib/dependencies.mjs';import {redact,publicURL} from '../../lib/evidence.mjs';
+const scope={page:'detail',platform:'windows-chromium',viewport:'VD',fixture:'hash'};const record={scope:dependencyKey(scope),assessment:'fail',result:'GUI-048/root/result.json'};
+test('Root fail blocks downstream and preserves evidence reference',()=>assert.deepEqual(gate(record,scope),{allowed:false,reason:'control-not-responding',rootEvidence:record.result}));
+test('Passed prerequisite permits execution',()=>assert.equal(gate({...record,assessment:'pass'},scope).allowed,true));
+test('Home is not covered by failed Detail prerequisite',()=>assert.equal(gate(record,{...scope,page:'home'}).reason,'prerequisite-scope-mismatch'));
+test('Other platform cannot reuse root result',()=>assert.equal(gate(record,{...scope,platform:'firefox'}).reason,'prerequisite-scope-mismatch'));
+test('Fixture change invalidates prerequisite',()=>assert.equal(gate(record,{...scope,fixture:'other'}).allowed,false));
+test('Missing prerequisite never passes',()=>assert.equal(gate(null,scope).allowed,false));
+test('needs-review prerequisite never passes',()=>assert.equal(gate({...record,assessment:'needs-review'},scope).allowed,false));
+test('Sensitive log fragments are redacted',()=>{assert(!redact('Bearer abcd.secret.token').includes('abcd'));assert(!publicURL('http://localhost:3000/api/products?token=abc&search=iPhone').includes('abc'));});

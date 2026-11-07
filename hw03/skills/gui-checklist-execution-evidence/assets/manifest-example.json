@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "pilot",
+  "integrationStatus": "pending-main-review",
+  "exampleOnly": true,
+  "notes": "Mẫu chưa chạy; thay mọi REPLACE và verify capability trước execution. Không đủ 50 ID.",
+  "inputs": {
+    "rootsEnv": {
+      "sut": "SUT_ROOT",
+      "harness": "HARNESS_ROOT",
+      "runs": "RUNS_ROOT"
+    },
+    "baseUrlEnv": "SUT_BASE_URL",
+    "checklist": {
+      "path": "hw03/gui/GUI_Checklist.md",
+      "sha256": "REPLACE"
+    },
+    "spec": {
+      "path": "README.md",
+      "sha256": "REPLACE"
+    },
+    "fixture": {
+      "path": "fixture/manifest.json",
+      "sha256": "REPLACE",
+      "fingerprintBefore": null,
+      "fingerprintAfter": null,
+      "mode": "read-only-verify",
+      "source": "Fixture được đối chiếu độc lập"
+    },
+    "baseline": {
+      "ref": "REPLACE",
+      "sha256": "REPLACE"
+    }
+  },
+  "permissions": {
+    "installDependencies": false,
+    "startRuntime": false,
+    "executePilot": false,
+    "executeFull": false,
+    "export": false,
+    "publish": false,
+    "commit": false
+  },
+  "platforms": [
+    {
+      "key": "sample-os-chrome",
+      "os": "REPLACE",
+      "browser": "Chrome",
+      "engine": "Chromium",
+      "versions": {
+        "os": null,
+        "browser": null,
+        "engine": null
+      },
+      "binaryKind": "installed-channel-unverified",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "locale": "vi-VN",
+      "zoom": 100,
+      "verified": false,
+      "proof": []
+    }
+  ],
+  "capabilities": [
+    {
+      "key": "ui-actions",
+      "platformKey": "sample-os-chrome",
+      "status": "pending",
+      "proof": [],
+      "reason": "Mẫu chưa có proof thật"
+    }
+  ],
+  "cases": [
+    {
+      "instanceKey": "GUI-048--first-click--home--sample-os-chrome--VD",
+      "checklistId": "GUI-048",
+      "variant": "first-click",
+      "page": "home",
+      "platformKey": "sample-os-chrome",
+      "viewportKey": "VD",
+      "contextGroup": "badge-flow",
+      "required": true,
+      "lane": "automated",
+      "requiresCapabilities": [
+        "ui-actions"
+      ],
+      "requires": [],
+      "provides": [
+        "home-cart-one"
+      ],
+      "actions": [
+        {
+          "order": 1,
+          "kind": "click",
+          "target": "Thêm vào giỏ của TD1 trên Home",
+          "count": 1,
+          "observation": "Ghi feedback và proof state tiếp nhận, không click thêm"
+        }
+      ],
+      "assertions": [
+        {
+          "key": "first-feedback",
+          "expected": "Feedback trực quan sau click đầu; chỉ cung cấp home-cart-one nếu có proof quantity=1",
+          "oracle": {
+            "class": "R",
+            "refs": [
+              "FR-06",
+              "FR-24"
+            ],
+            "rationale": "Phản hồi control, không kiểm trang giỏ"
+          },
+          "reviewRequired": false
+        }
+      ]
+    },
+    {
+      "instanceKey": "GUI-050--quantity-one--detail--sample-os-chrome--VD",
+      "checklistId": "GUI-050",
+      "variant": "quantity-one",
+      "page": "detail",
+      "platformKey": "sample-os-chrome",
+      "viewportKey": "VD",
+      "contextGroup": "badge-flow",
+      "required": true,
+      "lane": "automated",
+      "requiresCapabilities": [
+        "ui-actions"
+      ],
+      "requires": [
+        {
+          "instanceKey": "GUI-048--first-click--home--sample-os-chrome--VD",
+          "assertionKey": "first-feedback",
+          "state": "home-cart-one",
+          "reason": "Cần state quantity=1 đã được Home tiếp nhận",
+          "continuity": "Cùng context, SPA sang Detail; không reset/reload/chèn storage"
+        }
+      ],
+      "provides": [],
+      "actions": [
+        {
+          "order": 1,
+          "kind": "click",
+          "target": "Xem chi tiết TD1",
+          "count": 1,
+          "observation": "Điều hướng SPA giữ state; không mở Cart"
+        }
+      ],
+      "assertions": [
+        {
+          "key": "badge",
+          "expected": "Header Detail có badge số lượng 1",
+          "oracle": {
+            "class": "R",
+            "refs": [
+              "FR-23"
+            ],
+            "rationale": "Toast không thay badge"
+          },
+          "reviewRequired": false
+        }
+      ]
+    },
+    {
+      "instanceKey": "GUI-023--quantity-label--detail--sample-os-chrome--VD",
+      "checklistId": "GUI-023",
+      "variant": "quantity-label",
+      "page": "detail",
+      "platformKey": "sample-os-chrome",
+      "viewportKey": "VD",
+      "contextGroup": "clean-label",
+      "required": true,
+      "lane": "hybrid",
+      "requiresCapabilities": [
+        "ui-actions"
+      ],
+      "requires": [],
+      "provides": [],
+      "actions": [
+        {
+          "order": 1,
+          "kind": "navigate",
+          "target": "/product/1",
+          "count": 1,
+          "observation": "Quan sát label và accessible name, không click thêm giỏ"
+        }
+      ],
+      "assertions": [
+        {
+          "key": "label",
+          "expected": "Nhãn Số lượng nhận diện đúng ô nhập",
+          "oracle": {
+            "class": "H",
+            "refs": [
+              "S13 tr.8/16"
+            ],
+            "rationale": "Đánh giá nhãn độc lập với control thêm giỏ"
+          },
+          "reviewRequired": true
+        }
+      ]
+    }
+  ]
+}

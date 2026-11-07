@@ -1,0 +1,3 @@
+import {defineConfig} from '@playwright/test';import path from 'node:path';
+const root=process.env.GUI_RUN_DIR;if(!root)throw Error('Use npm run pilot');const stage=process.env.GUI_STAGE||'main';
+export default defineConfig({testDir:'./cases',testMatch:stage==='root'?'**/GUI-048/*.spec.mjs':'**/*.spec.mjs',testIgnore:stage==='root'?[]:['**/GUI-048/**'],timeout:25000,expect:{timeout:3000},fullyParallel:false,workers:1,retries:0,forbidOnly:true,outputDir:path.join(root,'native-output',stage),reporter:[['list'],['html',{outputFolder:path.join(root,'report',stage),open:'never'}],['json',{outputFile:path.join(root,'native-'+stage+'.json')}]],use:{browserName:'chromium',headless:true},projects:[{name:'windows-chromium-VD'}]});

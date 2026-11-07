@@ -1,0 +1,26 @@
+import fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';import {sha,json} from './env.mjs';import {inside,filesUnder} from '../lib/paths.mjs';import {dependencyBlocked,validateResult,validateArtifact} from '../lib/result-validation.mjs';
+export function verify(dir){
+ const get=f=>JSON.parse(fs.readFileSync(inside(dir,f),'utf8'));const failures=[];
+ const review=fs.existsSync(path.join(dir,'run-review.json'))?get('run-review.json'):null;
+ if(review?.acceptedForGUIResults===false)failures.push('Run invalidated by review: '+review.reason);
+ const integrity=get('integrity.json');if(integrity.verified!==true)failures.push('Final integrity not verified');
+ const cleanup=get('cleanup.json');if(cleanup.verified!==true)failures.push('Runtime cleanup not verified');
+ const render=get('render-preflight.json');if(render.display!=='flex'||render.padding==='0px')failures.push('Runtime render gate failed');
+ if(fs.existsSync(path.join(dir,'harness-error.json')))failures.push('Harness error present');
+ const results=[];for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(!/^GUI-\d{3}$/.test(entry.name))continue;if(entry.isSymbolicLink())throw Error('Symlink case folder refused');const base=inside(dir,entry.name);for(const rel of filesUnder(base).filter(p=>p.endsWith('result.json'))){const p=inside(base,rel);const folder=path.dirname(p);const r=JSON.parse(fs.readFileSync(p,'utf8'));validateResult(r);const resultPath=path.relative(dir,p);results.push({...r,resultPath});
+  const hashes=JSON.parse(fs.readFileSync(inside(folder,'checksums.json'),'utf8'));const actualFiles=filesUnder(folder).filter(f=>f!=='checksums.json').sort();if(JSON.stringify(Object.keys(hashes).sort())!==JSON.stringify(actualFiles))failures.push('Incomplete/extra checksum manifest: '+resultPath);
+  for(const [f,hash]of Object.entries(hashes)){if(!/^[a-f0-9]{64}$/i.test(hash)||sha(inside(folder,f))!==hash)failures.push('Checksum mismatch '+resultPath+' '+f);}
+  for(const ref of r.evidence){const artifact=inside(dir,ref);validateArtifact(artifact);const local=path.relative(folder,artifact);if(local.startsWith('..')||path.isAbsolute(local))failures.push('Cross-attempt artifact '+ref);}
+  if(dependencyBlocked(r)){if(!r.rootEvidence)failures.push('Dependency blocked without rootEvidence');if(r.evidence.length||fs.readFileSync(inside(folder,'logs/network.jsonl'),'utf8').trim()||fs.readFileSync(inside(folder,'logs/steps.jsonl'),'utf8').includes('context-created'))failures.push('Blocked dependent executed UI');}
+  else if(r.assessment!=='blocked'&&(!r.evidence.some(f=>f.endsWith('.png'))||!r.evidence.some(f=>f.endsWith('trace.zip'))))failures.push('Missing screenshot/trace '+resultPath);
+  if(!r.expected||r.actual===null&&r.assessment!=='blocked')failures.push('Missing oracle/actual '+resultPath);
+  if(r.assessment==='pass'&&(r.nativeStatus!=='passed'||r.humanReview?.required))failures.push('False pass status '+resultPath);
+ }}
+ const manifest=get('pilot-manifest.json');const keys=results.map(r=>r.id+'::'+r.variant);const expected=manifest.instances.map(r=>r.id+'::'+r.variant);if(new Set(keys).size!==keys.length)failures.push('Duplicate instances');if(JSON.stringify([...keys].sort())!==JSON.stringify([...expected].sort()))failures.push('Manifest/result mismatch');
+ const fixture=get('fixture/manifest.json');const deps=get('dependencies.json');const root=results.find(r=>r.id==='GUI-048'&&r.variant==='detail-first-click');
+ for(const r of results.filter(dependencyBlocked)){const ref=inside(dir,r.rootEvidence);if(!root||path.resolve(dir,root.resultPath)!==ref||root.assessment==='pass'||r.platform!==root.platform||r.viewport!==root.viewport)failures.push('Invalid prerequisite evidence '+r.resultPath);const d=deps['detail-add-accepted'];if(!d||d.result!==r.rootEvidence||d.assessment!==root?.assessment||d.scope!==['detail',r.platform,r.viewport,fixture.runtimeDatabase].join('|'))failures.push('Dependency scope mismatch '+r.resultPath);}
+ const counts={};for(const r of results)counts[r.assessment]=(counts[r.assessment]||0)+1;
+ const report={verified:failures.length===0,acceptedForGUIResults:failures.length===0,failures,instances:results.length,ids:new Set(results.map(r=>r.id)).size,counts,results:results.map(({id,variant,assessment,nativeStatus,resultPath,rootEvidence})=>({id,variant,assessment,nativeStatus,resultPath,rootEvidence}))};json(path.join(dir,'index.json'),report);
+ fs.writeFileSync(path.join(dir,'summary.md'),'# GUI pilot — partial checklist execution\n\n'+JSON.stringify({instances:report.instances,ids:report.ids,counts,verified:report.verified},null,2)+'\n\nChỉ Chromium/VD; không đại diện 50 ID/full variants hoặc ≥3 platforms. needs-review chưa phải Pass. Blocked giữ link root; không có UI action downstream.\n\nNative reports: [root](report/root/index.html), [main](report/main/index.html). Raw trace/video/native/server artifacts chỉ local, chưa được bảo đảm redacted; review trước export.\n');if(failures.length)throw Error(failures.join('\n'));return report;
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const d=process.argv[2]||process.env.GUI_RUN_DIR;if(!d)throw Error('Supply run directory');console.log(JSON.stringify(verify(path.resolve(d)),null,2));}
