@@ -68,9 +68,9 @@ hãy thực hiện T01 theo plan, tôi đã đính kèm "S13_GUI Testing & Usabi
 
 AI đề xuất Home / Product Listing & Search (FR-05), với Product Detail (FR-06) là màn hình bổ trợ và luồng kết thúc ở lựa chọn sản phẩm (A-00). AI soạn kế hoạch T00–T07, bổ sung nguồn chính sách và căn cứ đối chiếu rồi rút gọn cấu trúc (A-01). Ngoài hai artifact này, AI hỗ trợ thiết lập repo riêng và chuẩn bị biểu mẫu.
 
-**A-02:** AI tạo bản checklist đầu 48 mục. Worker AI review đề xuất GUI-049 về dấu `*`; main AI bổ sung GUI-050 về badge. AI sửa validation/oracle, keyboard, điều kiện context/request và căn cứ R/H; sau khảo sát Home/Detail ở hai viewport trong cùng Edge, làm rõ GUI-012. Bản v0.4 hiện có 50 mục; lý do giữ 049/050 do AI diễn đạt từ yêu cầu và khoảng trống bản đầu. AI còn hỗ trợ ôn lý thuyết và làm rõ yêu cầu bài.
+**A-02:** AI tạo bản checklist đầu 48 mục. Worker AI review đề xuất GUI-049 về dấu `*`; main AI bổ sung GUI-050 về badge. AI sửa validation/oracle, keyboard, điều kiện context/request và căn cứ R/H; sau khảo sát Home/Detail ở hai viewport trong cùng Edge, làm rõ GUI-012. Bản hiện hành v0.5 có 52 mục. GUI-049/050 và lý do giữ hai mục này có AI hỗ trợ; **GUI-051/052 cùng lý do AI bỏ sót do tôi đề xuất sau review**, AI chỉ gán ID, chuẩn hóa vào bảng và làm rõ điều kiện test. AI còn hỗ trợ ôn lý thuyết và làm rõ yêu cầu bài.
 
-**A-03 — Skill/harness GUI (P-005–P-007):** AI khảo sát framework/skill/plugin, đề xuất Playwright Test và cấu trúc evidence theo ID/variant/platform/attempt; sinh viên góp ý dependency và chọn runner. AI tạo repository-owned skill, contract/adapter, materializer/source template, harness và các test pilot; worker AI hỗ trợ authoring/review. AI sửa launcher/Tailwind và các vấn đề oracle/verifier sau tự kiểm/AI review rồi thực thi lại. Pilot cuối có 13 instance/7 ID trên Windows Chromium desktop: 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đây không phải full execution 50 ID, ≥3 nền tảng hoặc human review của hai instance GUI-032.
+**A-03 — Skill/harness GUI (P-005–P-007):** AI khảo sát framework/skill/plugin, đề xuất Playwright Test và cấu trúc evidence theo ID/variant/platform/attempt; sinh viên góp ý dependency và chọn runner. AI tạo repository-owned skill, contract/adapter, materializer/source template, harness và các test pilot; worker AI hỗ trợ authoring/review. AI sửa launcher/Tailwind và các vấn đề oracle/verifier sau tự kiểm/AI review rồi thực thi lại. Pilot cuối có 13 instance/7 ID trên Windows Chromium desktop: 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đây không phải full execution checklist 52 ID, ≥3 nền tảng hoặc human review của hai instance GUI-032.
 
 Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI tạo riêng. Chưa có dữ liệu người tham gia hoặc phiên usability mới. Raw screenshot/trace/video/native report local-only, chưa bảo đảm redacted để export.
 
@@ -80,11 +80,11 @@ Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI t�
 
 Tôi đã review và chấp nhận phạm vi FR-05/FR-06 và PLAN v0.3. Tôi giữ nguyên đề xuất phạm vi; đối với kế hoạch, tôi yêu cầu làm gọn cách trình bày, AI thực hiện chỉnh sửa. Việc bổ sung nguồn/căn cứ và kiểm tra kỹ thuật do AI hỗ trợ thực hiện.
 
-Tôi xác nhận đã đọc và kiểm tra checklist v0.3, đề nghị giữ GUI-049/050. Hai mục có nguồn phát hiện ban đầu là AI; đóng góp của tôi là review và lựa chọn giữ lại, không khai là tự phát hiện. AI cập nhật lý do thành v0.4 mà không đổi 50 mục kiểm tra.
+Tôi đã đọc và kiểm tra checklist, đề nghị giữ GUI-049/050; hai mục này có nguồn phát hiện ban đầu là AI. Sau review, ngày 07/11/2026 tôi bổ sung **GUI-051: phục hồi từ tìm kiếm không có kết quả sang iPhone mà không reload**, và **GUI-052: xử lý khi API trả HTTP 500**, cùng giải thích vì sao AI bỏ sót từng mục. AI gán ID, chuẩn hóa cách trình bày và làm rõ điều kiện test; checklist hiện hành là v0.5 với 52 mục. Phần AI review/sửa và phần tôi review/bổ sung được ghi riêng trong Checklist §5–6 và Audit A-02.
 
 Tôi đã kiểm tra pilot/evidence và xác nhận evidence từng GUI đầy đủ ngày 07/11/2026. Đây là review bằng chứng pilot, không khai đã review toàn bộ source hoặc kết luận Pass cho hai instance GUI-032.
 
-[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**; A-01, A-02 và A-03 **INCOMPLETE — chấp nhận sau sửa**. A-03 được chấp nhận trong phạm vi pilot sau các sửa đổi launcher/oracle/verifier do AI thực hiện. Verdict không chứng nhận full checklist/cross-platform, reuse, setup một lệnh hoặc toàn bộ yêu cầu về phần bổ sung của sinh viên.
+[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**; A-01, A-02 và A-03 **INCOMPLETE — chấp nhận sau sửa**. A-03 được chấp nhận trong phạm vi pilot sau các sửa đổi launcher/oracle/verifier do AI thực hiện. A-02 giữ INCOMPLETE vì bản AI cần sửa và tôi đã bổ sung GUI-051/052, không phải vì tôi chưa review hoặc chưa bổ sung. Verdict thiết kế không chứng nhận full execution/cross-platform; A-03 cũng chưa chứng nhận reuse hoặc setup một lệnh.
 
 ### **6\. Trích dẫn (nếu môn yêu cầu):**
 

@@ -1,6 +1,6 @@
 # HW03 — Thiết kế GUI checklist
 
-**Phiên bản:** v0.4 — bổ sung lý do giữ GUI-049/050 sau review, 07/11/2026.
+**Phiên bản:** v0.5 — bổ sung GUI-051/052 theo đề xuất của sinh viên sau review, 07/11/2026.
 
 ## 1. Phạm vi và cơ sở thiết kế
 
@@ -99,6 +99,8 @@
 | GUI-046 | H — từ khóa đã áp dụng | Đã gửi iPhone và có kết quả; tiếp tục gõ MacBook nhưng chưa gửi. | So sánh nhãn kết quả với tiêu chí đã submit. | Nếu có nhãn Kết quả tìm kiếm cho, nó phản ánh iPhone cho đến lần submit tiếp theo; không gán kết quả cũ cho chuỗi đang soạn. | H: S13 tr.12/14 |
 | GUI-047 | H/D — ảnh không tải được | Chặn URL ảnh của riêng TD1, không chặn API. | Mở Home/Detail và quan sát ảnh TD1. | Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng. | R: FR-24 (alt); H: S13 tr.7/11 |
 | GUI-048 | H/D — phản hồi control Thêm vào giỏ | Context riêng cho từng màn hình; xác nhận giỏ/state local sạch; quantity=1 ở Detail. Chỉ kiểm tra control trên H/D. | Bấm đúng một lần Thêm vào giỏ ở Home; ở lượt khác làm tương tự trên Detail. Ghi riêng mỗi màn hình. | Có phản hồi trực quan sau lần bấm đầu (toast, trạng thái nút hoặc badge cập nhật). Không cần mở Giỏ hàng/checkout; không suy từ lỗi này rằng validation quantity đã chặn đúng. | R: FR-06/24 |
+| GUI-051 | H — phục hồi sau tìm kiếm không có kết quả | Home đang hiển thị danh sách sản phẩm; fixture không có tên khớp `zzzz_no_match` và có TD1 iPhone 15 Pro Max. | Tìm `zzzz_no_match` và xác nhận đã nhận kết quả rỗng; sau đó tìm lại `iPhone` trong cùng trang/context, không reload. | Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang. | H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm |
+| GUI-052 | H — xử lý API trả HTTP 500 | Context sạch; công cụ interception bên ngoài SUT đã được xác minh có thể trả response HTTP 500 cho GET http://localhost:3000/api/products. Không sửa source/database và không abort request. | Bật giả lập HTTP 500 trước khi mở Home; mở Home, xác nhận request lấy danh sách nhận response 500 rồi quan sát UI. Bỏ interception sau lượt chạy. | Hiển thị thông báo lỗi tải dữ liệu; không hiển thị danh sách rỗng như thể không có sản phẩm hoặc loading vô hạn. | H: S13 tr.11/16/27 (thông báo lỗi); FR-05 làm bối cảnh tải danh sách |
 
 ## 4. Ma trận độ phủ thiết kế
 
@@ -107,8 +109,8 @@
 | IA-01 | 15 | GUI-001–GUI-015 |
 | IA-02 | 13 | GUI-016–GUI-027, GUI-049 |
 | IA-03 | 10 | GUI-028–GUI-036, GUI-050 |
-| IA-04 | 12 | GUI-037–GUI-048 |
-| **Tổng** | **50** | GUI-001–GUI-050 |
+| IA-04 | 14 | GUI-037–GUI-048, GUI-051–GUI-052 |
+| **Tổng** | **52** | GUI-001–GUI-052 |
 
 Các biến thể cùng quy tắc được nhóm trong một mục (ví dụ GUI-026), không nhân số dòng để đạt ngưỡng. Nhiều trang trong cùng dòng là tham số áp dụng, không phải bằng chứng đã thực thi.
 
@@ -120,3 +122,12 @@ Sinh viên đã xác nhận đọc và kiểm tra checklist v0.3, đồng thời
 |---|---|---|---|
 | GUI-049 | FR-06 quy định Số lượng phải là số nguyên dương, tối thiểu 1; kết hợp FR-22 về dấu `*` cạnh nhãn trường bắt buộc, cần kiểm tra người dùng nhận biết yêu cầu nhập ngay trên giao diện. Đây là kiểm tra ký hiệu bắt buộc, khác với việc ô có nhãn hoặc từ chối dữ liệu sai. | Bản đầu có kiểm tra nhãn, miền giá trị và vị trí lỗi (GUI-023/026/027), nhưng chưa có mục đối chiếu trực tiếp ký hiệu `*` theo FR-22. Không thể suy từ validation đúng rằng ký hiệu bắt buộc đã hiện đúng. | AI worker reviewer đề xuất; main AI tích hợp. |
 | GUI-050 | FR-23 yêu cầu link Giỏ hàng có badge số lượng. Cần kiểm tra badge phản ánh state đã xác nhận trên header Home và Detail, không cần mở trang giỏ hoặc checkout. | GUI-048 chấp nhận phản hồi bằng toast hoặc badge theo FR-06/24; vì vậy toast có thể làm mục đó đạt nhưng vẫn chưa kiểm tra nghĩa vụ badge riêng của FR-23. Bản đầu chưa tách yêu cầu này thành một mục độc lập. | Main AI phát hiện khi tự đối chiếu lại yêu cầu. |
+
+## 6. Hai mục sinh viên đề xuất sau review — GUI-051 và GUI-052
+
+Nguồn bổ sung: sinh viên gửi hai mục cùng điều kiện/thao tác, expected và lý do AI bỏ sót trong yêu cầu ngày 07/11/2026. AI gán ID, chuẩn hóa vào bảng checklist và làm rõ cách tạo điều kiện test; không ghi hai mục này thành đề xuất do AI tự phát hiện. Đây là bổ sung thiết kế, chưa có kết quả thực thi.
+
+| ID | Vì sao AI bỏ sót — nội dung sinh viên cung cấp | Phân biệt với mục đã có |
+|---|---|---|
+| GUI-051 | AI đã kiểm tra trạng thái không có kết quả (GUI-040), nhưng chỉ xét trạng thái đó tại một thời điểm, chưa kiểm tra quá trình chuyển từ kết quả rỗng trở lại có dữ liệu. | GUI-040 kiểm tra empty state; GUI-051 kiểm tra chuyển từ empty state sang kết quả iPhone mà không reload. GUI-021 bỏ bộ lọc bằng chuỗi rỗng, không phải tìm lại bằng từ khóa có dữ liệu. |
+| GUI-052 | AI tập trung vào lỗi mất kết nối mạng (GUI-041), nhưng chưa xét trường hợp server vẫn phản hồi với mã lỗi HTTP 500. Hai tình huống có cơ chế khác nhau. | GUI-041 chặn request để tạo lỗi mạng; GUI-052 nhận response HTTP 500 thực sự trong môi trường giả lập, không dùng abort request thay thế. |

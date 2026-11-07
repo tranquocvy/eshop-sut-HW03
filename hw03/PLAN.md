@@ -22,7 +22,7 @@
 | ID | Sản phẩm / phạm vi | Điều kiện hoàn tất | Trạng thái |
 |---|---|---|---|
 | T00 | Baseline, kế hoạch và hồ sơ AI | Repo gốc riêng; nguồn/thiếu nguồn rõ; log có nguồn; sinh viên review kế hoạch | Repo đã xác minh; kế hoạch và hồ sơ đã tạo |
-| T01 | Thiết kế GUI checklist | Đọc slide/spec; >40 mục không lặp, phủ IA-01–04; giữ bản AI đầu; review và sửa có truy vết | [50 mục thiết kế v0.4](gui/GUI_Checklist.md); bản AI đầu 48 mục được bảo toàn. Sinh viên đã xác nhận review v0.3 và đề nghị giữ GUI-049/050; v0.4 bổ sung lý do, không đổi nội dung kiểm tra. Đã khảo sát UI; chưa thực thi checklist |
+| T01 | Thiết kế GUI checklist | Đọc slide/spec; >40 mục không lặp, phủ IA-01–04; giữ bản AI đầu; review và sửa có truy vết | [52 mục thiết kế v0.5](gui/GUI_Checklist.md); bản AI đầu 48 mục được bảo toàn. AI review/sửa và bổ sung GUI-049/050; sinh viên đã review, chọn giữ hai mục đó và đề xuất thêm GUI-051/052 kèm lý do AI bỏ sót ngày 07/11/2026. Chưa thực thi toàn bộ checklist; pilot trước không bao phủ hai mục mới. |
 | T02 | Thực thi GUI và cross-platform | Checklist được review; kết quả tách theo ≥3 nền tảng; notes/ảnh Failed; bug Markdown + GitHub Issues có ảnh | Chưa cập nhật |
 | T03 | Bộ chuẩn bị usability và pilot | Mục tiêu, scenario theo goal, SUS/UEQ-S, probe clarity/recovery/speed/trust; review; pilot người thật và sửa | Chưa cập nhật |
 | T04 | 7 phiên usability | Đúng 7 người ngoài lớp, consent, phiên thật, notes và phản hồi thang đo; ghi từng phiên riêng | Chưa cập nhật |
@@ -38,8 +38,8 @@ Task 1 và Task 3 thực thi cùng quy trình, nhưng kết quả tách rõ từ
 - [x] Kiểm tra SUT/data riêng tại baseline, không sửa code sản phẩm. Đã đọc database read-only và khảo sát UI render trên bản sao; backend mở database hiện có READONLY, không chạy lại initializer/seed.
 - [x] Tạo bản AI đầu **ít nhất 41 mục**, không lặp, phủ IA-01–04: UI standards, Forms, Navigation, Feedback/state. Bản đầu có 48 mục.
 - [x] Mỗi mục có ID, IA, màn hình/trạng thái, điều kiện/thao tác và expected quan sát được.
-- [x] AI tự kiểm tra và worker pre-review; sinh viên xác nhận đã đọc/kiểm tra checklist v0.3 và đề nghị giữ GUI-049/050 ngày 07/11/2026.
-- [ ] Xác nhận đáp ứng yêu cầu “add further items of your own” và giải thích phần AI bỏ sót theo HW03 §6. GUI-049/050 do AI phát hiện, sinh viên đã review/chọn giữ; đề chưa làm rõ việc tiếp nhận gợi ý AI ở vòng review sau có được tính cho yêu cầu này hay không.
+- [x] AI tự kiểm tra và worker pre-review; sinh viên xác nhận đã đọc/kiểm tra checklist, giữ GUI-049/050 và bổ sung GUI-051/052 ngày 07/11/2026. Giữ riêng nguồn sửa/bổ sung của AI và sinh viên.
+- [x] Sinh viên bổ sung GUI-051 (phục hồi từ tìm kiếm rỗng sang có dữ liệu) và GUI-052 (response HTTP 500), kèm giải thích AI bỏ sót theo HW03 §6; xem [Checklist §6](gui/GUI_Checklist.md#6-hai-mục-sinh-viên-đề-xuất-sau-review--gui-051-và-gui-052). GUI-049/050 vẫn được ghi đúng là do AI phát hiện; AI chỉ chuẩn hóa hai mục sinh viên gửi vào bảng.
 - [x] Giữ bản đầu 48 mục trong PromptLog (A-02-initial), ghi thay đổi theo phiên bản và đúng nguồn phát hiện/người sửa trong Audit/Disclosure.
 - [ ] Xuất Excel sau review thiết kế; chưa điền actual/pass trước execution.
 
