@@ -29,14 +29,14 @@
 
 *Liệt kê mọi công cụ AI dùng cho bài tập này (ví dụ AI Tool (e.g., ChatGPT, Claude, Gemini), ChatGPT, GitHub Copilot, Cursor, Gemini).*
 
-- **OpenClaw main và worker reviewer / OpenAI gpt-6.1-sol:** tổng hợp yêu cầu, chọn phạm vi, soạn kế hoạch và checklist, AI review, khảo sát UI chuẩn bị và hỗ trợ sửa tài liệu.
+- **OpenClaw main và worker reviewer / OpenAI gpt-6.1-sol:** tổng hợp yêu cầu, chọn phạm vi, soạn kế hoạch và checklist, AI review, khảo sát UI chuẩn bị, hỗ trợ sửa tài liệu và tạo skill/harness thực thi pilot GUI.
 - **PDF extractor / OpenAI gpt-6-astra:** trích xuất và đối chiếu đề gốc, slide S13; extraction văn bản 55 trang theo các dải, chỉ có một số ảnh slide. Worker review không xác minh trực quan toàn bộ PDF.
 
 ### **2\. Giai đoạn nào của bài tập có dùng AI:**
 
 *Tick tất cả: [x] brainstorm  [x] outline  [x] viết nháp  [x] phản hồi  [x] sửa chữa  [x] code  [ ] phân tích dữ liệu  [ ] thiết kế đồ hoạ  [x] khác (ghi rõ: đọc đề/template, chọn phạm vi và setup repo).*
 
-Phạm vi sửa chữa là kế hoạch, checklist, setup repo và hồ sơ AI; không sửa production code để làm test đạt. AI có tạo launcher khảo sát riêng mở fixture READONLY mà không tải initializer/seed; launcher không dùng để kết luận đường ghi dữ liệu. Chưa có execution checklist/cross-platform hoặc phân tích dữ liệu usability.
+Phạm vi sửa chữa gồm kế hoạch, checklist, setup repo, hồ sơ AI và helper/harness; không sửa production code để làm test đạt. AI tạo launcher riêng mở fixture READONLY mà không tải initializer/seed, không dùng để kết luận đường ghi dữ liệu. Đã có pilot GUI 13 instance/7 ID bằng Playwright Test; chưa full checklist/cross-platform hoặc phân tích dữ liệu usability.
 
 ### **3\. Prompt / nhiệm vụ chính cho AI:**
 
@@ -60,7 +60,7 @@ bước 1 hãy chọn "Màn hình chính và luồng usability không được t
 hãy thực hiện T01 theo plan, tôi đã đính kèm "S13_GUI Testing & Usability Testing.pdf" ở root của src code
 ```
 
-[Prompt Log](PromptLog.md) là **bản trích tuyển 3 tương tác** P-000/P-002/P-004, không phải toàn bộ lịch sử. P-000 bị cắt ở cuối; nguồn phản hồi P-004 cũng báo cờ cắt khi truy xuất riêng. Các đóng góp AI review/sửa checklist vẫn được khai bên dưới dù không chép toàn văn mọi lượt review.
+[Prompt Log](PromptLog.md) là **bản trích tuyển 6 tương tác** P-000/P-002/P-004/P-005/P-006/P-007, không phải toàn bộ lịch sử. P-000/P-005 bị cắt ở cuối; nguồn P-004/P-006/P-007 có cờ cắt hoặc độ đầy đủ chưa xác minh như ghi tại từng mục. Ba prompt ở trên là các ví dụ đại diện; P-005–P-007 bổ sung quá trình chọn công cụ, dependency và tạo skill/harness. AI review không chép toàn văn nhưng đóng góp vẫn được khai.
 
 ### **4\. Phần cụ thể AI đóng góp:**
 
@@ -70,7 +70,9 @@ AI đề xuất Home / Product Listing & Search (FR-05), với Product Detail (F
 
 **A-02:** AI tạo bản checklist đầu 48 mục. Worker AI review đề xuất GUI-049 về dấu `*`; main AI bổ sung GUI-050 về badge. AI sửa validation/oracle, keyboard, điều kiện context/request và căn cứ R/H; sau khảo sát Home/Detail ở hai viewport trong cùng Edge, làm rõ GUI-012. Bản v0.4 hiện có 50 mục; lý do giữ 049/050 do AI diễn đạt từ yêu cầu và khoảng trống bản đầu. AI còn hỗ trợ ôn lý thuyết và làm rõ yêu cầu bài.
 
-Code SUT giữ nguyên từ nguồn giảng viên. Launcher khảo sát do AI tạo nằm ngoài SUT; không phải script đã thực thi toàn bộ checklist. Không có dữ liệu người tham gia hoặc kết quả execution GUI/cross-platform/usability mới.
+**A-03 — Skill/harness GUI (P-005–P-007):** AI khảo sát framework/skill/plugin, đề xuất Playwright Test và cấu trúc evidence theo ID/variant/platform/attempt; sinh viên góp ý dependency và chọn runner. AI tạo repository-owned skill, contract/adapter, materializer/source template, harness và các test pilot; worker AI hỗ trợ authoring/review. AI sửa launcher/Tailwind và các vấn đề oracle/verifier sau tự kiểm/AI review rồi thực thi lại. Pilot cuối có 13 instance/7 ID trên Windows Chromium desktop: 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đây không phải full execution 50 ID, ≥3 nền tảng hoặc human review của hai instance GUI-032.
+
+Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI tạo riêng. Chưa có dữ liệu người tham gia hoặc phiên usability mới. Raw screenshot/trace/video/native report local-only, chưa bảo đảm redacted để export.
 
 ### **5\. Cách tôi rà soát / chỉnh sửa / xác minh đầu ra AI:**
 
@@ -80,7 +82,9 @@ Tôi đã review và chấp nhận phạm vi FR-05/FR-06 và PLAN v0.3. Tôi gi�
 
 Tôi xác nhận đã đọc và kiểm tra checklist v0.3, đề nghị giữ GUI-049/050. Hai mục có nguồn phát hiện ban đầu là AI; đóng góp của tôi là review và lựa chọn giữ lại, không khai là tự phát hiện. AI cập nhật lý do thành v0.4 mà không đổi 50 mục kiểm tra.
 
-[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**, A-01 và A-02 **INCOMPLETE — chấp nhận sau sửa**. Các verdict đánh giá artifact chuẩn bị/thiết kế, không phải kết quả execution và không tự chứng minh đã đáp ứng toàn bộ yêu cầu về phần bổ sung của sinh viên.
+Tôi đã kiểm tra pilot/evidence và xác nhận evidence từng GUI đầy đủ ngày 07/11/2026. Đây là review bằng chứng pilot, không khai đã review toàn bộ source hoặc kết luận Pass cho hai instance GUI-032.
+
+[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**; A-01, A-02 và A-03 **INCOMPLETE — chấp nhận sau sửa**. A-03 được chấp nhận trong phạm vi pilot sau các sửa đổi launcher/oracle/verifier do AI thực hiện. Verdict không chứng nhận full checklist/cross-platform, reuse, setup một lệnh hoặc toàn bộ yêu cầu về phần bổ sung của sinh viên.
 
 ### **6\. Trích dẫn (nếu môn yêu cầu):**
 

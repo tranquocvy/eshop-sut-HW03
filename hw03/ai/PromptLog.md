@@ -1,5 +1,5 @@
 # HW03 — Prompt Log trích tuyển theo artifact
-**Phạm vi:** bản trích tuyển gồm **3 tương tác** P-000, P-002 và P-004 cho 3 artifact A-00–A-02; không phải toàn bộ lịch sử AI của HW03. Các lượt vận hành, ôn tập, trao đổi khác và AI-to-AI review không được chép toàn văn trong bản trích này. Đóng góp AI review và các sửa đổi có ảnh hưởng đến checklist vẫn được khai trong Audit/Disclosure. Bản trích tuyển này chưa chứng minh đáp ứng yêu cầu ghi mọi tương tác tại HW03 §9.
+**Phạm vi:** bản trích tuyển gồm **6 tương tác** P-000, P-002, P-004, P-005, P-006 và P-007, bao gồm phần chuẩn bị/thiết kế (A-00–A-02) và tạo skill/harness GUI (A-03). Không phải toàn bộ lịch sử AI HW03 theo §9. Các lượt vận hành, ôn tập và AI-to-AI review không được chép toàn văn; đóng góp AI review/sửa đổi vẫn được khai. P-000/P-005 có phần cuối nguồn bị cắt; P-004/P-006/P-007 có giới hạn nguồn ghi tại từng mục.
 
 
 ## P-000 — A-01: Đọc đề và cơ sở lập kế hoạch
@@ -303,3 +303,237 @@ Các biến thể cùng quy tắc được nhóm trong một mục (ví dụ GUI
 - **v0.2 → v0.3 (khảo sát UI và AI sửa):** quan sát Home/Detail ở hai viewport cùng Edge và search có kết quả/rỗng; làm rõ GUI-012 về heading bị form ép trên viewport hẹp. Đây là khảo sát chuẩn bị, chưa phải execution/cross-platform.
 - **v0.3 → v0.4:** sinh viên xác nhận đã đọc/kiểm tra và đề nghị giữ GUI-049/050 ngày 07/11/2026; AI bổ sung lý do từ FR-06/22/23 và khoảng trống bản đầu. Giữ nguồn phát hiện AI; không đổi nội dung 50 mục.
 - [Checklist hiện hành v0.4](../gui/GUI_Checklist.md): **50 mục**, IA-01/02/03/04 = **15/13/10/12**. Chưa có Actual/Passed/Failed, Excel hoặc bug execution.
+
+
+## P-005 — Skill GUI: Khảo sát và chọn công cụ
+
+- Công cụ: OpenClaw / OpenAI.
+- Model phản hồi: gpt-6.1-sol.
+- Đầu ra của lượt này là đề xuất kiến trúc, chưa phải skill/harness được triển khai.
+
+### Prompt nguyên văn
+
+- Timestamp: 2026-11-07 00:36:58 (UTC+07:00)
+
+`````text
+task tiếp theo tôi muốn bạn thực thi tất cả skill/plugin có thể, để tìm kiểm và brainstorm skill về implement gui checklist, chạy từng test trên giao diện (playwright hoặc cái gì đó, trước khi quyết định phải nói cho tôi biết ưu nhược từng cái, tại sao chọn cái đó), mỗi test là 1 folder riêng, có screenshot to (tốt nhất là browser cho rõ), có log,.... những cái cần thiết, tốt nhất là nên tham khảo trên browser/skill có sẵn/tài liệu quan trọng để rút kinh nghiệm (không nhét all log vào 1 file chẳng hạn,,.......)
+`````
+
+### Output đề xuất — phần truy xuất được
+
+- Timestamp: 2026-11-07 00:53:13 (UTC+07:00)
+- Giới hạn nguồn: phần cuối bị cắt tại dấu `…(truncated)…`; chỉ giữ phần truy xuất được.
+
+`````text
+## Đề xuất: Playwright Test + skill điều phối evidence
+
+Mình đã đối chiếu tài liệu chính thức, khảo sát skill/plugin và hoàn tất hai review độc lập. **Chưa cài đặt, chạy checklist hoặc thay đổi repo.**
+
+### 1. So sánh trước khi chọn
+
+| Phương án | Ưu điểm | Nhược điểm |
+|---|---|---|
+| **Playwright Test — khuyến nghị** | Có assertions, cô lập từng test, đa browser, screenshot, trace, video và HTML report; hợp việc chạy lại từng ID. | Cần thêm helper chia folder/log; một số kiểm tra thị giác, zoom và nhập tiếng Việt vẫn cần review riêng. |
+| **Cypress** | Runner và Command Log dễ theo dõi; debug React, giả lập lỗi mạng thuận tiện. | Evidence từng attempt cần ghép thêm hooks; video thường theo spec; WebKit còn experimental. |
+| **Selenium/WebDriver** | Phù hợp browser/device thật, đặc biệt Safari và Chrome Android trên host phù hợp. | Phải ghép nhiều phần: runner, assertions, report, log, video và retry. |
+| **Browser tool / CLI / MCP** | Tốt cho agent khảo sát giao diện, tìm selector và debug. | Không mặc nhiên có bộ quản lý test, kết quả và evidence đầy đủ như test runner. |
+
+**Vì sao chọn Playwright:** đáp ứng phần lớn yêu cầu bằng tính năng sẵn có, ít phải tự xây hơn Selenium và thuận tiện hơn Cypress cho evidence theo **ID × biến thể × nền tảng × lần chạy**.
+
+Không cần thêm Allure hoặc plugin stealth ở bản đầu. Các framework có thể chạy OSS local không mất phí dịch vụ; cloud/device farm là lựa chọn riêng.
+
+### 2. Skill có sẵn: học chọn lọc, không cài hàng loạt
+
+Đã tham khảo:
+- **Anthropic/GitHub `webapp-testing`:** khảo sát UI, screenshot, console và quản lý server.
+- **Microsoft/OpenAI Playwright CLI:** quan sát → thao tác → quan sát lại, xử lý refs cũ và thu trace.
+- **Playwright chính thức:** isolation, web-first assertions, projects, attachments và reporters.
+
+Chúng **chưa đáp ứng trọn vẹn** cấu trúc evidence bạn muốn. Một số hướng dẫn còn mặc định tự cài dependency hoặc khởi động server — không phù hợp ràng buộc no-seed của SUT này.
+
+Hai candidate Anthropic/Microsoft được registry báo **chưa được ClawHub scan**; mình chỉ đọc tham khảo, không cài.
+
+### 3. Mỗi test một folder, không gom mọi log
+
+Source mỗi ID một folder; evidence tách sâu hơn:
+
+```text
+runs/<run-id>/
+├── index.json                 # chỉ tổng hợp và liên kết
+├── report/                    # HTML report
+└── GUI-026/
+    └── quantity-1p5--detail/
+        └── windows-chrome--VD/
+            └── attempt-001/
+                ├── result.json
+                ├── screenshots/
+                │   ├── 01-before.png
+                │   └── 02-after-first-action.png
+                ├── logs/
+                │   ├── steps.jsonl
+                │   ├── console.jsonl
+                │   ├── network.jsonl
+                │   └── errors.jsonl
+                ├── trace.zip
+                └── video.webm
+```
+
+- Thu ảnh tại checkpoint có ý nghĩa, **kể cả test Pass**.
+- Giữ ảnh PNG gốc, full-page và ảnh viewport/crop bổ sung.
+- Retry tạo attempt mới, không ghi đè; fail rồi pass vẫn phải hiện lịch sử.
+- Trace ưu tiên giữ **lần fail đầu**; video dùng khi cần chứng minh diễn tiến.
+- Log server tách theo process/run; không trộn toàn bộ console/network của mọi test vào một file.
+
+**Lưu ý ảnh:** full-page screenshot chỉ chụp trang web, không có thanh URL/browser chrome. Muốn ảnh toàn cửa sổ browser phải kiểm chứng khả năng desktop capture riêng, không vẽ khung browser giả.
+
+### 4. Skill nên đóng gói quy trình nào?
+
+Tên dự kiến: **`gui-checklist-execution-evidence`**
+
+**Kiểm tra điều kiện → mở rộng biến thể → chạy UI → thu evidence → review → xuất report.**
+
+Review sơ bộ đủ **50 ID** cho thấy:
+- **30 mục:** có thể xây oracle tự động rõ ràng sau khi xác minh điều kiện.
+- **16 mục:** automation thu bằng chứng, cần review thị giác/ngữ nghĩa.
+- **4 mục:** cần chứng minh công cụ xử lý được zoom thật, nhập/sửa tiếng Việt, native validation và đảo thứ tự request.
+
+Đây là **phân loại thiết kế, không phải kết quả Pass/Fail**. Thiếu browser/device hay prerequisite phải ghi **Blocked**, không 
+…(truncated)…
+`````
+
+## P-006 — Skill GUI: Dependency và pilot
+
+- Công cụ: OpenClaw / OpenAI.
+- Model phản hồi: gpt-6.1-sol.
+
+### Prompt nguyên văn
+
+- Timestamp: 2026-11-07 10:16:02 (UTC+07:00)
+
+`````text
+ý kiến của tôi:
+1. về việc source cố tình chặn 1 click mà click double mới được, ta phải nhóm các test lại, khi block thao tác click vì không được, thì các test kia cũng block, không tốn chi phí để test những test liên quan
+2. tôi đồng ý playwright, nhưng pilot là gì nhỉ, là chọn 5 cái để thực hiện trước khi implement thực tế đúng không
+3. tôi có miss phần nào tôi cần confirm từ bạn nữa không
+chưa implement ở bước này
+`````
+
+### Output phản hồi — văn bản truy xuất được
+
+- Timestamp: 2026-11-07 10:16:40 (UTC+07:00)
+- Giới hạn nguồn: API báo `contentTruncated=true` nhưng văn bản hiển thị không có dấu cắt; độ đầy đủ chưa xác minh.
+
+`````text
+## 1. Nhóm test theo dependency — mình đồng ý
+
+Nên dùng **quan hệ phụ thuộc theo prerequisite**, tránh chạy lại những test chắc chắn không thể tiếp tục:
+
+- Test kiểm tra **click đầu tiên** vẫn chạy. Nếu không có phản hồi đúng expected → **Fail ở test gốc**.
+- Những test **bắt buộc cần hành động đó thành công** → **Blocked**, ghi rõ phụ thuộc vào test gốc và liên kết evidence; không cố click thêm để vượt lỗi.
+- Những phần **không phụ thuộc** vẫn chạy: nhãn, dấu `*`, nhập/giữ số lượng, layout, accessible name…
+
+Ví dụ: GUI-048 ở Detail thất bại **không tự động block toàn bộ GUI-026**. Phần nhập liệu vẫn kiểm tra được; phần cần chứng minh hành động từ chối quantity có thể bị che khuất và phải Blocked. Tương tự, lỗi ở Detail không tự block GUI-050 nếu prerequisite của nó chuẩn bị bằng control **Home**.
+
+**Cũng cần gọi đúng hiện tượng:** source bỏ qua lần kích hoạt đầu, không nhất thiết yêu cầu thao tác *double-click*. Mình sẽ không biến hai lần click thành cách sử dụng hợp lệ.
+
+Cách này tiết kiệm lượt chạy nhưng không làm mất coverage độc lập.
+
+## 2. Pilot là gì?
+
+**Đúng về ý chọn một nhóm nhỏ chạy trước**, nhưng cần chỉnh một chút:
+
+> Pilot là **triển khai tối thiểu và chạy thật một nhóm đại diện**, trước khi triển khai rộng toàn bộ checklist.
+
+Nghĩa là pilot vẫn có implementation, gồm:
+- Harness/fixture dùng chung.
+- Một số test đại diện.
+- Screenshot, log, trace, report và dependency handling.
+
+Mục tiêu là kiểm chứng **cách chạy và bằng chứng có đáng tin không**, không phải yêu cầu năm test đều Pass. Một test Fail đúng, có evidence đầy đủ, vẫn chứng minh pipeline hoạt động tốt.
+
+Năm ID trước đó chỉ là **đề xuất**, chưa chốt cứng.
+
+## 3. Bạn còn cần confirm gì?
+
+**Đã chốt:**
+- Chọn **Playwright Test**.
+- Áp dụng dependency để không chạy thừa.
+- **Chưa implement ở bước này** — mình giữ nguyên.
+
+**Chưa cần quyết định ngay, nhưng cần trước các bước tương ứng:**
+
+| Thời điểm | Cần xác nhận |
+|---|---|
+| Trước bắt đầu pilot | Cho phép triển khai local và cài dependency/browser cần thiết trong harness riêng. Việc chọn Playwright chưa được mình coi là phép cài ngay. |
+| Trước full cross-platform | Bộ **≥3 nền tảng** đáp ứng đề và quyền truy cập thực tế; hiện chưa chốt Safari/Android thật. |
+| Trước xuất evidence nộp bài | **Email sinh viên** để overlay; không suy từ email Git. |
+
+Còn chọn ID pilot, cấu trúc log, trace policy và chi tiết kỹ thuật mình có thể tự điều phối theo các nguyên tắc đã thống nhất, **không cần bạn duyệt từng việc nhỏ**. Commit/push, đăng Issue hoặc video vẫn là quyền riêng, chưa được cấp cho batch này.
+
+*Ghi chú: tra cứu bộ nhớ hiện tạm ngưng do lệch cấu hình chỉ mục; phần đối chiếu trên dựa vào ngữ cảnh và tài liệu đã đọc trong cuộc trò chuyện này.*
+`````
+
+## P-007 — Skill GUI: Tạo skill, harness và pilot local
+
+- Công cụ: OpenClaw main, có worker hỗ trợ authoring/review / OpenAI gpt-6.1-sol.
+- Phần dưới ghi thông điệp sửa lỗi launcher và phản hồi tổng kết cuối, không phải toàn bộ diễn tiến turn hoặc snapshot source AI ban đầu.
+
+### Prompt nguyên văn
+
+- Timestamp: 2026-11-07 10:47:45 (UTC+07:00)
+
+`````text
+oke cho phép triển khai tạo skill, triển khai local và cài dependency/browser cần thiết trong harness riêng
+`````
+
+### Thông điệp sửa lỗi launcher trong quá trình thực hiện
+
+- Timestamp: 2026-11-07 10:58:32 (UTC+07:00)
+- Giới hạn nguồn: API báo `contentTruncated=true` nhưng văn bản hiển thị không có dấu cắt; độ đầy đủ chưa xác minh.
+
+`````text
+Pilot đầu đã tạo đủ evidence và cho thấy dependency gate hoạt động: nhóm validation bị Blocked, còn test nhập liệu độc lập vẫn chạy.
+
+Tuy nhiên, khi mở ảnh kiểm tra, mình phát hiện launcher chưa nạp đúng Tailwind do sai working directory. Mình đã **đánh dấu run đó không hợp lệ cho kết luận GUI**, giữ nguyên bằng chứng, sửa launcher và thêm kiểm tra render trước execution. Mình sẽ chạy lại bằng run mới, không ghi đè run đầu.
+`````
+
+### Output tổng kết cuối — văn bản truy xuất được
+
+- Timestamp: 2026-11-07 11:17:12 (UTC+07:00)
+- Giới hạn nguồn: API báo `contentTruncated=true` nhưng văn bản hiển thị không có dấu cắt; độ đầy đủ chưa xác minh.
+
+`````text
+Đã hoàn tất **skill + harness riêng + pilot local**.
+
+- Skill: `hw03/skills/gui-checklist-execution-evidence/`, kèm source template để tạo lại harness.
+- Đã cài **Playwright Test 1.65.0 + Chromium** trong harness/cache riêng.
+- **44/44 kiểm tra regression đạt**; các vấn đề từ review đã được xử lý.
+
+### Kết quả pilot
+**13 instance thuộc 7 ID**, chỉ Chromium desktop:
+
+| Kết quả | Số lượng |
+|---|---:|
+| Pass | 3 |
+| Fail | 3 |
+| Blocked | 5 |
+| Cần review | 2 |
+
+**Dependency hoạt động đúng ý bạn:** GUI-048 Fail sau click đầu → năm biến thể validation phụ thuộc bị Blocked, không mở trang/click thêm. Test nhập số lượng độc lập vẫn chạy.
+
+Mỗi instance có folder evidence riêng: kết quả, screenshot, log, trace/video khi có thực thi, checksum và liên kết HTML report. Run lỗi launcher ban đầu được giữ nhưng loại khỏi kết luận GUI.
+
+**Không seed/reset, không sửa source SUT hoặc hồ sơ AI; chưa stage/commit/push.** Chưa chạy full 50 mục hay ≥3 nền tảng.
+
+Ví dụ GUI-045: đang tìm **MacBook** nhưng response cũ ghi đè thành **iPhone**:
+`````
+
+### Artifact và phạm vi đã kiểm chứng
+
+- [Skill procedure](../skills/gui-checklist-execution-evidence/SKILL.md), [pilot adapter](../skills/gui-checklist-execution-evidence/references/pilot-adapter.md), [harness source](../tools/gui-harness/README.md).
+- Run tham chiếu: `2026-11-07T04-14-40-565Z`, result schema `pilot-0.2`; 13 instance/7 ID trên Windows Chromium headless 1440×900: **3 Pass, 3 Fail, 5 dependency Blocked, 2 needs-review**. **44/44 unit/DOM regression checks đạt**; không đồng nghĩa 44 test GUI hoặc full checklist.
+- GUI-048 fail ở click đầu; các biến thể GUI-026 phụ thuộc giữ root reference và không mở trang/action. GUI-025 nhập số lượng độc lập vẫn chạy. GUI-040 thiếu empty-state message/icon; GUI-045 response cũ ghi đè kết quả mới. GUI-032 Home/Detail vẫn needs-review dù native passed.
+- Run `2026-11-07T03-55-37-468Z` bị loại vì launcher cwd/Tailwind; giữ evidence nhưng không dùng để kết luận GUI. AI sửa launcher/render gate rồi chạy run mới, không ghi đè.
+- Main AI đã sửa feedback oracle, provenance của lỗi kỹ thuật/oracle, phân biệt technical/dependency block và verifier schema/artifact sau tự kiểm và AI review. Các chỉnh sửa code là AI thực hiện, không khai là sinh viên tự viết.
+- Phản hồi tổng kết có ảnh `02-both-responses-complete.png` (1440×900), thuộc GUI-045 của run tham chiếu. Screenshot/trace/video và native report ở kho evidence local; raw artifacts chưa bảo đảm redacted để export.
+- Đây là fixed pilot adapter, không full JSON contract/generic DAG compiler; chưa full 50 ID, ≥3 nền tảng, real zoom, IME, browser chrome hoặc identity overlay. Source SUT/DB được kiểm tra không đổi; không có dữ liệu usability người thật mới.
