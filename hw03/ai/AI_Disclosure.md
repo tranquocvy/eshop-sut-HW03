@@ -36,7 +36,7 @@
 
 *Tick tất cả: [x] brainstorm  [x] outline  [x] viết nháp  [x] phản hồi  [x] sửa chữa  [x] code  [ ] phân tích dữ liệu  [ ] thiết kế đồ hoạ  [x] khác (ghi rõ: đọc đề/template, chọn phạm vi và setup repo).*
 
-Phạm vi sửa chữa gồm kế hoạch, checklist, setup repo, hồ sơ AI và helper/harness; không sửa production code để làm test đạt. AI tạo launcher riêng mở fixture READONLY mà không tải initializer/seed, không dùng để kết luận đường ghi dữ liệu. Đã có pilot GUI 13 instance/7 ID bằng Playwright Test; chưa full checklist/cross-platform hoặc phân tích dữ liệu usability.
+Phạm vi sửa chữa gồm kế hoạch, checklist, setup repo, hồ sơ AI và helper/harness; không sửa production code để làm test đạt. AI tạo launcher riêng mở fixture READONLY mà không tải initializer/seed, không dùng để kết luận đường ghi dữ liệu. Đã có pilot GUI 13 instance/7 ID bằng Playwright Test và lượt xử lý Task 1 đủ 52 ID/122 biến thể trên Windows Chromium: 119 biến thể/51 ID có UI observations. Kết quả hiệu lực sau AI review và review kiểm thủ công: 75 Pass, 31 Fail, 15 Blocked, 1 needs-review; không đồng nghĩa mọi assertion đều được thực thi. Chưa hoàn tất cross-platform Task 3 hoặc phân tích dữ liệu usability.
 
 ### **3\. Prompt / nhiệm vụ chính cho AI:**
 
@@ -72,7 +72,7 @@ AI đề xuất Home / Product Listing & Search (FR-05), với Product Detail (F
 
 **A-03 — Skill/harness GUI (P-005–P-007):** AI khảo sát framework/skill/plugin, đề xuất Playwright Test và cấu trúc evidence theo ID/variant/platform/attempt; sinh viên góp ý dependency và chọn runner. AI tạo repository-owned skill, contract/adapter, materializer/source template, harness và các test pilot; worker AI hỗ trợ authoring/review. AI sửa launcher/Tailwind và các vấn đề oracle/verifier sau tự kiểm/AI review rồi thực thi lại. Pilot cuối có 13 instance/7 ID trên Windows Chromium desktop: 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đây không phải full execution checklist 52 ID, ≥3 nền tảng hoặc human review của hai instance GUI-032.
 
-Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI tạo riêng. Chưa có dữ liệu người tham gia hoặc phiên usability mới. Raw screenshot/trace/video/native report local-only, chưa bảo đảm redacted để export.
+Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI tạo riêng. Chưa có dữ liệu người tham gia hoặc phiên usability mới. Raw screenshot/trace/video/native report được bảo toàn riêng, không mặc định đưa toàn bộ vào Git. Bộ xuất Task 1 gồm report, Excel và evidence Failed được chọn có mapping; chỉ có thể coi đã sẵn sàng xuất bản sau kiểm tra privacy, checksum và links.
 
 ### **5\. Cách tôi rà soát / chỉnh sửa / xác minh đầu ra AI:**
 
@@ -84,7 +84,13 @@ Tôi đã đọc và kiểm tra checklist, đề nghị giữ GUI-049/050; hai m
 
 Tôi đã kiểm tra pilot/evidence và xác nhận evidence từng GUI đầy đủ ngày 07/11/2026. Đây là review bằng chứng pilot, không khai đã review toàn bộ source hoặc kết luận Pass cho hai instance GUI-032.
 
-[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**; A-01, A-02 và A-03 **INCOMPLETE — chấp nhận sau sửa**. A-03 được chấp nhận trong phạm vi pilot sau các sửa đổi launcher/oracle/verifier do AI thực hiện. A-02 giữ INCOMPLETE vì bản AI cần sửa và tôi đã bổ sung GUI-051/052, không phải vì tôi chưa review hoặc chưa bổ sung. Verdict thiết kế không chứng nhận full execution/cross-platform; A-03 cũng chưa chứng nhận reuse hoặc setup một lệnh.
+[AI Audit Report](AI_Audit_Report.md) ghi A-00 **VALID**; A-01, A-02 và A-03 **INCOMPLETE — chấp nhận sau sửa**; A-04 **INCOMPLETE — execution/report còn giới hạn coverage và log được ghi rõ**. A-03 được chấp nhận trong phạm vi pilot sau các sửa đổi launcher/oracle/verifier do AI thực hiện. A-02 giữ INCOMPLETE vì bản AI cần sửa và tôi đã bổ sung GUI-051/052, không phải vì tôi chưa review hoặc chưa bổ sung. Verdict thiết kế không chứng nhận full execution/cross-platform; A-03 cũng chưa chứng nhận reuse hoặc setup một lệnh.
+
+### Bổ sung A-04 — Thực thi và tổng hợp Task 1
+
+AI tạo adapter local, thu observation, đối chiếu ảnh/DOM/network, rà false Pass và tổng hợp báo cáo/Excel/findings từ kết quả đã lưu. Native collector báo 122 passed không phải 122 GUI Pass. Raw assessment ban đầu là 44 Pass/26 Fail/14 Blocked/38 needs-review; effective assessment hiện hành là 75/31/15/1. GUI-033 Home/Detail được chốt theo xác nhận kiểm thủ công của sinh viên, không khai là agent đã chạy bổ sung reverse traversal đầy đủ. GUI-036 Detail còn applicability; phần recovery của GUI-051 đạt nhưng message-disappearance bị chặn do không có message ban đầu.
+
+[Report Task 1](../gui/task1/START-HERE.md) là bộ xuất dẫn xuất; không sửa SUT hoặc ghi đè attempt gốc. Transcript cho giai đoạn mới chưa được bổ sung đầy đủ vào PromptLog; không tự dựng prompt/output lịch sử. AI không khai đã thực hiện usability với người thật.
 
 ### **6\. Trích dẫn (nếu môn yêu cầu):**
 

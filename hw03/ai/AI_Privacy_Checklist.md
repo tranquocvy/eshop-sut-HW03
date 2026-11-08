@@ -34,17 +34,17 @@
 * [x] Đính kèm AI Use Disclosure Form.  
 * [ ] Sẵn sàng cho vấn đáp ngẫu nhiên 5–7 phút tuần kế nộp bài.
 
-**Căn cứ tại giai đoạn chuẩn bị / thiết kế và pilot GUI**
+**Căn cứ thiết kế, pilot và lượt Task 1 Windows Chromium**
 
 | Nội dung | Bằng chứng / trạng thái thực tế |
 | :---- | :---- |
 | Công cụ AI | OpenClaw main/worker reviewer / OpenAI gpt-6.1-sol và PDF extractor / gpt-6-astra. Mục “Claude Pro” trong mẫu không áp dụng cho các công cụ này; HW03 §8 cho phép chọn công cụ AI bất kỳ. |
-| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-00 VALID; A-01, A-02 và A-03 INCOMPLETE (chấp nhận sau sửa). Checklist đầu 48 mục, hiện hành v0.5 có 52 mục. AI review/sửa và phát hiện GUI-049/050; sinh viên đã review, chọn giữ hai mục đó và bổ sung GUI-051/052 cùng lý do AI bỏ sót. A-02 INCOMPLETE vì bản AI được sửa/bổ sung, không phải vì thiếu review/bổ sung của sinh viên. A-03 ghi skill/harness trong phạm vi pilot; 4 artifact đều có verdict, không chứng nhận toàn bộ bài nộp. |
+| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-00 VALID; A-01, A-02 và A-03 INCOMPLETE (chấp nhận sau sửa). Checklist đầu 48 mục, hiện hành v0.5 có 52 mục. AI review/sửa và phát hiện GUI-049/050; sinh viên đã review, chọn giữ hai mục đó và bổ sung GUI-051/052 cùng lý do AI bỏ sót. A-02 INCOMPLETE vì bản AI được sửa/bổ sung, không phải vì thiếu review/bổ sung của sinh viên. A-03 ghi skill/harness trong phạm vi pilot; A-04 INCOMPLETE ghi execution/report Task 1 và giới hạn coverage/log. 5 artifact có verdict, không chứng nhận toàn bộ bài nộp. |
 | Log tương tác | [PromptLog](PromptLog.md) là bản trích tuyển 6 tương tác P-000/P-002/P-004/P-005/P-006/P-007, không phải toàn bộ lịch sử theo HW03 §9. P-000/P-005 thiếu cuối; P-004/P-006/P-007 có giới hạn nguồn ghi tại từng mục. Chưa xác nhận log đủ mọi prompt/phản hồi. |
-| Code và thực thi | Không sửa code SUT. AI tạo launcher READONLY, skill/harness và test pilot riêng; không tải initializer/seed. Pilot 13 instance/7 ID trên Windows Chromium desktop có 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Chưa full checklist/cross-platform hoặc phiên usability. |
-| AI Critique và Mandatory Disclosure | Chưa có báo cáo chính hoặc AI Critique 200–300 từ; Mandatory Disclosure trong Audit còn placeholder. |
+| Code và thực thi | Không sửa code SUT. AI tạo launcher READONLY, skill/harness và test pilot riêng; không tải initializer/seed. Pilot 13 instance/7 ID trên Windows Chromium desktop có 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đã xử lý lượt Task 1 đủ 52 ID/122 biến thể (119 có UI observations), effective 75 Pass/31 Fail/15 Blocked/1 needs-review. Blocked và applicability chưa được coi là đạt; chưa hoàn tất Task 3 cross-platform hoặc phiên usability. |
+| AI Critique và Mandatory Disclosure | Đã xuất bộ report Task 1 Markdown/HTML/PDF và Excel; AI Critique 200–300 từ và Mandatory Disclosure vẫn cần hoàn thiện đúng trách nhiệm tác giả, không tự ký hay giả nhận xét cá nhân của sinh viên. |
 | Disclosure | [AI_Disclosure.md](AI_Disclosure.md) đi cùng hồ sơ này; chữ ký chưa điền. |
-| Evidence pilot | Raw screenshot/trace/video/native report được giữ local-only; chưa bảo đảm redacted để export. Sinh viên xác nhận evidence từng GUI đầy đủ ngày 07/11/2026. Hai instance GUI-032 vẫn needs-review; xác nhận evidence không thay kết luận Tab-order hoặc chứng nhận tính xác thực từ bytes đơn lẻ. |
+| Evidence pilot | Raw screenshot/trace/video/native report được giữ local-only; chưa bảo đảm redacted để export. Sinh viên xác nhận evidence từng GUI đầy đủ ngày 07/11/2026. Trong snapshot pilot lịch sử, hai instance GUI-032 còn needs-review; không dùng trạng thái lịch sử này thay kết quả full run hiện hành; xác nhận evidence không thay kết luận Tab-order hoặc chứng nhận tính xác thực từ bytes đơn lẻ. |
 | Dữ liệu cá nhân | Hồ sơ hiện có họ tên, MSSV và lớp của sinh viên; chưa có dữ liệu người tham gia usability. |
 
 ## **4\. Cam đoan Cuối cùng**
