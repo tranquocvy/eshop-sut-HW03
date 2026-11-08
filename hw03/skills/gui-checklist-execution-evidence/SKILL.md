@@ -7,9 +7,9 @@ description: "Thực thi GUI checklist có oracle và prerequisite graph; dùng 
 
 ## 1. Chốt đầu vào và quyền
 
-Đọc checklist, spec, kế hoạch, baseline và phạm vi được duyệt. Dùng [JSON contract](references/contract.md) và [manifest mẫu](assets/manifest-example.json); mẫu không là kết quả đã chạy hoặc full manifest. Playwright Test + reporter native là lựa chọn đã duyệt cho workflow này; dependency ở harness riêng, không trong SUT. Không tự cài plugin/framework khác. Skill không mặc định cấp quyền chạy server, full suite, stage, commit, push hoặc publish. Chỉ đọc checklist/PLAN/spec, không tự đổi expected hay hồ sơ AI.
+Đọc checklist, spec, kế hoạch, baseline và phạm vi được duyệt. Dùng [JSON contract](references/contract.md) và [manifest mẫu](assets/manifest-example.json); mẫu không là kết quả đã chạy hoặc full manifest. Adapter đi kèm dùng Playwright Test + reporter native; dependency ở harness riêng, không trong SUT. Công cụ hoặc framework bổ sung cần phù hợp phạm vi thực thi và quyền hiện có. Skill không mặc định cấp quyền chạy server, full suite, stage, commit, push hoặc publish. Chỉ đọc checklist/PLAN/spec, không tự đổi expected hay hồ sơ AI.
 
-Dùng [source runner trong repository](../../tools/gui-harness/README.md) và [materializer](scripts/materialize-harness.mjs) để tạo harness làm việc mới ngoài repo. Skill cần đi cùng `hw03/tools/gui-harness` trong repository; copy riêng folder skill không mang theo runner. Materializer từ chối target có sẵn, chỉ copy source, không tự install/start. Sau đó mới cài dependency/browser nếu được duyệt. Nhận SUT_ROOT, HARNESS_ROOT, RUNS_ROOT, URL và baseline từ cấu hình, không hardcode máy. Ví dụ bố trí HW03: harness tại _working/eshop-sut-HW03/t02-harness, output cạnh nó tại ../t02-runs; đây chỉ là minh họa deployment.
+Dùng [source runner trong repository](../../tools/gui-harness/README.md) và [materializer](scripts/materialize-harness.mjs) để tạo harness làm việc mới ngoài repo. Skill cần đi cùng `hw03/tools/gui-harness` trong repository; copy riêng folder skill không mang theo runner. Materializer từ chối target có sẵn, chỉ copy source, không tự install/start. Sau đó mới cài dependency/browser nếu được duyệt. Nhận SUT_ROOT, HARNESS_ROOT, RUNS_ROOT, URL và baseline từ cấu hình, không hardcode máy. Với adapter đi kèm, map sang các biến SUT_REPO, SUT_RUNTIME, SUT_DEPENDENCY_SOURCE và GUI_RUNS_ROOT theo tài liệu adapter.
 
 **Xong khi:** input có nguồn/hash; quyền cài/chạy/ghi/export rõ; thiếu quyết định an toàn được ghi blocker trước mutation.
 
@@ -64,6 +64,38 @@ Kiểm JSON, unique instance keys, graph, path trong output root, file tồn t�
 
 Đọc [adapter pilot v0.1](references/pilot-adapter.md) để biết commands/schema thực tế và giới hạn. Harness có `npm run unit`, `npm run pilot`, `npm run verify -- <run-directory>`; kiểm package.json trước gọi. Adapter chỉ hỗ trợ pilot cố định, không phải full contract v1 hay compiler chung. Full/reuse branches chưa có adapter tương ứng phải blocked/not-run, không lặng lẽ bỏ qua trường input hoặc đổi kết quả cho hợp schema.
 
-Không tự commit. Nếu tương lai được phép, kiểm effective author và committer chính xác `tranquocvy <quocvy23072005@gmail.com>` rồi verify commit metadata; giữ tác giả bên thứ ba. Không stage/push/publish mặc định.
+### 6.1. Bộ output bắt buộc để người dùng đọc và review
+
+Sau mỗi lượt pilot/full/reuse hoặc review evidence, tạo một lối vào rõ ràng trong thư mục output đã được phép; không chỉ trả đường dẫn `runs/` hoặc native HTML report. Đây là nghĩa vụ bàn giao của agent dùng skill, **không phải tuyên bố adapter pilot hiện đã tự sinh đủ các file này**. Agent bổ sung report từ kết quả thật; không mở rộng implementation/SUT ngoài phạm vi được phép chỉ để tạo báo cáo.
+
+- **`START-HERE.md` — mở đầu tiên:** xác định run được dùng, phạm vi/platform/viewport, báo cáo nào có hiệu lực và thứ tự đọc. Có link tương đối trực tiếp đến report tổng, report chi tiết/native và file human review; ghi mục đích từng file. Không bắt user tự chọn giữa nhiều run hoặc tự đoán report cũ/mới. Tên có thể map sang báo cáo tương đương đã có, nhưng phải chỉ rõ một entry point duy nhất.
+- **Report tổng đọc được + dữ liệu máy đọc** (ví dụ `SUMMARY.md` và `summary.json`): tổng ID khác tổng instances/attempts; số có observation/UI execution khác số chỉ scheduled/blocked; counts pass/fail/blocked/needs-review/not-applicable/not-run. Có bảng theo ID và các biến thể/page/platform/viewport, Actual/Notes hoặc lý do, finding R-bug/H-design và link result/evidence. Đếm execution từ observation/action/navigation đã được ghi nhận, không chỉ từ một wrapper log. Native passed chỉ chứng minh runner/thu evidence hoàn tất, không là GUI Pass.
+- **Report chi tiết/native** (ví dụ `report/index.html`): chỉ vị trí xem từng test, ảnh/video/trace và trường assessment thực sự. Nếu native report chỉ hiện collector pass, cảnh báo ngay tại entry point/report tổng và lời bàn giao, không hướng dẫn user lọc Fail theo native status thay GUI assessment.
+- **Một file `HUMAN-REVIEW.html`:** mở trực tiếp để xem đúng queue cần xử lý, không yêu cầu user duyệt toàn cây artifacts. Nếu không có review pending, vẫn tạo file ghi rõ queue rỗng; không bịa câu hỏi để đủ mẫu. Với lượt bị chặn trước execution, ghi chưa có evidence và blocker, không tạo ảnh hoặc review giả. Không nhúng telemetry, CDN, upload hay dịch vụ ngoài vào file; giữ local và link tới artifacts được phép.
+
+Nếu report/assessment được sửa sau run, dùng supplement append-only theo contract; giữ nguyên attempts và raw verdict. Entry point trỏ đúng **effective report**, trình bày raw và effective counts khi khác nhau, giải thích thay đổi và report nào được ưu tiên. Không để user phải tự đối chiếu nhiều bảng mâu thuẫn hoặc đọc internal correction logs để tìm kết luận hiện hành.
+
+### 6.2. Nội dung cụ thể của HUMAN-REVIEW.html
+
+Mỗi thẻ/hàng có khóa **ID + variant + page + platform + viewport + attempt** và phải trả lời đầy đủ:
+
+1. **Vì sao chưa kết luận / cần ai làm:** phân biệt xác nhận thị giác của người dùng, kỹ thuật agent phải kiểm, evidence/coverage còn thiếu, thiếu capability/prerequisite, và applicability cần làm rõ. `needs-review` một mình không là yêu cầu hành động. Không gộp tất cả thành “user hãy chấm Pass/Fail”.
+2. **Cần xem điều gì:** câu hỏi cụ thể cho assertion chưa chốt, kèm Expected có nguồn và observation/nhận xét AI hiện có, ghi rõ phần nào đã kiểm/phần nào chưa. Ví dụ layout hỏi vùng nào chồng/che hoặc heading có bị ép từng từ, không chỉ ghi “review layout”.
+3. **Mở đúng evidence nào:** link trực tiếp và tên checkpoint cần so (before/after, đầu/cuối trang, focus-N, ảnh nguồn, video đúng instance); thứ tự xem và control/sản phẩm tương ứng. Với keyboard, hiển thị chuỗi focus/action đã giải mã và bước cần đối chiếu; không bắt user đọc JSONL để biết đang xem gì. Với ảnh, ghi có đủ vùng/sản phẩm và ảnh đã tải chưa; ảnh viewport không tự chứng minh toàn trang.
+4. **Cần trả lời gì:** mẫu có instance key và lựa chọn phù hợp như đạt phần quan sát / không đạt + vị trí hoặc bước / chưa đủ evidence / cần làm rõ applicability. Nói rõ user trả lời qua đâu. Nếu chỉ trả lời chat thì không tạo nút lưu giả; nếu có chức năng lưu phải kiểm chứng việc lưu thực sự. Không tự ghi user đã xác nhận hoặc tự ký.
+5. **Giới hạn và bước còn lại:** xác nhận ảnh không thay kiểm accessible name, DOM/network hoặc tái thực thi. Agent tự xử lý kỹ thuật có thể kiểm; evidence thiếu do runner phải ghi cần bổ sung, không yêu cầu user tự bù test hay approve phần chưa chứng minh. Thiếu initial state/message thì không suy assertion message disappearance đạt từ việc dữ liệu cuối xuất hiện; ghi riêng phần recovery đã thấy và phần còn thiếu. Không hỏi user hợp thức hóa Pass khi prerequisite/capability thiếu hoặc tự đặt requirement để giải quyết applicability.
+
+Chỉ đưa các assertions chưa kết luận vào yêu cầu xác nhận; giữ nguyên các lỗi độc lập đã có proof. Một user review chỉ áp dụng cho các biến thể/assertions họ thực sự xác nhận, không auto-propagate cho ID/page/platform khác. Nếu có phát hiện rõ từ kỹ thuật, ghi bằng chứng/đề xuất của AI để user biết họ đang review gì, không dùng human lane để né kết luận có thể kiểm. Human review muộn là event/supplement mới, không sửa ảnh/result gốc.
+
+### 6.3. Kiểm và trả output cuối
+
+- Đối chiếu queue với **effective results**, không bỏ sót pending instance hoặc giữ nhầm raw Pass đã bị review lại; giữ phần cần agent xử lý tách khỏi phần yêu cầu user hành động.
+- Kiểm mọi link/ảnh/video chỉ đúng attempt, tồn tại và nằm trong output root được phép; không yêu cầu người dùng mở link hỏng hoặc ảnh không đủ để trả lời câu hỏi. Kiểm HTML render/đọc được bằng browser hiện có nếu khả dụng; nếu chưa kiểm render/delivery thì nói rõ, không suy file local đồng nghĩa user truy cập được. Không tự cài công cụ chỉ để render.
+- Lời bàn giao cuối ngắn, gồm: phạm vi và observed coverage; counts GUI với đúng đơn vị; **mở đâu trước / xem tổng ở đâu / review ở đâu** bằng đường dẫn hoặc link chính xác của run; user cần trả lời gì và blockers không giải quyết được bằng review. Nêu file có hiệu lực khi có supplement và cảnh báo native pass khác GUI pass.
+- Không bắt user đọc log/trace thô mặc định, không đổ toàn bộ danh sách artifacts vào chat; log/trace là phần kỹ thuật hỗ trợ khi cần. Báo cáo mới chỉ tổng hợp quan sát đã có, không là lần execution mới hoặc chứng minh đã hoàn tất acceptance. Không tự commit/publish bộ output.
+
+**Xong khi:** entry point và report tổng có counts nhất quán; HUMAN-REVIEW.html có câu hỏi/evidence/cách trả lời rõ cho từng pending instance hoặc ghi queue rỗng; links được kiểm, trạng thái human review vẫn trung thực; người dùng nhận hướng dẫn mở đúng file và phần cần họ làm.
+
+Skill chỉ thực thi và bàn giao kết quả GUI; stage/commit/push hoặc publish không phải bước mặc định. Không chứa Git identity, thông tin tài khoản cá nhân hoặc lịch sử phối hợp riêng; publication phải theo yêu cầu riêng của tác vụ.
 
 **Xong khi:** báo kiểm chứng thật đã chạy, artifacts/link, counts pass/fail/blocked/needs-review/not-applicable/not-run, gaps và quyền thiếu. Không gọi hoàn tất execution khi còn variants chưa chạy. Automated pilot không thay usability pilot hay 7 phiên người thật/consent.

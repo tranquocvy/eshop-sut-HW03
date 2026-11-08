@@ -4,7 +4,7 @@
 
 ## Cấu hình triển khai hiện tại
 
-Source runner ở [hw03/tools/gui-harness](../../../tools/gui-harness/README.md), tách khỏi skill hướng dẫn. Harness thực thi đã dùng nằm ngoài repo tại _working/eshop-sut-HW03/t02-harness trong bố trí HW03. Materializer copy source runner ra thư mục làm việc mới; không copy dependency/browser/run evidence. Đọc package.json và README.md harness trước thực thi. Có npm run unit, npm run pilot, npm run verify -- <run-directory>; node scripts/validate-skill.mjs là focused validator Node, không thay tuyên bố đã chạy bundled Python validator.
+Source runner ở [hw03/tools/gui-harness](../../../tools/gui-harness/README.md), tách khỏi skill hướng dẫn. Harness thực thi và run evidence nằm ngoài source repository; chọn thư mục từ cấu hình deployment. Materializer copy source runner ra thư mục làm việc mới; không copy dependency/browser/run evidence. Đọc package.json và README.md harness trước thực thi. Có npm run unit, npm run pilot, npm run verify -- <run-directory>; node scripts/validate-skill.mjs là focused validator Node, không thay tuyên bố đã chạy bundled Python validator.
 
 Biến thực tế: SUT_REPO, SUT_RUNTIME, SUT_DEPENDENCY_SOURCE, GUI_RUNS_ROOT. GUI_RUN_DIR do orchestrator sinh mới mỗi run; GUI_STAGE=root/main là hai stage native report. URL pilot cố định frontend http://127.0.0.1:5173 và API http://localhost:3000 vì source SUT; workflow reuse khác phải cấu hình adapter mới, không giả generic URL đã hỗ trợ.
 

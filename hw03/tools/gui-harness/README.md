@@ -23,7 +23,7 @@ Chạy các lệnh thực thi từ thư mục harness làm việc đã materiali
 
 ## Input và phạm vi thực tế
 
-SUT_REPO, SUT_RUNTIME, SUT_DEPENDENCY_SOURCE, GUI_RUNS_ROOT là overrides; mặc định theo bố trí workspace hiện tại. SUT_DEPENDENCY_SOURCE trỏ runtime khảo sát có dependency sẵn; tạo junction node_modules từ runtime mới tới dependency này, không sửa package/source bên đó. Vite cache riêng từng run. Thiếu dependency/fixture hoặc port 3000/5173 đang có process thì dừng; không kill process lạ.
+SUT_REPO, SUT_RUNTIME, SUT_DEPENDENCY_SOURCE, GUI_RUNS_ROOT cấu hình repository, runtime, dependency source và output. Đặt tường minh khi materialize sang layout khác; không coi default tương đối trong scripts/env.mjs là đường dẫn triển khai chung. SUT_DEPENDENCY_SOURCE trỏ runtime có dependency sẵn; tạo junction node_modules từ runtime mới tới dependency này, không sửa package/source bên đó. Vite cache riêng từng run. Thiếu dependency/fixture hoặc port 3000/5173 đang có process thì dừng; không kill process lạ.
 
 Runtime copy tracked backend/frontend-web và DB repo; source kiểm hash; adapter mở DB READONLY, chèn module cache thay database.js trước import server.js nên initializer không chạy. Không hỗ trợ nghiệp vụ ghi DB. UI network chỉ GET products/categories, không mở Cart/login/checkout. Đây là precondition phù hợp pilot đường đọc + React memory UI, không phải production-equivalent environment cho mọi nghiệp vụ.
 
@@ -52,4 +52,4 @@ Verifier kiểm exact checksum inventory/path containment, regular/nonempty file
 - `tests/unit/`: regression của chính harness, không phải kết quả GUI trên SUT.
 - Sau khi đổi source, chạy `node scripts/refresh-source-manifest.mjs` ngay trong source runner để cập nhật `bundle-manifest.json`. Không dùng script bundle cũ của harness lịch sử để copy source về skill.
 - Materializer chỉ copy các file có trong manifest và kiểm hash; không mang theo dependency/browser/log dù source có file ngoài inventory.
-- Pilot được chấp nhận trước lần tách folder có ID `2026-11-07T04-14-40-565Z`. Lần tách source không tự thành execution GUI mới; giữ nguyên run/harness lịch sử để đối chiếu.
+- Việc materialize hoặc thay đổi cấu trúc source không tự thành execution GUI mới. Mỗi lần thực thi phải có run ID và evidence riêng; giữ nguyên các run trước để đối chiếu.
