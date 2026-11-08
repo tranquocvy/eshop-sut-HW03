@@ -1,0 +1,158 @@
+[
+  {
+    "path": "issue-01-R01-header.png",
+    "sha256": "c179f43fbf9d01bc71f0ce8a72e74ee48e23f6e416474079fbe1912d9bf6b45c"
+  },
+  {
+    "path": "issue-01-R01-screenshot.png",
+    "sha256": "c076de78cc2ae88617001be63bdbc24b48fe6e33a8f5c42eaa71614a77763b14"
+  },
+  {
+    "path": "issue-02-R02-header.png",
+    "sha256": "2daca780b77267f77a6c7b3e4d592424d2c0e32f5cd1a1843a466505e309210d"
+  },
+  {
+    "path": "issue-02-R02-screenshot.png",
+    "sha256": "6b251f5a02283c764c28c1cc24f31c4b62e7f92fc294e7d5e85b86cb808578d5"
+  },
+  {
+    "path": "issue-03-R03-header.png",
+    "sha256": "14b0d17f53608176079cf9f188d3ca3fafd6ead95258354903b4f1904530acee"
+  },
+  {
+    "path": "issue-03-R03-screenshot.png",
+    "sha256": "2a9a9b1e3801041a75a3821682b492ea990dfb291ebba666d6d5f08fc168f62b"
+  },
+  {
+    "path": "issue-04-R04-header.png",
+    "sha256": "75c9ed21b96be8559e58c6ec0d7f380bb3c8b0c3a86abe26cb6296e27574e841"
+  },
+  {
+    "path": "issue-04-R04-screenshot.png",
+    "sha256": "7e97a837b76ed4c805ca148bba7fb4075ed420427c00fe74645e9a6aa8584c11"
+  },
+  {
+    "path": "issue-05-R05-header.png",
+    "sha256": "305456bd99d54a293aacec0f2333ae37a13e594cda237a0d227e606ee209cdf3"
+  },
+  {
+    "path": "issue-05-R05-screenshot.png",
+    "sha256": "1a7161dd4ecf40312128f5f7dc60588521d9105fbb62b6fa28470962488eef2d"
+  },
+  {
+    "path": "issue-06-H01-header.png",
+    "sha256": "1643c944d2cf5b60a2e69045bbc473b2cfac474df5f404496921247d17c3b2d6"
+  },
+  {
+    "path": "issue-06-H01-screenshot.png",
+    "sha256": "000b4778cb3a4d5ddf877a254219c91d1ec8735ab665f1be2cb8c7832e363814"
+  },
+  {
+    "path": "issue-07-H02-header.png",
+    "sha256": "ed7f838bb3405ce587e37e2ff575b13579d76a47faf599edbf5a4a4fb4f4c92b"
+  },
+  {
+    "path": "issue-07-H02-screenshot.png",
+    "sha256": "5187fbe181f41388a08eeea7006bfac1253ad41976cf1cd86e9fd9b4dc29f7e5"
+  },
+  {
+    "path": "issue-08-R06-header.png",
+    "sha256": "9585105c7d7cfc888cb1ebda85f7ef927db6644de99f3c9a92bec558dbdd52d2"
+  },
+  {
+    "path": "issue-08-R06-screenshot.png",
+    "sha256": "5d00a3a3ca4880c9ebdad955eaad8e61d4f5a97b5fd036e49543a7d0c1d7b72c"
+  },
+  {
+    "path": "issue-09-H03-header.png",
+    "sha256": "3a72eb43321578f934fa1425df06ad75c1f8494738404a2ff5a45b696b3a5017"
+  },
+  {
+    "path": "issue-09-H03-screenshot.png",
+    "sha256": "011507ce453ff966d32086ff60529638df815c8e8256c16cb466e85b2c5e6143"
+  },
+  {
+    "path": "issue-10-R07-header.png",
+    "sha256": "b641f86a17bebc219a2126fcda98f4e20632076aaf1b23c79d82e38f17dbd50c"
+  },
+  {
+    "path": "issue-10-R07-screenshot.png",
+    "sha256": "99c4d3ba31ddde8eaea24b88d0fafe1a36f4ca5f0fe886c5429286d28228c972"
+  },
+  {
+    "path": "issue-11-R08-header.png",
+    "sha256": "3187beba254ef98be291bfadb9f85cf096f6eb391aa67645e66ee6a684103f58"
+  },
+  {
+    "path": "issue-11-R08-screenshot.png",
+    "sha256": "104864b031628e1cdf062beb47453accb7544811b3c6b63e739f2c36eb045ade"
+  },
+  {
+    "path": "issue-12-R09-header.png",
+    "sha256": "caa2eff2cb402468e88693f7310aefedaeefd901925a4d01635623b801ff9151"
+  },
+  {
+    "path": "issue-12-R09-screenshot.png",
+    "sha256": "dd386709b43db186fba448053c493884e6e9a24feaceb61b2ccc464e824d2ead"
+  },
+  {
+    "path": "issue-13-R10-header.png",
+    "sha256": "316e3bc609197adecee791088dbc374c85df90f24eb00d2be7df7880dc0fd40b"
+  },
+  {
+    "path": "issue-13-R10-screenshot.png",
+    "sha256": "7214df1ae09eaf907164ea8e14bfcf17b030bdc3b60299910c9fb46eb7f02ec3"
+  },
+  {
+    "path": "issue-14-R11-header.png",
+    "sha256": "0709515a44918b8eb74c37b6c92b17a52306c86c89521a239b3e6cd9f845b273"
+  },
+  {
+    "path": "issue-14-R11-screenshot.png",
+    "sha256": "bcea81a380d280dd8858e36347b250795247afd639e8943cc11e9312087999bd"
+  },
+  {
+    "path": "issue-15-H04-header.png",
+    "sha256": "fe5b089fc1cfca3fa46e8e07b5682b09d607ee9d77b4a6607959c3ad596dae97"
+  },
+  {
+    "path": "issue-15-H04-screenshot.png",
+    "sha256": "e212817b8ebbe2ff83bac11b00a839ec1b73aca1e8d333ffd31533fbdb632c60"
+  },
+  {
+    "path": "issue-16-H05-header.png",
+    "sha256": "63feb52d90c474681e71a547a82b7093be97da25fbe2e0a11da93f28176e554f"
+  },
+  {
+    "path": "issue-16-H05-screenshot.png",
+    "sha256": "2c3ba9ee5b48d434fe643ba93c57043fd898b3180d4d427cc418a7289b052a8f"
+  },
+  {
+    "path": "issue-17-H06-header.png",
+    "sha256": "aa1e39bc9bbbb10f370fd226501689b8cb3ecaedd861ba7b148b407b3f207743"
+  },
+  {
+    "path": "issue-17-H06-screenshot.png",
+    "sha256": "27b4127f94aab77cefc7d3c4fe4cfc9c871a8074f86fde74a08384a05fabe853"
+  },
+  {
+    "path": "issue-18-H07-header.png",
+    "sha256": "62e9980ae00371416e9a75cf1a9469a536cb2cfc8c0d6ff085a55f1f17524ecc"
+  },
+  {
+    "path": "issue-18-H07-screenshot.png",
+    "sha256": "5ab228ebade8cd699773df17ae32327ee2c8956b43936ac4b59ae844195dd583"
+  },
+  {
+    "path": "issue-19-R12-header.png",
+    "sha256": "a5c67dc9374c7132a6a1aa254090f8a9905d937cc28a21fd3e31a5766b59d3ce"
+  },
+  {
+    "path": "issue-19-R12-screenshot.png",
+    "sha256": "9d2f859a8ced36770169a0dbe329a920b768888f2807743c7a6d11f60dc3030c"
+  },
+  {
+    "path": "issues-list.png",
+    "sha256": "b4189b89be3ad375dc57baa8bf694e93f929fb63930090336c04294ca5e6be91"
+  }
+]
