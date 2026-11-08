@@ -1,0 +1,341 @@
+{
+  "sourceRunId": "2026-11-08T07-51-06-876Z",
+  "entries": [
+    {
+      "instanceKey": "GUI-004--default--H--windows-chromium--VD",
+      "source": "GUI-004/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-005--default--D--windows-chromium--VD",
+      "source": "GUI-005/default--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-006--all-seed--H--windows-chromium--VD",
+      "source": "GUI-006/all-seed--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-047--default--H--windows-chromium--VD",
+      "source": "GUI-047/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/b93b5c8f12d71a0c.png",
+      "sha256": "b93b5c8f12d71a0cce9e03b06de7a7480b056b7614df5ba498e999395c8a102f"
+    },
+    {
+      "instanceKey": "GUI-008--default--H--windows-chromium--VD",
+      "source": "GUI-008/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-010--default--D--windows-chromium--VD",
+      "source": "GUI-010/default--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-012--default--H--windows-chromium--VM",
+      "source": "GUI-012/default--H/windows-chromium--VM/attempt-001/screenshots/bottom.png",
+      "path": "evidence/screenshots/027c00545d24ae57.png",
+      "sha256": "027c00545d24ae57a420dfb8b59b40525036c9e71eb74a00d414e61be36ce2dd"
+    },
+    {
+      "instanceKey": "GUI-012--default--H--windows-chromium--VM",
+      "source": "GUI-012/default--H/windows-chromium--VM/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/ed54d9c7bcec0a92.png",
+      "sha256": "ed54d9c7bcec0a92ea7c241dfa58b99bce02d0823b5676e12b98589c614e19d4"
+    },
+    {
+      "instanceKey": "GUI-016--default--H--windows-chromium--VD",
+      "source": "GUI-016/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-022--default--H--windows-chromium--VD",
+      "source": "GUI-022/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/5ea62fc012e52c30.png",
+      "sha256": "5ea62fc012e52c30f097994f8e1a6cb45e046a58be6d66ff528a427f421fa1dd"
+    },
+    {
+      "instanceKey": "GUI-023--default--D--windows-chromium--VD",
+      "source": "GUI-023/default--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-030--default--D--windows-chromium--VD",
+      "source": "GUI-030/default--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-031--add-click--D--windows-chromium--VD",
+      "source": "GUI-031/add-click--D/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-031--add-click--D--windows-chromium--VD",
+      "source": "GUI-031/add-click--D/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/1417dac39677b6ab.png",
+      "sha256": "1417dac39677b6ab1a387ca348fbfbe959dd9d1ff35eb5ecbf228fa000355bf1"
+    },
+    {
+      "instanceKey": "GUI-031--add-click--D--windows-chromium--VD",
+      "source": "GUI-031/add-click--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/1417dac39677b6ab.png",
+      "sha256": "1417dac39677b6ab1a387ca348fbfbe959dd9d1ff35eb5ecbf228fa000355bf1"
+    },
+    {
+      "instanceKey": "GUI-031--add-click--H--windows-chromium--VD",
+      "source": "GUI-031/add-click--H/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-031--add-click--H--windows-chromium--VD",
+      "source": "GUI-031/add-click--H/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/411405ad9a4af474.png",
+      "sha256": "411405ad9a4af474cf962c76ed953e1a9ca4841b8558624ba244505893c9fe19"
+    },
+    {
+      "instanceKey": "GUI-031--add-click--H--windows-chromium--VD",
+      "source": "GUI-031/add-click--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/411405ad9a4af474.png",
+      "sha256": "411405ad9a4af474cf962c76ed953e1a9ca4841b8558624ba244505893c9fe19"
+    },
+    {
+      "instanceKey": "GUI-031--add-Enter--D--windows-chromium--VD",
+      "source": "GUI-031/add-Enter--D/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-031--add-Enter--D--windows-chromium--VD",
+      "source": "GUI-031/add-Enter--D/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/f783fe51aa2015c4.png",
+      "sha256": "f783fe51aa2015c4e46e27964b85671e41b3990acf4e5efb50a8103b4e68bef8"
+    },
+    {
+      "instanceKey": "GUI-031--add-Enter--D--windows-chromium--VD",
+      "source": "GUI-031/add-Enter--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/f783fe51aa2015c4.png",
+      "sha256": "f783fe51aa2015c4e46e27964b85671e41b3990acf4e5efb50a8103b4e68bef8"
+    },
+    {
+      "instanceKey": "GUI-031--add-Enter--H--windows-chromium--VD",
+      "source": "GUI-031/add-Enter--H/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-031--add-Enter--H--windows-chromium--VD",
+      "source": "GUI-031/add-Enter--H/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/7a4b2c5d40d1df40.png",
+      "sha256": "7a4b2c5d40d1df40c6c1b231df4558ccf3bb8a7022df52d96223c7f0a77c1738"
+    },
+    {
+      "instanceKey": "GUI-031--add-Enter--H--windows-chromium--VD",
+      "source": "GUI-031/add-Enter--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7a4b2c5d40d1df40.png",
+      "sha256": "7a4b2c5d40d1df40c6c1b231df4558ccf3bb8a7022df52d96223c7f0a77c1738"
+    },
+    {
+      "instanceKey": "GUI-031--add-Space--D--windows-chromium--VD",
+      "source": "GUI-031/add-Space--D/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-031--add-Space--D--windows-chromium--VD",
+      "source": "GUI-031/add-Space--D/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/f783fe51aa2015c4.png",
+      "sha256": "f783fe51aa2015c4e46e27964b85671e41b3990acf4e5efb50a8103b4e68bef8"
+    },
+    {
+      "instanceKey": "GUI-031--add-Space--D--windows-chromium--VD",
+      "source": "GUI-031/add-Space--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/f783fe51aa2015c4.png",
+      "sha256": "f783fe51aa2015c4e46e27964b85671e41b3990acf4e5efb50a8103b4e68bef8"
+    },
+    {
+      "instanceKey": "GUI-031--add-Space--H--windows-chromium--VD",
+      "source": "GUI-031/add-Space--H/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-031--add-Space--H--windows-chromium--VD",
+      "source": "GUI-031/add-Space--H/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/7a4b2c5d40d1df40.png",
+      "sha256": "7a4b2c5d40d1df40c6c1b231df4558ccf3bb8a7022df52d96223c7f0a77c1738"
+    },
+    {
+      "instanceKey": "GUI-031--add-Space--H--windows-chromium--VD",
+      "source": "GUI-031/add-Space--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7a4b2c5d40d1df40.png",
+      "sha256": "7a4b2c5d40d1df40c6c1b231df4558ccf3bb8a7022df52d96223c7f0a77c1738"
+    },
+    {
+      "instanceKey": "GUI-048--default--D--windows-chromium--VD",
+      "source": "GUI-048/default--D/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/3765df64d2c689a0.png",
+      "sha256": "3765df64d2c689a04d191581a8313a5ecfb08a2760ae648b53644772f4aca3e7"
+    },
+    {
+      "instanceKey": "GUI-048--default--D--windows-chromium--VD",
+      "source": "GUI-048/default--D/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/1417dac39677b6ab.png",
+      "sha256": "1417dac39677b6ab1a387ca348fbfbe959dd9d1ff35eb5ecbf228fa000355bf1"
+    },
+    {
+      "instanceKey": "GUI-048--default--D--windows-chromium--VD",
+      "source": "GUI-048/default--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/1417dac39677b6ab.png",
+      "sha256": "1417dac39677b6ab1a387ca348fbfbe959dd9d1ff35eb5ecbf228fa000355bf1"
+    },
+    {
+      "instanceKey": "GUI-048--default--H--windows-chromium--VD",
+      "source": "GUI-048/default--H/windows-chromium--VD/attempt-001/screenshots/before-first-action.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-048--default--H--windows-chromium--VD",
+      "source": "GUI-048/default--H/windows-chromium--VD/attempt-001/screenshots/after-first-action.png",
+      "path": "evidence/screenshots/411405ad9a4af474.png",
+      "sha256": "411405ad9a4af474cf962c76ed953e1a9ca4841b8558624ba244505893c9fe19"
+    },
+    {
+      "instanceKey": "GUI-048--default--H--windows-chromium--VD",
+      "source": "GUI-048/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/411405ad9a4af474.png",
+      "sha256": "411405ad9a4af474cf962c76ed953e1a9ca4841b8558624ba244505893c9fe19"
+    },
+    {
+      "instanceKey": "GUI-036--default--H--windows-chromium--VD",
+      "source": "GUI-036/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-037--default--H--windows-chromium--VD",
+      "source": "GUI-037/default--H/windows-chromium--VD/attempt-001/screenshots/pending.png",
+      "path": "evidence/screenshots/8f25db6307b9d9bb.png",
+      "sha256": "8f25db6307b9d9bbee6373f3a30f3bd39b274964cc54615853c4b6189afcc12e"
+    },
+    {
+      "instanceKey": "GUI-037--default--H--windows-chromium--VD",
+      "source": "GUI-037/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/7e30088def1cd6bb.png",
+      "sha256": "7e30088def1cd6bb493182d0845e94432956a0dc73f8f79030246973046422f2"
+    },
+    {
+      "instanceKey": "GUI-038--default--H--windows-chromium--VD",
+      "source": "GUI-038/default--H/windows-chromium--VD/attempt-001/screenshots/pending.png",
+      "path": "evidence/screenshots/bb4473451f4f6c8c.png",
+      "sha256": "bb4473451f4f6c8c5d89fe11b4904b11f9dec38aae3efbb387f57996e542c78c"
+    },
+    {
+      "instanceKey": "GUI-038--default--H--windows-chromium--VD",
+      "source": "GUI-038/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/23ca4211ee4c6d1b.png",
+      "sha256": "23ca4211ee4c6d1b0878b618db43327b9dd02832b99849c4e0db0e408de34601"
+    },
+    {
+      "instanceKey": "GUI-040--default--H--windows-chromium--VD",
+      "source": "GUI-040/default--H/windows-chromium--VD/attempt-001/screenshots/empty-state.png",
+      "path": "evidence/screenshots/4d21fc131204917c.png",
+      "sha256": "4d21fc131204917c09f093800ff2dea97bda2ecd3482c8e8b5a90d49e284623a"
+    },
+    {
+      "instanceKey": "GUI-040--default--H--windows-chromium--VD",
+      "source": "GUI-040/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/4d21fc131204917c.png",
+      "sha256": "4d21fc131204917c09f093800ff2dea97bda2ecd3482c8e8b5a90d49e284623a"
+    },
+    {
+      "instanceKey": "GUI-041--initial--H--windows-chromium--VD",
+      "source": "GUI-041/initial--H/windows-chromium--VD/attempt-001/screenshots/error-observation.png",
+      "path": "evidence/screenshots/8f25db6307b9d9bb.png",
+      "sha256": "8f25db6307b9d9bbee6373f3a30f3bd39b274964cc54615853c4b6189afcc12e"
+    },
+    {
+      "instanceKey": "GUI-041--initial--H--windows-chromium--VD",
+      "source": "GUI-041/initial--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/8f25db6307b9d9bb.png",
+      "sha256": "8f25db6307b9d9bbee6373f3a30f3bd39b274964cc54615853c4b6189afcc12e"
+    },
+    {
+      "instanceKey": "GUI-041--search--H--windows-chromium--VD",
+      "source": "GUI-041/search--H/windows-chromium--VD/attempt-001/screenshots/error-observation.png",
+      "path": "evidence/screenshots/bb4473451f4f6c8c.png",
+      "sha256": "bb4473451f4f6c8c5d89fe11b4904b11f9dec38aae3efbb387f57996e542c78c"
+    },
+    {
+      "instanceKey": "GUI-041--search--H--windows-chromium--VD",
+      "source": "GUI-041/search--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/bb4473451f4f6c8c.png",
+      "sha256": "bb4473451f4f6c8c5d89fe11b4904b11f9dec38aae3efbb387f57996e542c78c"
+    },
+    {
+      "instanceKey": "GUI-052--default--H--windows-chromium--VD",
+      "source": "GUI-052/default--H/windows-chromium--VD/attempt-001/screenshots/error-observation.png",
+      "path": "evidence/screenshots/8f25db6307b9d9bb.png",
+      "sha256": "8f25db6307b9d9bbee6373f3a30f3bd39b274964cc54615853c4b6189afcc12e"
+    },
+    {
+      "instanceKey": "GUI-052--default--H--windows-chromium--VD",
+      "source": "GUI-052/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/8f25db6307b9d9bb.png",
+      "sha256": "8f25db6307b9d9bbee6373f3a30f3bd39b274964cc54615853c4b6189afcc12e"
+    },
+    {
+      "instanceKey": "GUI-043--default--D--windows-chromium--VD",
+      "source": "GUI-043/default--D/windows-chromium--VD/attempt-001/screenshots/error-observation.png",
+      "path": "evidence/screenshots/f88a90d6f38f7042.png",
+      "sha256": "f88a90d6f38f70422b60d897f73b7386aaf7e7b5be1c5dcab509994a7d3fbc74"
+    },
+    {
+      "instanceKey": "GUI-043--default--D--windows-chromium--VD",
+      "source": "GUI-043/default--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/f88a90d6f38f7042.png",
+      "sha256": "f88a90d6f38f70422b60d897f73b7386aaf7e7b5be1c5dcab509994a7d3fbc74"
+    },
+    {
+      "instanceKey": "GUI-045--default--H--windows-chromium--VD",
+      "source": "GUI-045/default--H/windows-chromium--VD/attempt-001/screenshots/macbook-finished-before-release.png",
+      "path": "evidence/screenshots/af97321b433510cb.png",
+      "sha256": "af97321b433510cb2b54af4ebf26b3c4972bb283c566c566ab8fcff967f8eb0d"
+    },
+    {
+      "instanceKey": "GUI-045--default--H--windows-chromium--VD",
+      "source": "GUI-045/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/d292cbf6053f6e44.png",
+      "sha256": "d292cbf6053f6e4456aefe905276904672b602df4244b3b9dcaa1b21996ab0ec"
+    },
+    {
+      "instanceKey": "GUI-046--default--H--windows-chromium--VD",
+      "source": "GUI-046/default--H/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/6cc0c290f233024e.png",
+      "sha256": "6cc0c290f233024e72d3ec691b79bd2a5dc7bd6a493afa55a2d59fcede09aa87"
+    },
+    {
+      "instanceKey": "GUI-049--1--D--windows-chromium--VD",
+      "source": "GUI-049/1--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/f2839fa71fa04e80.png",
+      "sha256": "f2839fa71fa04e80f38345a3352f92c4000ba0f65a3280e85e21206cdf3a92e1"
+    },
+    {
+      "instanceKey": "GUI-049--empty--D--windows-chromium--VD",
+      "source": "GUI-049/empty--D/windows-chromium--VD/attempt-001/screenshots/final.png",
+      "path": "evidence/screenshots/03203bbefaac1a2f.png",
+      "sha256": "03203bbefaac1a2f5c9073f69bfbb74ec70138948383faa61af4d6050166f6a4"
+    }
+  ]
+}
