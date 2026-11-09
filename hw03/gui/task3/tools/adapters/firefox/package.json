@@ -1,0 +1,15 @@
+{
+  "name": "hw03-gui-pilot-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "unit": "node --test tests/unit/*.test.mjs",
+    "pilot": "node scripts/pilot.mjs",
+    "verify": "node scripts/verify-run.mjs",
+    "preflight": "node scripts/preflight.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0"
+  }
+}

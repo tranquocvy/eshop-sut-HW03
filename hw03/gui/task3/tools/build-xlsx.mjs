@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';
+import {Workbook,SpreadsheetFile} from '@oai/artifact-tool';
+const root='D:/Workspace/SoftwareTesting/HW03/eshop-sut-HW03/hw03/gui/task3';
+const data=JSON.parse(await fs.readFile(root+'/results.json','utf8'));const w=Workbook.create();const summary=w.worksheets.add('Summary');const exec=w.worksheets.add('Execution');const env=w.worksheets.add('Environments');
+function grid(s,values,widths){const end=String.fromCharCode(64+values[0].length);s.getRange('A1:'+end+values.length).values=values;s.getRange('A1:'+end+values.length).format={font:{name:'Arial',size:11},rowHeight:32,verticalAlignment:'top',wrapText:true};s.getRange('A1:'+end+'1').format={fill:'#17365D',font:{bold:true,color:'#FFFFFF'},rowHeight:30};widths.forEach((width,i)=>s.getRange(String.fromCharCode(65+i)+'1:'+String.fromCharCode(65+i)+values.length).format.columnWidth=width);}
+const vals=[['Platform','Case ID','Variant','Page','Viewport','Raw status','Expected','Actual / reason','UTC start','Evidence / record']];
+for(const r of data.records){const actual=r.reason||r.assertions.map(a=>a.assertionKey+': '+JSON.stringify(a.observation)).join('\n');vals.push([r.platform,r.caseId,r.variant,r.page,r.viewport,r.assessment,r.expected.map(a=>a.expected).join('\n'),actual.slice(0,280)+(actual.length>280?' [full observation: JSON record]':''),r.startedAtUTC,r.recordPath]);}
+grid(exec,vals,[14,13,23,10,12,17,65,75,27,65]);
+exec.getRange('A2:J367').format.rowHeight=125;
+for(let i=2;i<=vals.length;i++){const status=vals[i-1][5];exec.getRange('F'+i).format.fill={pass:'#E4F1E7',fail:'#FCE4E4',blocked:'#FFF0D1','needs-review':'#E9E4FA'}[status];}
+grid(summary,[['Browser','Pass','Fail','Blocked','Needs review','Total'],['chrome',0,0,0,0,0],['edge',0,0,0,0,0],['firefox',0,0,0,0,0],['Total',0,0,0,0,0],['Status','Review and submission exceptions pending','','','',''],['Scope','52 IDs; 122 variants per browser; 366 records','','','',''],['Evidence','Firefox URL label is not native address bar','','','',''],['Exception','Edge GUI-001 native screenshot checksum mismatch','','','',''],['Source','results.json; same directory as this workbook','','','','']],[18,19,19,19,22,17]);
+for(let row=2;row<=4;row++){for(let col=2;col<=5;col++){const status=['pass','fail','blocked','needs-review'][col-2];summary.getRange(String.fromCharCode(64+col)+row).formulas=[[`=COUNTIFS(Execution!$A$2:$A$367,A${row},Execution!$F$2:$F$367,"${status}")`]];}summary.getRange('F'+row).formulas=[[`=SUM(B${row}:E${row})`]];}
+for(let col=2;col<=6;col++){const c=String.fromCharCode(64+col);summary.getRange(c+'5').formulas=[[`=SUM(${c}2:${c}4)`]];}
+summary.getRange('B6:F6').merge();summary.getRange('B7:F7').merge();summary.getRange('B8:F8').merge();summary.getRange('B9:F9').merge();summary.getRange('B10:F10').merge();summary.getRange('A6:F10').format.rowHeight=45;
+const evalues=[['Platform','Browser / versions','OS','Capture','Runs / source']];for(const e of data.environments)evalues.push([e.platform,e.browser+' '+e.versions.join(', '),e.os,e.capture,e.runs.join('\n')]);grid(env,evalues,[16,48,30,65,90]);env.getRange('A2:E4').format.rowHeight=75;
+for(const name of ['Summary','Execution','Environments']){const blob=await w.render({sheetName:name,range:name==='Summary'?'A1:F10':name==='Execution'?'A1:F7':'A1:D4',scale:1.5});await fs.writeFile('D:/Workspace/SoftwareTesting/HW03/_working/eshop-sut-HW03/task3-closeout/'+name+'.png',new Uint8Array(await blob.arrayBuffer()));}
+console.log((await w.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?',options:{useRegex:true,maxResults:20},summary:'formula scan'})).ndjson);
+await (await SpreadsheetFile.exportXlsx(w)).save(root+'/GUI_Checklist_CrossPlatform.xlsx');console.log('Workbook exported');
