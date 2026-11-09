@@ -1,0 +1,122 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-041",
+  "variant": "search",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-041--search--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Cả A và B có thông báo lỗi dễ hiểu, không gọi lỗi mạng là không có kết quả; không hiển thị stack trace/SQL. Một lượt không đại diện cho cả hai biến thể.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 94
+          },
+          "H: S13 tr.11/16/27"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "error-feedback",
+      "observation": {
+        "failed": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm",
+        "simulation": "network abort"
+      },
+      "expected": "Cả A và B có thông báo lỗi dễ hiểu, không gọi lỗi mạng là không có kết quả; không hiển thị stack trace/SQL. Một lượt không đại diện cho cả hai biến thể.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16/27",
+          {
+            "line": 94,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:19:34.410Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:19:34.830Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:19:34.862Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:19:34.262Z",
+  "finishedAtUTC": "2026-11-09T18:19:36.956Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\error-observation-window-email.png",
+      "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-041--search--H--VD/error-observation.png",
+      "sha256": "be8d240a133010c702b028cb8a5842b99d642ddeb160ff4bd5743147b622b4b7"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-041--search--H--VD/error-observation-window-email.png",
+      "sha256": "9f329b2c1325d69e36eb32fdebeee72eed021785f82f1d6360227c176ce2b9ac"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-041--search--H--VD/final.png",
+      "sha256": "be8d240a133010c702b028cb8a5842b99d642ddeb160ff4bd5743147b622b4b7"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-041--search--H--VD/final-window-email.png",
+      "sha256": "9f329b2c1325d69e36eb32fdebeee72eed021785f82f1d6360227c176ce2b9ac"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

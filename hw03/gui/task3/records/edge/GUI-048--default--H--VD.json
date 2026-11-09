@@ -1,0 +1,130 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-048",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-048--default--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "feedback",
+      "expected": "Có phản hồi trực quan sau lần bấm đầu (toast, trạng thái nút hoặc badge cập nhật). Không cần mở Giỏ hàng/checkout; không suy từ lỗi này rằng validation quantity đã chặn đúng.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 101
+          },
+          "R: FR-06/24"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "feedback",
+      "observation": {
+        "before": "Thêm vào giỏ",
+        "after": "Thêm vào giỏ",
+        "headerBefore": "EShop\nGiỏ hàng\nĐăng nhập\nĐăng ký",
+        "headerAfter": "EShop\nGiỏ hàng\nĐăng nhập\nĐăng ký",
+        "toast": []
+      },
+      "expected": "Có phản hồi trực quan sau lần bấm đầu (toast, trạng thái nút hoặc badge cập nhật). Không cần mở Giỏ hàng/checkout; không suy từ lỗi này rằng validation quantity đã chặn đúng.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06/24",
+          {
+            "line": 101,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:27:13.595Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:27:27.980Z",
+      "kind": "click",
+      "target": "add",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:27:13.396Z",
+  "finishedAtUTC": "2026-11-09T18:27:30.708Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\before-first-action.png",
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\before-first-action-window-email.png",
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\after-first-action.png",
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\after-first-action-window-email.png",
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-048--default--H--VD/before-first-action.png",
+      "sha256": "f84be1b080e241188c11c2c28664634ddcd37cdda19bdc9fe75ad96efdd15e8f"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-048--default--H--VD/before-first-action-window-email.png",
+      "sha256": "9c11010422af4c166b17293d8f8c7b48a760b6444bef8699c8937279a318295c"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-048--default--H--VD/after-first-action.png",
+      "sha256": "c11dfd1e5f11e736fac7cb461914ee208861f8cf476763c0d7d4cb976a129c6a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-048--default--H--VD/after-first-action-window-email.png",
+      "sha256": "66a95c4a7a8f08f44107850731f33e051029a0919d3f9cdff051529a7350516d"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-048--default--H--VD/final.png",
+      "sha256": "c11dfd1e5f11e736fac7cb461914ee208861f8cf476763c0d7d4cb976a129c6a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-048--default--H--VD/final-window-email.png",
+      "sha256": "66a95c4a7a8f08f44107850731f33e051029a0919d3f9cdff051529a7350516d"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

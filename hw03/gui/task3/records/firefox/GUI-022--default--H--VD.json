@@ -1,0 +1,109 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-022",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-022--default--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Nếu từ khóa được phản chiếu, hiển thị nguyên văn như text; không tạo phần tử b hoặc render HTML từ đầu vào.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 61
+          },
+          "R: FR-05; SEC-04"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: GUI_T01"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "escaped-keyword",
+      "observation": {
+        "main": "<div><div class=\"flex justify-between items-center mb-6\"><h1 class=\"text-3xl font-bold\">Danh sách sản phẩm</h1><form class=\"flex gap-2\"><input placeholder=\"Tìm kiếm...\" class=\"border p-2 rounded\" type=\"text\" value=\"&lt;b&gt;GUI_T01&lt;/b&gt;\"><button type=\"submit\" class=\"bg-blue-600 text-white px-4 py-2 rounded\">Tìm</button></form></div><div class=\"mb-4 text-gray-600\">Kết quả tìm kiếm cho: <span><b>GUI_T01</b></span></div><div class=\"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6\"></div></div>"
+      },
+      "expected": "Nếu từ khóa được phản chiếu, hiển thị nguyên văn như text; không tạo phần tử b hoặc render HTML từ đầu vào.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05; SEC-04",
+          {
+            "line": 61,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:00:19.413Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:19.875Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "<b>GUI_T01</b>",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:19.963Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:19.050Z",
+  "finishedAtUTC": "2026-11-09T19:00:20.548Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-022\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-022\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-022\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-022--default--H--VD/final.png",
+      "sha256": "799dea5dd085f65b6789b94d6677e184baaafb53848fc63027e0ecbdccd817e7"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-022--default--H--VD/final-email-url.png",
+      "sha256": "e29be36d976ba4d9ed895d92739971bd3d44c55e979e2153caa1d11b6318a447"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-022\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

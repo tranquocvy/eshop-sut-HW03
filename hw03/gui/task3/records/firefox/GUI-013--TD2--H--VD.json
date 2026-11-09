@@ -1,0 +1,201 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-013",
+  "variant": "TD2",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-013--TD2--H--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Người dùng xác định được tên đầy đủ qua phương tiện sẵn có; tên không che giá/nút. Không bắt buộc tooltip nếu đã có trang chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 47
+          },
+          "H: S13 tr.7/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "fullNameAfterNavigation": "Samsung Galaxy S24 Ultra"
+      },
+      {
+        "url": "http://localhost:5173/product/2",
+        "main": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "Samsung Galaxy S24 Ultra",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 736,
+                "y": 104.66667175292969,
+                "width": 455.33331298828125,
+                "height": 36,
+                "top": 104.66667175292969,
+                "right": 1191.3333129882812,
+                "bottom": 140.6666717529297,
+                "left": 736
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 736,
+                "y": 463.33331298828125,
+                "width": 67.03334045410156,
+                "height": 24,
+                "top": 463.33331298828125,
+                "right": 803.0333404541016,
+                "bottom": 487.33331298828125,
+                "left": 736
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 819.0333251953125,
+                "y": 454.66668701171875,
+                "width": 80,
+                "height": 41.33332824707031,
+                "top": 454.66668701171875,
+                "right": 899.0333251953125,
+                "bottom": 496.00001525878906,
+                "left": 819.0333251953125
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 736,
+                "y": 512,
+                "width": 184.25,
+                "height": 48,
+                "top": 512,
+                "right": 920.25,
+                "bottom": 560,
+                "left": 736
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "fullNameAfterNavigation": "Samsung Galaxy S24 Ultra"
+          },
+          {
+            "url": "http://localhost:5173/product/2",
+            "main": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Người dùng xác định được tên đầy đủ qua phương tiện sẵn có; tên không che giá/nút. Không bắt buộc tooltip nếu đã có trang chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.7/16",
+          {
+            "line": 47,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:56.383Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:55.959Z",
+  "finishedAtUTC": "2026-11-09T18:56:57.451Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\long-name-before-explore.png",
+      "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\long-name-before-explore-email-url.png",
+      "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-013--TD2--H--VD/long-name-before-explore.png",
+      "sha256": "653df97ec3862a0560ca78970116d55b74f8e46f3cc3d5622d4afc05d2ac87f9"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-013--TD2--H--VD/long-name-before-explore-email-url.png",
+      "sha256": "f486ba427d700ff97b261f5844532215f0481d281155e94411e4d0428ff843d3"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-013--TD2--H--VD/final.png",
+      "sha256": "5bc9d7df83975f952a2b0e29a17d231740bfbf548b4e9ef25f9f639b3e22c858"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-013--TD2--H--VD/final-email-url.png",
+      "sha256": "2d28cb0a9f535fcef818a491a4e5da31cb086ed915a170a9c82971ede8caa11f"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

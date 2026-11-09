@@ -1,0 +1,649 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-032",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VM",
+  "comparisonKey": "GUI-032--default--D--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Thứ tự focus từ trên xuống dưới, trái sang phải theo thứ tự hiển thị; không nhảy tới phần tử bị ẩn.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 78
+          },
+          "R: FR-21; L: S13 tr.18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "focusSequence": [
+          {
+            "tag": "A",
+            "text": "EShop",
+            "type": "",
+            "rect": {
+              "x": 16,
+              "y": 16,
+              "width": 70.23958587646484,
+              "height": 32,
+              "top": 16,
+              "right": 86.23958587646484,
+              "bottom": 48,
+              "left": 16
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Giỏ hàng",
+            "type": "",
+            "rect": {
+              "x": 141.92709350585938,
+              "y": 20,
+              "width": 64.28125,
+              "height": 24,
+              "top": 20,
+              "right": 206.20834350585938,
+              "bottom": 44,
+              "left": 141.92709350585938
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Đăng nhập",
+            "type": "",
+            "rect": {
+              "x": 222.20834350585938,
+              "y": 20,
+              "width": 77.875,
+              "height": 24,
+              "top": 20,
+              "right": 300.0833435058594,
+              "bottom": 44,
+              "left": 222.20834350585938
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Đăng ký",
+            "type": "",
+            "rect": {
+              "x": 316.0833435058594,
+              "y": 20,
+              "width": 57.91666793823242,
+              "height": 24,
+              "top": 20,
+              "right": 374.0000114440918,
+              "bottom": 44,
+              "left": 316.0833435058594
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "type": "number",
+            "rect": {
+              "x": 123.70833587646484,
+              "y": 593.3333740234375,
+              "width": 80,
+              "height": 41.333335876464844,
+              "top": 593.3333740234375,
+              "right": 203.70833587646484,
+              "bottom": 634.6667098999023,
+              "left": 123.70833587646484
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ hàng",
+            "type": "submit",
+            "rect": {
+              "x": 40.66666793823242,
+              "y": 650.6666870117188,
+              "width": 184.2604217529297,
+              "height": 48,
+              "top": 650.6666870117188,
+              "right": 224.9270896911621,
+              "bottom": 698.6666870117188,
+              "left": 40.66666793823242
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BODY",
+            "text": "\n    EShopGiỏ hàngĐăng nhậpĐăng kýiPhone 15 Pro Max30.000.000 ₫Điện thoại cao cấ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "outline": "rgb(0, 0, 0) none 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "EShop",
+            "type": "",
+            "rect": {
+              "x": 16,
+              "y": 16,
+              "width": 70.23958587646484,
+              "height": 32,
+              "top": 16,
+              "right": 86.23958587646484,
+              "bottom": 48,
+              "left": 16
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Giỏ hàng",
+            "type": "",
+            "rect": {
+              "x": 141.92709350585938,
+              "y": 20,
+              "width": 64.28125,
+              "height": 24,
+              "top": 20,
+              "right": 206.20834350585938,
+              "bottom": 44,
+              "left": 141.92709350585938
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Đăng nhập",
+            "type": "",
+            "rect": {
+              "x": 222.20834350585938,
+              "y": 20,
+              "width": 77.875,
+              "height": 24,
+              "top": 20,
+              "right": 300.0833435058594,
+              "bottom": 44,
+              "left": 222.20834350585938
+            },
+            "outline": "rgb(16, 16, 16) auto 0.666667px",
+            "boxShadow": "none"
+          }
+        ]
+      },
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 390,
+          "innerWidth": 390,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "iPhone 15 Pro Max",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 445.3333435058594,
+                "width": 308.66668701171875,
+                "height": 36,
+                "top": 445.3333435058594,
+                "right": 349.3333549499512,
+                "bottom": 481.3333435058594,
+                "left": 40.66666793823242
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 602,
+                "width": 67.04167175292969,
+                "height": 24,
+                "top": 602,
+                "right": 107.70833969116211,
+                "bottom": 626,
+                "left": 40.66666793823242
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 123.70833587646484,
+                "y": 593.3333740234375,
+                "width": 80,
+                "height": 41.333335876464844,
+                "top": 593.3333740234375,
+                "right": 203.70833587646484,
+                "bottom": 634.6667098999023,
+                "left": 123.70833587646484
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 650.6666870117188,
+                "width": 184.2604217529297,
+                "height": 48,
+                "top": 650.6666870117188,
+                "right": 224.9270896911621,
+                "bottom": 698.6666870117188,
+                "left": 40.66666793823242
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "focusSequence": [
+              {
+                "tag": "A",
+                "text": "EShop",
+                "type": "",
+                "rect": {
+                  "x": 16,
+                  "y": 16,
+                  "width": 70.23958587646484,
+                  "height": 32,
+                  "top": 16,
+                  "right": 86.23958587646484,
+                  "bottom": 48,
+                  "left": 16
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Giỏ hàng",
+                "type": "",
+                "rect": {
+                  "x": 141.92709350585938,
+                  "y": 20,
+                  "width": 64.28125,
+                  "height": 24,
+                  "top": 20,
+                  "right": 206.20834350585938,
+                  "bottom": 44,
+                  "left": 141.92709350585938
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Đăng nhập",
+                "type": "",
+                "rect": {
+                  "x": 222.20834350585938,
+                  "y": 20,
+                  "width": 77.875,
+                  "height": 24,
+                  "top": 20,
+                  "right": 300.0833435058594,
+                  "bottom": 44,
+                  "left": 222.20834350585938
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Đăng ký",
+                "type": "",
+                "rect": {
+                  "x": 316.0833435058594,
+                  "y": 20,
+                  "width": 57.91666793823242,
+                  "height": 24,
+                  "top": 20,
+                  "right": 374.0000114440918,
+                  "bottom": 44,
+                  "left": 316.0833435058594
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "type": "number",
+                "rect": {
+                  "x": 123.70833587646484,
+                  "y": 593.3333740234375,
+                  "width": 80,
+                  "height": 41.333335876464844,
+                  "top": 593.3333740234375,
+                  "right": 203.70833587646484,
+                  "bottom": 634.6667098999023,
+                  "left": 123.70833587646484
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ hàng",
+                "type": "submit",
+                "rect": {
+                  "x": 40.66666793823242,
+                  "y": 650.6666870117188,
+                  "width": 184.2604217529297,
+                  "height": 48,
+                  "top": 650.6666870117188,
+                  "right": 224.9270896911621,
+                  "bottom": 698.6666870117188,
+                  "left": 40.66666793823242
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BODY",
+                "text": "\n    EShopGiỏ hàngĐăng nhậpĐăng kýiPhone 15 Pro Max30.000.000 ₫Điện thoại cao cấ",
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844,
+                  "top": 0,
+                  "right": 390,
+                  "bottom": 844,
+                  "left": 0
+                },
+                "outline": "rgb(0, 0, 0) none 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "EShop",
+                "type": "",
+                "rect": {
+                  "x": 16,
+                  "y": 16,
+                  "width": 70.23958587646484,
+                  "height": 32,
+                  "top": 16,
+                  "right": 86.23958587646484,
+                  "bottom": 48,
+                  "left": 16
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Giỏ hàng",
+                "type": "",
+                "rect": {
+                  "x": 141.92709350585938,
+                  "y": 20,
+                  "width": 64.28125,
+                  "height": 24,
+                  "top": 20,
+                  "right": 206.20834350585938,
+                  "bottom": 44,
+                  "left": 141.92709350585938
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Đăng nhập",
+                "type": "",
+                "rect": {
+                  "x": 222.20834350585938,
+                  "y": 20,
+                  "width": 77.875,
+                  "height": 24,
+                  "top": 20,
+                  "right": 300.0833435058594,
+                  "bottom": 44,
+                  "left": 222.20834350585938
+                },
+                "outline": "rgb(16, 16, 16) auto 0.666667px",
+                "boxShadow": "none"
+              }
+            ]
+          },
+          {
+            "url": "http://localhost:5173/product/1",
+            "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Thứ tự focus từ trên xuống dưới, trái sang phải theo thứ tự hiển thị; không nhảy tới phần tử bị ẩn.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-21; L: S13 tr.18",
+          {
+            "line": 78,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:18:28.719Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:29.101Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:29.698Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:32.341Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:34.731Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:37.384Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:37.696Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:37.709Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:37.718Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:37.733Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:18:37.744Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:18:28.576Z",
+  "finishedAtUTC": "2026-11-09T18:18:38.477Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-0.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-0-window-email.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-1.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-1-window-email.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-2.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-2-window-email.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-3.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-3-window-email.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-4.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\focus-4-window-email.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-0.png",
+      "sha256": "7660c461cdd8f2b545c511b1c1e169104a90dc18fe379d0300b624b9d2719f4d"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-0-window-email.png",
+      "sha256": "31676e065c59f8c4f5d0a938a9a3d252f64b947de920599b434c6c81f0930847"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-1.png",
+      "sha256": "875d8387029d13235326a58a5422a981b46a80cefe2ccb89a48c963f484d7fd9"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-1-window-email.png",
+      "sha256": "7be650f917aa4800db6eb424aeb6ba087152da3cf0edf436e07217fdab23da34"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-2.png",
+      "sha256": "50450d57d3581d4fa93a8648306d423593995db2683c283f0aaf84684da3ed8f"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-2-window-email.png",
+      "sha256": "ee93f6b45d3d48d2ceec7d6b03fe99348b7a59cab731836f97e8f544b9c3efd8"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-3.png",
+      "sha256": "e5e0d7722901983e7c7419d9f75c5d44927271d5422689287e96e3b627f6dc5b"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-3-window-email.png",
+      "sha256": "869b9b7c0e4601dc73e328b6930631dc778092f86f425a5d11e4e0617a058950"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-4.png",
+      "sha256": "77b5777445fc3ce49e76b0db21fea025c22ba883ddaab2b1c62826b29f2e3177"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/focus-4-window-email.png",
+      "sha256": "303c75495e54cc400087091ecb7479bcd4a2591180be640a750851891e248781"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/final.png",
+      "sha256": "50450d57d3581d4fa93a8648306d423593995db2683c283f0aaf84684da3ed8f"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-032--default--D--VM/final-window-email.png",
+      "sha256": "85581e61a27a224edb77db1fb75f35b33a2ae81a4dcab8f257f06f0d95d6a913"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

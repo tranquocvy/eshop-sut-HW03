@@ -1,0 +1,129 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-045",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-045--default--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Sau khi cả hai xong, kết quả/nhãn cuối ứng với MacBook, response iPhone cũ không ghi đè. Throttling chung không đủ chứng minh điều kiện này; nếu không giữ/thả được từng request thì chưa thực thi.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 98
+          },
+          "H: S13 tr.12/14/20"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: MacBook\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "latest-wins",
+      "observation": {
+        "timeline": [
+          {
+            "event": "iPhone-held",
+            "at": 1794250907958
+          },
+          {
+            "event": "MacBook-finished",
+            "at": 1794250908113
+          },
+          {
+            "event": "iPhone-released",
+            "at": 1794250908194
+          },
+          {
+            "event": "iPhone-finished",
+            "at": 1794250908463
+          }
+        ],
+        "names": [
+          "iPhone 15 Pro Max"
+        ],
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: MacBook\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      },
+      "expected": "Sau khi cả hai xong, kết quả/nhãn cuối ứng với MacBook, response iPhone cũ không ghi đè. Throttling chung không đủ chứng minh điều kiện này; nếu không giữ/thả được từng request thì chưa thực thi.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14/20",
+          {
+            "line": 98,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:01:47.363Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:46.818Z",
+  "finishedAtUTC": "2026-11-09T19:01:48.715Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\macbook-finished-before-release.png",
+      "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\macbook-finished-before-release-email-url.png",
+      "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-045--default--H--VD/macbook-finished-before-release.png",
+      "sha256": "e600ad0627ec74c4f12d0688e3ff88806fd82279fe6a59c136f8395c64cde302"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-045--default--H--VD/macbook-finished-before-release-email-url.png",
+      "sha256": "991552c2c026abb8b4dfe7b1daedbfc0fa62ea7f0566d897597718ca4f208208"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-045--default--H--VD/final.png",
+      "sha256": "b16a64e85906c05861f5e916957a0169f714b48f28ad4a1beebad948072731a6"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-045--default--H--VD/final-email-url.png",
+      "sha256": "c3115bf209113b555bd574962f34ce6e5265ab772f717cb04235c2ec4619926f"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

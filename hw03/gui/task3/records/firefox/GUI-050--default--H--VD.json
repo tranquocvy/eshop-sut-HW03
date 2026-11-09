@@ -1,0 +1,113 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-050",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-050--default--H--VD",
+  "assessment": "blocked",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Link Giỏ hàng hiển thị badge số lượng 1 đúng state trên cả hai màn hình, không chỉ có toast tại nút. Nếu không tạo/xác nhận được state vì lỗi control, ghi blocker thay vì suy ra badge đạt. Cách hiện badge khi giỏ rỗng chưa được quy định chi tiết.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 84
+          },
+          "R: FR-23; L: S13 tr.14"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "before": "Thêm vào giỏ",
+        "after": "Thêm vào giỏ",
+        "headerBefore": "EShop\nGiỏ hàng\nĐăng nhập\nĐăng ký",
+        "headerAfter": "EShop\nGiỏ hàng\nĐăng nhập\nĐăng ký",
+        "toast": []
+      },
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [],
+  "actions": [
+    {
+      "at": "2026-11-09T19:01:20.409Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:01:21.061Z",
+      "kind": "click",
+      "target": "add",
+      "count": 1
+    }
+  ],
+  "reason": "Home first-click has no observable acceptance; cannot establish required cart state without storage injection/cart navigation",
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:19.944Z",
+  "finishedAtUTC": "2026-11-09T19:01:21.936Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\before-first-action.png",
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\before-first-action-email-url.png",
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\after-first-action.png",
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\after-first-action-email-url.png",
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-050--default--H--VD/before-first-action.png",
+      "sha256": "653df97ec3862a0560ca78970116d55b74f8e46f3cc3d5622d4afc05d2ac87f9"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-050--default--H--VD/before-first-action-email-url.png",
+      "sha256": "feb09891f1e6468a571baa617bb1125d1ab3e051e102b679ea19e78833eef24a"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-050--default--H--VD/after-first-action.png",
+      "sha256": "792f4a2c93f01378e5f0c355a9fd5850eb3512870c111fee09ecd0a7fe0ddc1e"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-050--default--H--VD/after-first-action-email-url.png",
+      "sha256": "340484098cb6a9aae5a9ca6437d310f94b978d5f7c1a402624711e9be60b0bc0"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-050--default--H--VD/final.png",
+      "sha256": "792f4a2c93f01378e5f0c355a9fd5850eb3512870c111fee09ecd0a7fe0ddc1e"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-050--default--H--VD/final-email-url.png",
+      "sha256": "340484098cb6a9aae5a9ca6437d310f94b978d5f7c1a402624711e9be60b0bc0"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-050\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

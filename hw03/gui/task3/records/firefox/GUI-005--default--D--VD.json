@@ -1,0 +1,175 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-005",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-005--default--D--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Có ảnh lớn, tên iPhone 15 Pro Max, giá 30000000, mô tả Điện thoại cao cấp của Apple và danh mục Điện thoại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 39
+          },
+          "R: FR-06; API §3"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "name",
+      "observation": {
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+        "required": "iPhone 15 Pro Max"
+      },
+      "expected": "Có ảnh lớn, tên iPhone 15 Pro Max, giá 30000000, mô tả Điện thoại cao cấp của Apple và danh mục Điện thoại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06; API §3",
+          {
+            "line": 39,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "description",
+      "observation": {
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+        "required": "Điện thoại cao cấp của Apple"
+      },
+      "expected": "Có ảnh lớn, tên iPhone 15 Pro Max, giá 30000000, mô tả Điện thoại cao cấp của Apple và danh mục Điện thoại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06; API §3",
+          {
+            "line": 39,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "category",
+      "observation": {
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+        "required": "Điện thoại"
+      },
+      "expected": "Có ảnh lớn, tên iPhone 15 Pro Max, giá 30000000, mô tả Điện thoại cao cấp của Apple và danh mục Điện thoại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06; API §3",
+          {
+            "line": 39,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    },
+    {
+      "assertionKey": "large-image",
+      "observation": {
+        "images": 1
+      },
+      "expected": "Có ảnh lớn, tên iPhone 15 Pro Max, giá 30000000, mô tả Điện thoại cao cấp của Apple và danh mục Điện thoại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06; API §3",
+          {
+            "line": 39,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "price",
+      "observation": {
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      },
+      "expected": "Có ảnh lớn, tên iPhone 15 Pro Max, giá 30000000, mô tả Điện thoại cao cấp của Apple và danh mục Điện thoại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06; API §3",
+          {
+            "line": 39,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:10.043Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:09.630Z",
+  "finishedAtUTC": "2026-11-09T18:56:10.770Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-005\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-005\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-005\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-005--default--D--VD/final.png",
+      "sha256": "025a3ea8ffda349b33b0b7f7ec1d6ae4b9dc4b52983250c68dabbc588175e15f"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-005--default--D--VD/final-email-url.png",
+      "sha256": "e81432cc3876d53702aa883f2f81c0f9a3b635039790cf863e730fc44b4624dd"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-005\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

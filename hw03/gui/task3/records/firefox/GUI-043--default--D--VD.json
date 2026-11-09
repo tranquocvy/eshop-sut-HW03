@@ -1,0 +1,102 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-043",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-043--default--D--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Thông báo lỗi tải khác trạng thái không tìm thấy; không để Đang tải vô hạn sau request thất bại.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 96
+          },
+          "H: S13 tr.11/16/27"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "Đang tải..."
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "error-feedback",
+      "observation": {
+        "failed": "Đang tải...",
+        "simulation": "network abort"
+      },
+      "expected": "Thông báo lỗi tải khác trạng thái không tìm thấy; không để Đang tải vô hạn sau request thất bại.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16/27",
+          {
+            "line": 96,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:40.125Z",
+  "finishedAtUTC": "2026-11-09T19:01:41.912Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\error-observation-email-url.png",
+      "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-043--default--D--VD/error-observation.png",
+      "sha256": "7198b46c26f44f3515415159c15741b60470b11dc0494ea7e117e5eb647a90b0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-043--default--D--VD/error-observation-email-url.png",
+      "sha256": "c4dab10a8f4ee2ffd38927d052266dfd8debed7bf3773c3e397086cf8bd89ed0"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-043--default--D--VD/final.png",
+      "sha256": "7198b46c26f44f3515415159c15741b60470b11dc0494ea7e117e5eb647a90b0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-043--default--D--VD/final-email-url.png",
+      "sha256": "c4dab10a8f4ee2ffd38927d052266dfd8debed7bf3773c3e397086cf8bd89ed0"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

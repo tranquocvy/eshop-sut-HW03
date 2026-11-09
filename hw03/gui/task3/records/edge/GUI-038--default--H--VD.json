@@ -1,0 +1,128 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-038",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-038--default--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Có trạng thái loading khi pending; khi xong thay bằng kết quả, không còn chỉ báo tải treo.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 91
+          },
+          "R: FR-05; L: S13 tr.13/14"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "loading",
+      "observation": {
+        "pending": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm",
+        "final": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      },
+      "expected": "Có trạng thái loading khi pending; khi xong thay bằng kết quả, không còn chỉ báo tải treo.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05; L: S13 tr.13/14",
+          {
+            "line": 91,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    },
+    {
+      "assertionKey": "settled",
+      "observation": {
+        "final": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      },
+      "expected": "Có trạng thái loading khi pending; khi xong thay bằng kết quả, không còn chỉ báo tải treo.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05; L: S13 tr.13/14",
+          {
+            "line": 91,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:31:58.228Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:31:58.051Z",
+  "finishedAtUTC": "2026-11-09T18:32:04.223Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\pending.png",
+      "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\pending-window-email.png",
+      "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-038--default--H--VD/pending.png",
+      "sha256": "05cb48fbf415ca5165e28afb97415ac0328fde878258452628403c91efea4015"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-038--default--H--VD/pending-window-email.png",
+      "sha256": "4ee7840dfb73e628dc37c71253289fc52e1feb497c007f5e8bd115fbf99d3ffe"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-038--default--H--VD/final.png",
+      "sha256": "fb058f79cf2677b2bf6635abeeb8c215cd86aea13f989d7074cc7b52a17eea5e"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-038--default--H--VD/final-window-email.png",
+      "sha256": "0459fd0989b65505bbdaf85f21aa2d06ba00036697e53ae41f8ed9f13200c62c"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

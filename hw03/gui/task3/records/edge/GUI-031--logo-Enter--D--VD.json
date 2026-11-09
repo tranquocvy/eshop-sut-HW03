@@ -1,0 +1,103 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-031",
+  "variant": "logo-Enter",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-031--logo-Enter--D--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 77
+          },
+          "H: S13 tr.8/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "activation-success",
+      "observation": {
+        "method": "Enter",
+        "url": "http://localhost:5173/"
+      },
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.8/18",
+          {
+            "line": 77,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:30:53.682Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:54.096Z",
+      "kind": "Enter",
+      "target": "logo",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:30:53.532Z",
+  "finishedAtUTC": "2026-11-09T18:30:55.225Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-031\\logo-Enter--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-031\\logo-Enter--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-031\\logo-Enter--D\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-031--logo-Enter--D--VD/final.png",
+      "sha256": "6e5e0429689d4c222950db5f402c6da84de366bee5f4214c461fd93b09390099"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-031--logo-Enter--D--VD/final-window-email.png",
+      "sha256": "a5ea96892214ced8193ca40f0b7209e615668efcda4f1a6c3cfca12d08e45256"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-031\\logo-Enter--D\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

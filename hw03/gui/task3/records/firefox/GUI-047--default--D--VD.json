@@ -1,0 +1,142 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-047",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-047--default--D--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 100
+          },
+          "R: FR-24 (alt); H: S13 tr.7/11"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    },
+    {
+      "key": "H",
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 100
+          },
+          "R: FR-24 (alt); H: S13 tr.7/11"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "fallback-alt",
+      "observation": {
+        "im": {
+          "alt": "iPhone 15 Pro Max",
+          "complete": true,
+          "naturalWidth": 0
+        },
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      },
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-24 (alt); H: S13 tr.7/11",
+          {
+            "line": 100,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "usability-with-broken-image",
+      "observation": {
+        "im": {
+          "alt": "iPhone 15 Pro Max",
+          "complete": true,
+          "naturalWidth": 0
+        },
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+        "detailLinks": 0
+      },
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-24 (alt); H: S13 tr.7/11",
+          {
+            "line": 100,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:01:52.851Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:52.470Z",
+  "finishedAtUTC": "2026-11-09T19:01:53.776Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-047\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-047\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-047\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-047--default--D--VD/final.png",
+      "sha256": "d40bda017df084fd128c182f4ffd2760fbb5b1e9b55ebf93b265d594e27dc7c1"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-047--default--D--VD/final-email-url.png",
+      "sha256": "3885ab6abd1cb7b973eb8c0fad5a506c4157d7e86c2f43c8e9be1a6da1387789"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-047\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

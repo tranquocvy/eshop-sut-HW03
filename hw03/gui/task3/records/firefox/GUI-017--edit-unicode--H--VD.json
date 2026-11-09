@@ -1,0 +1,103 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-017",
+  "variant": "edit-unicode",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-017--edit-unicode--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Ô hiển thị đúng chuỗi người dùng nhập, hỗ trợ chỉnh sửa bình thường, không mất ký tự tiếng Việt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 56
+          },
+          "H: S13 tr.11/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: Bàn phím cơ\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "unicode-edit",
+      "observation": {
+        "value": "Bàn phím cơ",
+        "composition": "not claimed; separate real-IME blocked"
+      },
+      "expected": "Ô hiển thị đúng chuỗi người dùng nhập, hỗ trợ chỉnh sửa bình thường, không mất ký tự tiếng Việt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16",
+          {
+            "line": 56,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:00:09.780Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:10.189Z",
+      "kind": "fill",
+      "target": "search",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:09.331Z",
+  "finishedAtUTC": "2026-11-09T19:00:10.747Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-017\\edit-unicode--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-017\\edit-unicode--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-017\\edit-unicode--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-017--edit-unicode--H--VD/final.png",
+      "sha256": "1070c25264509633fd4f43623808e7f012ffcc3f422bd1a113f74e213d1c2b9d"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-017--edit-unicode--H--VD/final-email-url.png",
+      "sha256": "5aa11fcd4ec33a95c9a8edcf525f7846848b710c990829c726e523ed39890599"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-017\\edit-unicode--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

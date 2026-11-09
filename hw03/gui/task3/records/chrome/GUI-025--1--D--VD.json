@@ -1,0 +1,176 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-025",
+  "variant": "1",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-025--1--D--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Ô giữ đúng số nguyên dương đã nhập; không tự đổi 2 thành giá trị khác hoặc báo lỗi hợp lệ sai. Mục này chỉ kiểm tra ô nhập; feedback nút được xét ở GUI-048, không kiểm tra số lượng trong giỏ.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 64
+          },
+          "R: FR-06 (miền giá trị); H: hành vi ô nhập; L: S13 tr.19"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    },
+    {
+      "key": "H",
+      "expected": "Ô giữ đúng số nguyên dương đã nhập; không tự đổi 2 thành giá trị khác hoặc báo lỗi hợp lệ sai. Mục này chỉ kiểm tra ô nhập; feedback nút được xét ở GUI-048, không kiểm tra số lượng trong giỏ.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 64
+          },
+          "R: FR-06 (miền giá trị); H: hành vi ô nhập; L: S13 tr.19"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "valid-domain",
+      "observation": {
+        "raw": "1",
+        "type": "number",
+        "min": "",
+        "step": "",
+        "validity": {
+          "valid": true,
+          "rangeUnderflow": false,
+          "stepMismatch": false,
+          "badInput": false
+        },
+        "events": [
+          {
+            "type": "input",
+            "value": "1"
+          },
+          {
+            "type": "blur",
+            "value": "1"
+          }
+        ]
+      },
+      "expected": "Ô giữ đúng số nguyên dương đã nhập; không tự đổi 2 thành giá trị khác hoặc báo lỗi hợp lệ sai. Mục này chỉ kiểm tra ô nhập; feedback nút được xét ở GUI-048, không kiểm tra số lượng trong giỏ.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-06 (miền giá trị); H: hành vi ô nhập; L: S13 tr.19",
+          {
+            "line": 64,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "retain-input",
+      "observation": {
+        "raw": "1",
+        "type": "number",
+        "min": "",
+        "step": "",
+        "validity": {
+          "valid": true,
+          "rangeUnderflow": false,
+          "stepMismatch": false,
+          "badInput": false
+        },
+        "events": [
+          {
+            "type": "input",
+            "value": "1"
+          },
+          {
+            "type": "blur",
+            "value": "1"
+          }
+        ]
+      },
+      "expected": "Ô giữ đúng số nguyên dương đã nhập; không tự đổi 2 thành giá trị khác hoặc báo lỗi hợp lệ sai. Mục này chỉ kiểm tra ô nhập; feedback nút được xét ở GUI-048, không kiểm tra số lượng trong giỏ.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-06 (miền giá trị); H: hành vi ô nhập; L: S13 tr.19",
+          {
+            "line": 64,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:16:42.207Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:16:42.641Z",
+      "kind": "fill",
+      "target": "quantity",
+      "value": "1",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:16:42.054Z",
+  "finishedAtUTC": "2026-11-09T18:16:43.493Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-025\\1--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-025\\1--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-025\\1--D\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-025--1--D--VD/final.png",
+      "sha256": "321f2a0802dc8e8fa23a3ed2bdefdc13c1b92948370c8096558dc2d93358d809"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-025--1--D--VD/final-window-email.png",
+      "sha256": "05a45048bcd78225077829e72bf003881732abae4406ee412a10e04ed93ab189"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-025\\1--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

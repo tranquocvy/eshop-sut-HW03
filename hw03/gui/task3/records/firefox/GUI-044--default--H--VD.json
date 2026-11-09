@@ -1,0 +1,110 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-044",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-044--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Có thể lấy lại dữ liệu và dùng màn hình; lỗi cũ không che nội dung thành công. Không bắt buộc phải có nút Retry mới.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 97
+          },
+          "H: S13 tr.11/14"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "recovery",
+      "observation": {
+        "errorBefore": "Danh sách sản phẩm\nTìm",
+        "after": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm",
+        "sameContext": true
+      },
+      "expected": "Có thể lấy lại dữ liệu và dùng màn hình; lỗi cũ không che nội dung thành công. Không bắt buộc phải có nút Retry mới.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/14",
+          {
+            "line": 97,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:01:43.719Z",
+      "kind": "reload",
+      "target": "same-context recovery",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:41.937Z",
+  "finishedAtUTC": "2026-11-09T19:01:44.412Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-044\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-044\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\error-observation-email-url.png",
+      "GUI-044\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-044\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-044\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-044--default--H--VD/error-observation.png",
+      "sha256": "067a883381b79fd7d3cf2027f09157dfc2b8223515a00ca8ecab03c3e58fdc69"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-044--default--H--VD/error-observation-email-url.png",
+      "sha256": "a301e281d6463b1ebbe294fe66e302025ff7efe1cf39cdb76e88b1ce64e34921"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-044--default--H--VD/final.png",
+      "sha256": "653df97ec3862a0560ca78970116d55b74f8e46f3cc3d5622d4afc05d2ac87f9"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-044--default--H--VD/final-email-url.png",
+      "sha256": "72feae32e85e3d0ba0abccd9cee488997342e0d01428c5b32d654bff3db0f8a1"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-044\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

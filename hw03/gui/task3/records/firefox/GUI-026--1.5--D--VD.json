@@ -1,0 +1,72 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-026",
+  "variant": "1.5",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-026--1.5--D--VD",
+  "assessment": "blocked",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Không tiếp nhận giá trị ngoài số nguyên dương, không silently đổi 1.5 thành 1 hoặc gửi NaN. Không phản ứng sau một lần click và DOM validity đơn thuần không chứng minh validation hoạt động. Nếu lỗi control GUI-048 che khuất đường validation và không xác định được cơ chế từ chối, ghi chưa kết luận/blocker, không Passed.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 65
+          },
+          "R: FR-06; L: S13 tr.11/19"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "root": {
+          "ok": false,
+          "resultRef": "GUI-048\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+          "assertionKey": "feedback"
+        }
+      }
+    ]
+  },
+  "assertions": [],
+  "actions": [],
+  "reason": "Detail first-click prerequisite failed; dependent item not executed",
+  "prerequisites": [
+    {
+      "instanceKey": "GUI-048--default--D--windows-playwright-firefox--VD",
+      "assertionKey": "feedback",
+      "state": "detail-add-accepted",
+      "reason": "Root first-click must expose actionable validation path; raw input observations still collected",
+      "continuity": "equivalent-clean-context; no state injected",
+      "met": false
+    }
+  ],
+  "blockedBy": [
+    {
+      "ok": false,
+      "resultRef": "GUI-048\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+      "assertionKey": "feedback"
+    }
+  ],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:25.939Z",
+  "finishedAtUTC": "2026-11-09T19:00:25.939Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": []
+  },
+  "evidence": [],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-026\\1.5--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

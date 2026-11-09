@@ -1,0 +1,166 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-007",
+  "variant": "TD3",
+  "page": "D",
+  "viewport": "VM",
+  "comparisonKey": "GUI-007--TD3--D--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    },
+    {
+      "key": "H",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/3",
+        "main": "MacBook Pro M3\n\n45.000.000 ₫\n\nLaptop chuyên nghiệp mạnh mẽ\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "ratio-comparison",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=Macbook+Pro",
+          "alt": "MacBook Pro M3",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 40.66667175292969,
+            "y": 104.66667175292969,
+            "width": 308.6666564941406,
+            "height": 308.6666564941406,
+            "top": 104.66667175292969,
+            "right": 349.3333282470703,
+            "bottom": 413.3333282470703,
+            "left": 40.66667175292969
+          },
+          "objectFit": "fill"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "seed-text-crop-review",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=Macbook+Pro",
+          "alt": "MacBook Pro M3",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 40.66667175292969,
+            "y": 104.66667175292969,
+            "width": 308.6666564941406,
+            "height": 308.6666564941406,
+            "top": 104.66667175292969,
+            "right": 349.3333282470703,
+            "bottom": 413.3333282470703,
+            "left": 40.66667175292969
+          },
+          "objectFit": "fill"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:37.568Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:37.191Z",
+  "finishedAtUTC": "2026-11-09T18:56:39.084Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-007\\TD3--D\\windows-playwright-firefox--VM\\attempt-001\\source-image-0.png",
+      "GUI-007\\TD3--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-007\\TD3--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-007\\TD3--D\\windows-playwright-firefox--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-007--TD3--D--VM/final.png",
+      "sha256": "d19bfdf717d5d0ad9088febc505b3e13521000cd0742cf61f86e9b9d76d29664"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-007--TD3--D--VM/final-email-url.png",
+      "sha256": "f0087a3c97655eb914b8c5b05ab4aa8706d4b29d828fc98fd27a355f7ab3f119"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-007\\TD3--D\\windows-playwright-firefox--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

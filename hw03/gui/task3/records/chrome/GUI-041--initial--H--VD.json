@@ -1,0 +1,102 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-041",
+  "variant": "initial",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-041--initial--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Cả A và B có thông báo lỗi dễ hiểu, không gọi lỗi mạng là không có kết quả; không hiển thị stack trace/SQL. Một lượt không đại diện cho cả hai biến thể.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 94
+          },
+          "H: S13 tr.11/16/27"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "error-feedback",
+      "observation": {
+        "failed": "Danh sách sản phẩm\nTìm",
+        "simulation": "network abort"
+      },
+      "expected": "Cả A và B có thông báo lỗi dễ hiểu, không gọi lỗi mạng là không có kết quả; không hiển thị stack trace/SQL. Một lượt không đại diện cho cả hai biến thể.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16/27",
+          {
+            "line": 94,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:19:31.974Z",
+  "finishedAtUTC": "2026-11-09T18:19:34.227Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\error-observation-window-email.png",
+      "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-041--initial--H--VD/error-observation.png",
+      "sha256": "c7731ae8bba3a4527ed5e1fac1485a398baf75100d78bfc603674c4cebf7846f"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-041--initial--H--VD/error-observation-window-email.png",
+      "sha256": "85b3ce2251d4c4be93b75d4ab9b0c654ee585114fc461fd9e27dd67fdfacdc15"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-041--initial--H--VD/final.png",
+      "sha256": "c7731ae8bba3a4527ed5e1fac1485a398baf75100d78bfc603674c4cebf7846f"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-041--initial--H--VD/final-window-email.png",
+      "sha256": "85b3ce2251d4c4be93b75d4ab9b0c654ee585114fc461fd9e27dd67fdfacdc15"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

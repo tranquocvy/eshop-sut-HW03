@@ -1,0 +1,72 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-027",
+  "variant": "-1",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-027---1--D--VD",
+  "assessment": "blocked",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Thông báo lỗi nhập liệu nằm trên nút hành động tương ứng theo FR-22; không bị giấu dưới nút/ngoài vùng nhìn.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 66
+          },
+          "R: FR-22; L: S13 tr.16/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "root": {
+          "ok": false,
+          "resultRef": "GUI-048\\default--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+          "assertionKey": "feedback"
+        }
+      }
+    ]
+  },
+  "assertions": [],
+  "actions": [],
+  "reason": "Detail first-click prerequisite failed; dependent item not executed",
+  "prerequisites": [
+    {
+      "instanceKey": "GUI-048--default--D--windows-google-chrome--VD",
+      "assertionKey": "feedback",
+      "state": "detail-add-accepted",
+      "reason": "Root first-click must expose actionable validation path; raw input observations still collected",
+      "continuity": "equivalent-clean-context; no state injected",
+      "met": false
+    }
+  ],
+  "blockedBy": [
+    {
+      "ok": false,
+      "resultRef": "GUI-048\\default--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+      "assertionKey": "feedback"
+    }
+  ],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:16:45.107Z",
+  "finishedAtUTC": "2026-11-09T18:16:45.107Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": []
+  },
+  "evidence": [],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-027\\-1--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

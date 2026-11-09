@@ -1,0 +1,97 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-030",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-030--default--D--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Có breadcrumb phản ánh đúng trang chi tiết; tổ tiên đưa về Home, nhãn cuối nhận diện sản phẩm hiện tại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 76
+          },
+          "R: FR-23; L: S13 tr.17"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "breadcrumb",
+      "observation": {
+        "breadcrumbs": [],
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      },
+      "expected": "Có breadcrumb phản ánh đúng trang chi tiết; tổ tiên đưa về Home, nhãn cuối nhận diện sản phẩm hiện tại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-23; L: S13 tr.17",
+          {
+            "line": 76,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:16:55.220Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:16:55.069Z",
+  "finishedAtUTC": "2026-11-09T18:16:56.395Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-030\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-030\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-030\\default--D\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-030--default--D--VD/final.png",
+      "sha256": "6d10f6be7780101c5ff25ae8ea34d9072b49846984b7026b6f1b809f5a65f786"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-030--default--D--VD/final-window-email.png",
+      "sha256": "3b6331e3d7f1bedf259353651658d90afe75c170b1f8c5125d36912aaac169f6"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-030\\default--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

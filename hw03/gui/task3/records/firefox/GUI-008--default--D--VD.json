@@ -1,0 +1,98 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-008",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-008--default--D--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Đúng một h1/trang và mô tả nội dung chính; số lượng sản phẩm không tạo h1 thứ hai.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 42
+          },
+          "R: FR-05/21"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "one-h1",
+      "observation": {
+        "headings": [
+          "iPhone 15 Pro Max"
+        ]
+      },
+      "expected": "Đúng một h1/trang và mô tả nội dung chính; số lượng sản phẩm không tạo h1 thứ hai.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05/21",
+          {
+            "line": 42,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:44.511Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:44.071Z",
+  "finishedAtUTC": "2026-11-09T18:56:45.303Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-008\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-008\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-008\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-008--default--D--VD/final.png",
+      "sha256": "025a3ea8ffda349b33b0b7f7ec1d6ae4b9dc4b52983250c68dabbc588175e15f"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-008--default--D--VD/final-email-url.png",
+      "sha256": "e2ca575be25bfd4073211a90da7f8ee75c94273f24192675fd3e62ad0a8cdb85"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-008\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

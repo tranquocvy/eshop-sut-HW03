@@ -1,0 +1,108 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-035",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-035--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Trở về đúng Home rồi đúng chi tiết TD1, không vòng lặp hoặc đổi sản phẩm. Chưa áp đặt việc giữ từ khóa/scroll vì spec chưa chốt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 81
+          },
+          "H: S13 tr.17/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "history",
+      "observation": {
+        "url": "http://localhost:5173/product/1"
+      },
+      "expected": "Trở về đúng Home rồi đúng chi tiết TD1, không vòng lặp hoặc đổi sản phẩm. Chưa áp đặt việc giữ từ khóa/scroll vì spec chưa chốt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.17/18",
+          {
+            "line": 81,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:31:45.121Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:31:44.972Z",
+  "finishedAtUTC": "2026-11-09T18:31:47.402Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-035\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\back-home.png",
+      "GUI-035\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\back-home-window-email.png",
+      "GUI-035\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-035\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-035\\default--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-035--default--H--VD/back-home.png",
+      "sha256": "98514229c3aedea199ea185c47f1370879d7c167531e9e8f312dc36d37e9feab"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-035--default--H--VD/back-home-window-email.png",
+      "sha256": "a8325558ddd4a9f0d600ea087d6d3d799833097024552e20ed57d3da39b88d11"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-035--default--H--VD/final.png",
+      "sha256": "fb9ae6487852014f80986524b814dad4de80006b093726eff67a858940e54622"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-035--default--H--VD/final-window-email.png",
+      "sha256": "f20f42abbf8cc37e7e9c20ab96579fe98412010e23a922d195cf985498b68b04"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-035\\default--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

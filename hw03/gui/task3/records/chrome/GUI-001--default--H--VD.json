@@ -1,0 +1,143 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-001",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-001--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Lưới hiển thị đủ 5 sản phẩm, mỗi ID đúng một thẻ; không bỏ sót hoặc lặp.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 35
+          },
+          "R: FR-05"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "apiProductIds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "api-fixture-IDs",
+      "observation": {
+        "apiProductIds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": "Lưới hiển thị đủ 5 sản phẩm, mỗi ID đúng một thẻ; không bỏ sót hoặc lặp.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05",
+          {
+            "line": 35,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "exact-IDs",
+      "observation": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "expectedFixtureIds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": "Lưới hiển thị đủ 5 sản phẩm, mỗi ID đúng một thẻ; không bỏ sót hoặc lặp.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05",
+          {
+            "line": 35,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:12:36.164Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:12:35.980Z",
+  "finishedAtUTC": "2026-11-09T18:12:37.854Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-001\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-001\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-001\\default--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-001--default--H--VD/final.png",
+      "sha256": "9451d36b40212b463fff4468a0050bcd582193d5cffb84cb845ac5b94af3f478"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-001--default--H--VD/final-window-email.png",
+      "sha256": "ca6500de5ca86ea406720c07a80c54c8a0171c015dc334a3174ee3370d496802"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-001\\default--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

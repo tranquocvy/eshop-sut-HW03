@@ -1,0 +1,112 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-018",
+  "variant": "click",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-018--click--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Hai cách gửi cùng tiêu chí và cho cùng tập sản phẩm; không submit nhầm control. Đây là đề xuất về thao tác bàn phím, không phải quy định Enter trực tiếp trong FR-05.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 57
+          },
+          "H: S13 tr.18; FR-05 chỉ làm bối cảnh tìm kiếm"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "result-set",
+      "observation": {
+        "names": [
+          "iPhone 15 Pro Max"
+        ],
+        "q": "iPhone"
+      },
+      "expected": "Hai cách gửi cùng tiêu chí và cho cùng tập sản phẩm; không submit nhầm control. Đây là đề xuất về thao tác bàn phím, không phải quy định Enter trực tiếp trong FR-05.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.18; FR-05 chỉ làm bối cảnh tìm kiếm",
+          {
+            "line": 57,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:29:55.861Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:29:56.268Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:29:56.293Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:29:55.675Z",
+  "finishedAtUTC": "2026-11-09T18:30:00.876Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-018\\click--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-018\\click--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-018\\click--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-018--click--H--VD/final.png",
+      "sha256": "fb058f79cf2677b2bf6635abeeb8c215cd86aea13f989d7074cc7b52a17eea5e"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-018--click--H--VD/final-window-email.png",
+      "sha256": "0c16b0fd5a7f7b78d8cc9d06c807f93d87f330c6ac32f2dc5a022168f5ccb643"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-018\\click--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

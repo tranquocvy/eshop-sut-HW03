@@ -1,0 +1,112 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-020",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-020--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Hiển thị MacBook Pro M3 và không đưa sản phẩm tên không chứa MacBook. Tìm chuỗi con là tiêu chí đề xuất, không phải quy tắc match được spec mô tả chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 59
+          },
+          "H: S13 tr.12; FR-05 làm bối cảnh"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: MacBook\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "result-set",
+      "observation": {
+        "names": [
+          "MacBook Pro M3"
+        ],
+        "q": "MacBook"
+      },
+      "expected": "Hiển thị MacBook Pro M3 và không đưa sản phẩm tên không chứa MacBook. Tìm chuỗi con là tiêu chí đề xuất, không phải quy tắc match được spec mô tả chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12; FR-05 làm bối cảnh",
+          {
+            "line": 59,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:30:04.613Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:05.039Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "MacBook",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:05.072Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:30:04.451Z",
+  "finishedAtUTC": "2026-11-09T18:30:06.386Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-020\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-020\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-020\\default--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-020--default--H--VD/final.png",
+      "sha256": "d0421df8549f75a484bc16555e5b94bbd6b2e40b1d1a9c1306a4ab730ca44874"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-020--default--H--VD/final-window-email.png",
+      "sha256": "a51619e700ae0c60d1a2c52c5d605b9d082547bcdd7ef65e4c33a6401ab1243c"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-020\\default--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

@@ -1,0 +1,102 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-043",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-043--default--D--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Thông báo lỗi tải khác trạng thái không tìm thấy; không để Đang tải vô hạn sau request thất bại.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 96
+          },
+          "H: S13 tr.11/16/27"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "Đang tải..."
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "error-feedback",
+      "observation": {
+        "failed": "Đang tải...",
+        "simulation": "network abort"
+      },
+      "expected": "Thông báo lỗi tải khác trạng thái không tìm thấy; không để Đang tải vô hạn sau request thất bại.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16/27",
+          {
+            "line": 96,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:19:41.674Z",
+  "finishedAtUTC": "2026-11-09T18:19:44.181Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\error-observation-window-email.png",
+      "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-043--default--D--VD/error-observation.png",
+      "sha256": "5021e756f6a825c8e4e5fbdee997d79adbc58ee9df7b5806477a3d753602c3e2"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-043--default--D--VD/error-observation-window-email.png",
+      "sha256": "12288b71745fad4ea75b11ee9cbd7816a49aaca8421066fefb14d54452b5d17b"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-043--default--D--VD/final.png",
+      "sha256": "5021e756f6a825c8e4e5fbdee997d79adbc58ee9df7b5806477a3d753602c3e2"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-043--default--D--VD/final-window-email.png",
+      "sha256": "12288b71745fad4ea75b11ee9cbd7816a49aaca8421066fefb14d54452b5d17b"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

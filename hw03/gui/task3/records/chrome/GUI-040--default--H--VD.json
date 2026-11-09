@@ -1,0 +1,141 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-040",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-040--default--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Có message thân thiện và icon/hình minh họa; không để lưới trắng hoặc giữ thẻ cũ như kết quả hiện tại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 93
+          },
+          "R: FR-05/24"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: zzzz_T01_no_match_23120410"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "empty-message",
+      "observation": {
+        "empty": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: zzzz_T01_no_match_23120410",
+        "cardCount": 0
+      },
+      "expected": "Có message thân thiện và icon/hình minh họa; không để lưới trắng hoặc giữ thẻ cũ như kết quả hiện tại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05/24",
+          {
+            "line": 93,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    },
+    {
+      "assertionKey": "empty-illustration",
+      "observation": {
+        "main": "<div><div class=\"flex justify-between items-center mb-6\"><h1 class=\"text-3xl font-bold\">Danh sách sản phẩm</h1><form class=\"flex gap-2\"><input placeholder=\"Tìm kiếm...\" class=\"border p-2 rounded\" type=\"text\" value=\"zzzz_T01_no_match_23120410\" style=\"\"><button type=\"submit\" class=\"bg-blue-600 text-white px-4 py-2 rounded\">Tìm</button></form></div><div class=\"mb-4 text-gray-600\">Kết quả tìm kiếm cho: <span>zzzz_T01_no_match_23120410</span></div><div class=\"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6\"></div></div>"
+      },
+      "expected": "Có message thân thiện và icon/hình minh họa; không để lưới trắng hoặc giữ thẻ cũ như kết quả hiện tại.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05/24",
+          {
+            "line": 93,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:19:30.159Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:19:30.575Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "zzzz_T01_no_match_23120410",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:19:30.619Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:19:30.001Z",
+  "finishedAtUTC": "2026-11-09T18:19:31.941Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\empty-state.png",
+      "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\empty-state-window-email.png",
+      "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-040--default--H--VD/empty-state.png",
+      "sha256": "5b6aab1ddf5d9d6c63adc7f5d40ee4cc4207dc1e8ba89af8802a237ba5692b5a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-040--default--H--VD/empty-state-window-email.png",
+      "sha256": "3e06a544d751604de37d484a4ca70ff48fbc90f68327747d8eb866e3e670709d"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-040--default--H--VD/final.png",
+      "sha256": "5b6aab1ddf5d9d6c63adc7f5d40ee4cc4207dc1e8ba89af8802a237ba5692b5a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-040--default--H--VD/final-window-email.png",
+      "sha256": "3e06a544d751604de37d484a4ca70ff48fbc90f68327747d8eb866e3e670709d"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

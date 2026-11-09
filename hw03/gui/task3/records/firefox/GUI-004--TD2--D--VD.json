@@ -1,0 +1,98 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-004",
+  "variant": "TD2",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-004--TD2--D--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Dùng ₫ và phân cách hàng nghìn nhất quán; không dùng VND thay ký hiệu quy định. Không áp đặt dấu chấm hay dấu phẩy khi spec chưa chốt locale.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 38
+          },
+          "R: FR-05/21"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/2",
+        "main": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "currency",
+      "observation": {
+        "money": [
+          "28.000.000 ₫"
+        ]
+      },
+      "expected": "Dùng ₫ và phân cách hàng nghìn nhất quán; không dùng VND thay ký hiệu quy định. Không áp đặt dấu chấm hay dấu phẩy khi spec chưa chốt locale.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05/21",
+          {
+            "line": 38,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:05.273Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:04.908Z",
+  "finishedAtUTC": "2026-11-09T18:56:06.032Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-004\\TD2--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-004\\TD2--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-004\\TD2--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-004--TD2--D--VD/final.png",
+      "sha256": "e8140cf73c25fc95cd61a4a285e128d25582169afc8272dd850e7d4a6218df43"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-004--TD2--D--VD/final-email-url.png",
+      "sha256": "eedbda83a4afa9b8d8d5300b68df4ff2b407e98d5bae660331a3ec4a0aaf5e0c"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-004\\TD2--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

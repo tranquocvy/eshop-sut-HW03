@@ -1,0 +1,128 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-021",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-021--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Khôi phục tập 5 sản phẩm ban đầu, không giữ ngầm bộ lọc iPhone.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 60
+          },
+          "H: S13 tr.12/14; FR-05 làm bối cảnh"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "restore",
+      "observation": {
+        "names": [
+          "iPhone 15 Pro Max",
+          "Samsung Galaxy S24 Ultra",
+          "MacBook Pro M3",
+          "Tai nghe AirPods Pro 2",
+          "Bàn phím cơ Keychron Q1"
+        ]
+      },
+      "expected": "Khôi phục tập 5 sản phẩm ban đầu, không giữ ngầm bộ lọc iPhone.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14; FR-05 làm bối cảnh",
+          {
+            "line": 60,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:30:06.566Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:06.968Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:06.999Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:07.227Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:07.242Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:30:06.412Z",
+  "finishedAtUTC": "2026-11-09T18:30:08.275Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-021\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-021\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-021\\default--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-021--default--H--VD/final.png",
+      "sha256": "09512b719611fee984d9c139b1c6aa9375784853a8b6ad86f2744e9d7ea81a94"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-021--default--H--VD/final-window-email.png",
+      "sha256": "101be6ea69c7f8851b307344679c6699e224097c62b7f6b808780d44a1c80398"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-021\\default--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

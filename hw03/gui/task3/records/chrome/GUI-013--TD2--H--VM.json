@@ -1,0 +1,201 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-013",
+  "variant": "TD2",
+  "page": "H",
+  "viewport": "VM",
+  "comparisonKey": "GUI-013--TD2--H--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Người dùng xác định được tên đầy đủ qua phương tiện sẵn có; tên không che giá/nút. Không bắt buộc tooltip nếu đã có trang chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 47
+          },
+          "H: S13 tr.7/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "fullNameAfterNavigation": "Samsung Galaxy S24 Ultra"
+      },
+      {
+        "url": "http://localhost:5173/product/2",
+        "main": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 375,
+          "innerWidth": 390,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "Samsung Galaxy S24 Ultra",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 430,
+                "width": 293.3333435058594,
+                "height": 72,
+                "top": 430,
+                "right": 334.0000114440918,
+                "bottom": 502,
+                "left": 40.66666793823242
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 646.6666870117188,
+                "width": 67.04167175292969,
+                "height": 24,
+                "top": 646.6666870117188,
+                "right": 107.70833969116211,
+                "bottom": 670.6666870117188,
+                "left": 40.66666793823242
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 123.70833587646484,
+                "y": 638,
+                "width": 80,
+                "height": 41.333335876464844,
+                "top": 638,
+                "right": 203.70833587646484,
+                "bottom": 679.3333358764648,
+                "left": 123.70833587646484
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 695.3333740234375,
+                "width": 184.2604217529297,
+                "height": 48,
+                "top": 695.3333740234375,
+                "right": 224.9270896911621,
+                "bottom": 743.3333740234375,
+                "left": 40.66666793823242
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "fullNameAfterNavigation": "Samsung Galaxy S24 Ultra"
+          },
+          {
+            "url": "http://localhost:5173/product/2",
+            "main": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Người dùng xác định được tên đầy đủ qua phương tiện sẵn có; tên không che giá/nút. Không bắt buộc tooltip nếu đã có trang chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.7/16",
+          {
+            "line": 47,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:15:04.093Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:15:03.938Z",
+  "finishedAtUTC": "2026-11-09T18:15:05.574Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\long-name-before-explore.png",
+      "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\long-name-before-explore-window-email.png",
+      "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-013--TD2--H--VM/long-name-before-explore.png",
+      "sha256": "23fa324bd3a22c262715057ebb8333c205d656e5f9070162b5dbfef54d17846b"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-013--TD2--H--VM/long-name-before-explore-window-email.png",
+      "sha256": "73db27b402b53d6f36a96231e04ff65d924b0437b6c32644d69c84a484927ed1"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-013--TD2--H--VM/final.png",
+      "sha256": "c5f57dcd2221e92a1a1cf52a2b038a37b8e918d8152f260bfaec254482644c2a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-013--TD2--H--VM/final-window-email.png",
+      "sha256": "dd0b3d11b854ab9a6c4427db694498946b4d4daa4c48ff7dc3515591ea2a543c"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

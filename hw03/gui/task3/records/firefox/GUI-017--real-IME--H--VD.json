@@ -1,0 +1,51 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-017",
+  "variant": "real-IME",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-017--real-IME--H--VD",
+  "assessment": "blocked",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Ô hiển thị đúng chuỗi người dùng nhập, hỗ trợ chỉnh sửa bình thường, không mất ký tự tiếng Việt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 56
+          },
+          "H: S13 tr.11/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      "realIME unavailable; no proxy used"
+    ]
+  },
+  "assertions": [],
+  "actions": [],
+  "reason": "realIME unavailable; no proxy used",
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:10.776Z",
+  "finishedAtUTC": "2026-11-09T19:00:10.776Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": []
+  },
+  "evidence": [],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-017\\real-IME--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

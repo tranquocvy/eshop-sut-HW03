@@ -1,0 +1,166 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-007",
+  "variant": "TD5",
+  "page": "D",
+  "viewport": "VM",
+  "comparisonKey": "GUI-007--TD5--D--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    },
+    {
+      "key": "H",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/5",
+        "main": "Bàn phím cơ Keychron Q1\n\n4.000.000 ₫\n\nGõ cực sướng, thiết kế kim loại\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "ratio-comparison",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=Keychron+Q1",
+          "alt": "Bàn phím cơ Keychron Q1",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 40.66667175292969,
+            "y": 104.66667175292969,
+            "width": 308.6666564941406,
+            "height": 308.6666564941406,
+            "top": 104.66667175292969,
+            "right": 349.3333282470703,
+            "bottom": 413.3333282470703,
+            "left": 40.66667175292969
+          },
+          "objectFit": "fill"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "seed-text-crop-review",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=Keychron+Q1",
+          "alt": "Bàn phím cơ Keychron Q1",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 40.66667175292969,
+            "y": 104.66667175292969,
+            "width": 308.6666564941406,
+            "height": 308.6666564941406,
+            "top": 104.66667175292969,
+            "right": 349.3333282470703,
+            "bottom": 413.3333282470703,
+            "left": 40.66667175292969
+          },
+          "objectFit": "fill"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:41.313Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:40.916Z",
+  "finishedAtUTC": "2026-11-09T18:56:42.808Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-007\\TD5--D\\windows-playwright-firefox--VM\\attempt-001\\source-image-0.png",
+      "GUI-007\\TD5--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-007\\TD5--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-007\\TD5--D\\windows-playwright-firefox--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-007--TD5--D--VM/final.png",
+      "sha256": "37f692fe0440bc86dce46d0328e33704840748cd72e59c222f0bc0560fefb003"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-007--TD5--D--VM/final-email-url.png",
+      "sha256": "d4146a52048d21e3f077572cb5e04bb1aeaeb05d465b35aa869b5b30000d02ff"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-007\\TD5--D\\windows-playwright-firefox--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,163 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-002",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-002--default--H--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Mỗi thẻ có ảnh, tên và giá; các thành phần gắn cùng sản phẩm, không tráo giữa thẻ.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 36
+          },
+          "R: FR-05; L: S13 tr.12"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "card-content",
+      "observation": [
+        {
+          "name": "iPhone 15 Pro Max",
+          "card": "iPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=iPhone+15"
+        },
+        {
+          "name": "Samsung Galaxy S24 Ultra",
+          "card": "Samsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=Samsung+S24"
+        },
+        {
+          "name": "MacBook Pro M3",
+          "card": "MacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=Macbook+Pro"
+        },
+        {
+          "name": "Tai nghe AirPods Pro 2",
+          "card": "Tai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=AirPods+Pro"
+        },
+        {
+          "name": "Bàn phím cơ Keychron Q1",
+          "card": "Bàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=Keychron+Q1"
+        }
+      ],
+      "expected": "Mỗi thẻ có ảnh, tên và giá; các thành phần gắn cùng sản phẩm, không tráo giữa thẻ.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05; L: S13 tr.12",
+          {
+            "line": 36,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "visual-association",
+      "observation": [
+        {
+          "name": "iPhone 15 Pro Max",
+          "card": "iPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=iPhone+15"
+        },
+        {
+          "name": "Samsung Galaxy S24 Ultra",
+          "card": "Samsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=Samsung+S24"
+        },
+        {
+          "name": "MacBook Pro M3",
+          "card": "MacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=Macbook+Pro"
+        },
+        {
+          "name": "Tai nghe AirPods Pro 2",
+          "card": "Tai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=AirPods+Pro"
+        },
+        {
+          "name": "Bàn phím cơ Keychron Q1",
+          "card": "Bàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ",
+          "image": "https://placehold.co/300x300/png?text=Keychron+Q1"
+        }
+      ],
+      "expected": "Mỗi thẻ có ảnh, tên và giá; các thành phần gắn cùng sản phẩm, không tráo giữa thẻ.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-05; L: S13 tr.12",
+          {
+            "line": 36,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:55:56.103Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:55:55.676Z",
+  "finishedAtUTC": "2026-11-09T18:55:56.893Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-002\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-002\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-002\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-002--default--H--VD/final.png",
+      "sha256": "653df97ec3862a0560ca78970116d55b74f8e46f3cc3d5622d4afc05d2ac87f9"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-002--default--H--VD/final-email-url.png",
+      "sha256": "b05ff1c56bb6e93ee7dad51842ac761e2c83730c4844f7980025c25e8b7c7d10"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-002\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

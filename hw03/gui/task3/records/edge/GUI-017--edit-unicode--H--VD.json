@@ -1,0 +1,103 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-017",
+  "variant": "edit-unicode",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-017--edit-unicode--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Ô hiển thị đúng chuỗi người dùng nhập, hỗ trợ chỉnh sửa bình thường, không mất ký tự tiếng Việt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 56
+          },
+          "H: S13 tr.11/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: Bàn phím cơ\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "unicode-edit",
+      "observation": {
+        "value": "Bàn phím cơ",
+        "composition": "not claimed; separate real-IME blocked"
+      },
+      "expected": "Ô hiển thị đúng chuỗi người dùng nhập, hỗ trợ chỉnh sửa bình thường, không mất ký tự tiếng Việt.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16",
+          {
+            "line": 56,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:29:53.991Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:29:54.405Z",
+      "kind": "fill",
+      "target": "search",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:29:53.844Z",
+  "finishedAtUTC": "2026-11-09T18:29:55.634Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-017\\edit-unicode--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-017\\edit-unicode--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-017\\edit-unicode--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-017--edit-unicode--H--VD/final.png",
+      "sha256": "fdf813e709888395904d28fdeb325d939b35ae4d0de6874db5a0aa16b3398cb6"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-017--edit-unicode--H--VD/final-window-email.png",
+      "sha256": "fbf184c44df76fd518aca3c504bd375e519b319a1e6bad2b5b095682d1d1b0d9"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-017\\edit-unicode--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

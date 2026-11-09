@@ -1,0 +1,201 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-013",
+  "variant": "TD5",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-013--TD5--H--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Người dùng xác định được tên đầy đủ qua phương tiện sẵn có; tên không che giá/nút. Không bắt buộc tooltip nếu đã có trang chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 47
+          },
+          "H: S13 tr.7/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "fullNameAfterNavigation": "Bàn phím cơ Keychron Q1"
+      },
+      {
+        "url": "http://localhost:5173/product/5",
+        "main": "Bàn phím cơ Keychron Q1\n\n4.000.000 ₫\n\nGõ cực sướng, thiết kế kim loại\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "Bàn phím cơ Keychron Q1\n\n4.000.000 ₫\n\nGõ cực sướng, thiết kế kim loại\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "Bàn phím cơ Keychron Q1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 736,
+                "y": 104.66667175292969,
+                "width": 455.3333435058594,
+                "height": 36,
+                "top": 104.66667175292969,
+                "right": 1191.3333435058594,
+                "bottom": 140.6666717529297,
+                "left": 736
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 736,
+                "y": 463.3333435058594,
+                "width": 67.04167175292969,
+                "height": 24,
+                "top": 463.3333435058594,
+                "right": 803.0416717529297,
+                "bottom": 487.3333435058594,
+                "left": 736
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 819.0416870117188,
+                "y": 454.66668701171875,
+                "width": 80,
+                "height": 41.333335876464844,
+                "top": 454.66668701171875,
+                "right": 899.0416870117188,
+                "bottom": 496.0000228881836,
+                "left": 819.0416870117188
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 736,
+                "y": 512,
+                "width": 184.2604217529297,
+                "height": 48,
+                "top": 512,
+                "right": 920.2604217529297,
+                "bottom": 560,
+                "left": 736
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "fullNameAfterNavigation": "Bàn phím cơ Keychron Q1"
+          },
+          {
+            "url": "http://localhost:5173/product/5",
+            "main": "Bàn phím cơ Keychron Q1\n\n4.000.000 ₫\n\nGõ cực sướng, thiết kế kim loại\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Người dùng xác định được tên đầy đủ qua phương tiện sẵn có; tên không che giá/nút. Không bắt buộc tooltip nếu đã có trang chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.7/16",
+          {
+            "line": 47,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:15:02.060Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:15:01.911Z",
+  "finishedAtUTC": "2026-11-09T18:15:03.904Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\long-name-before-explore.png",
+      "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\long-name-before-explore-window-email.png",
+      "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-013--TD5--H--VD/long-name-before-explore.png",
+      "sha256": "9451d36b40212b463fff4468a0050bcd582193d5cffb84cb845ac5b94af3f478"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-013--TD5--H--VD/long-name-before-explore-window-email.png",
+      "sha256": "43c40e2a07bebce9b812107cd6935270d7f791bd00c61ef67e7eb4972e477a23"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-013--TD5--H--VD/final.png",
+      "sha256": "ceaa486da591921a2c7f6fd2351bc53967aa42a8ea2d3ee2e5688b5ed2903b74"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-013--TD5--H--VD/final-window-email.png",
+      "sha256": "c2aa9670833cd1cea06246332bf353406806479dcf6375a96619804680893bfb"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

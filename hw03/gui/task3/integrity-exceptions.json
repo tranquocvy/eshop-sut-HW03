@@ -1,0 +1,10 @@
+[
+  {
+    "platform": "edge",
+    "caseId": "GUI-001",
+    "sourcePath": "GUI-001\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+    "expectedSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actualSHA256": "1361cc1ddd1289d4240ca38b2f804c6435fff5da94ddc80ebe24efc532594944",
+    "action": "Excluded from packaged evidence; raw preserved. Native capture must be retaken for submission."
+  }
+]

@@ -1,0 +1,142 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-047",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-047--default--D--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 100
+          },
+          "R: FR-24 (alt); H: S13 tr.7/11"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    },
+    {
+      "key": "H",
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 100
+          },
+          "R: FR-24 (alt); H: S13 tr.7/11"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "fallback-alt",
+      "observation": {
+        "im": {
+          "alt": "iPhone 15 Pro Max",
+          "complete": true,
+          "naturalWidth": 0
+        },
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      },
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-24 (alt); H: S13 tr.7/11",
+          {
+            "line": 100,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "usability-with-broken-image",
+      "observation": {
+        "im": {
+          "alt": "iPhone 15 Pro Max",
+          "complete": true,
+          "naturalWidth": 0
+        },
+        "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+        "detailLinks": 0
+      },
+      "expected": "Tên, giá và đích chi tiết vẫn dùng được; ảnh hỏng có alt/fallback nhận diện, không khiến cả màn hình trắng.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-24 (alt); H: S13 tr.7/11",
+          {
+            "line": 100,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:20:04.891Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:20:04.745Z",
+  "finishedAtUTC": "2026-11-09T18:20:06.329Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-047\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-047\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-047\\default--D\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-047--default--D--VD/final.png",
+      "sha256": "2daa15c67e35ec32dc14a755b87acf261a763193ea9bcebf679378890e93d5d5"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-047--default--D--VD/final-window-email.png",
+      "sha256": "69a4e63ea0622a605b8552b5f4c80a979a1f6e79b49d5e4ca076df9176c49321"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-047\\default--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

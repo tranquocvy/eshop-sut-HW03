@@ -1,0 +1,121 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-039",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-039--default--D--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Nhận biết được đang tải rồi nội dung TD1; không hiển thị dữ liệu sản phẩm khác như kết quả cuối.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 92
+          },
+          "H: S13 tr.13/14"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "loading",
+      "observation": {
+        "pending": "Đang tải...",
+        "final": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      },
+      "expected": "Nhận biết được đang tải rồi nội dung TD1; không hiển thị dữ liệu sản phẩm khác như kết quả cuối.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.13/14",
+          {
+            "line": 92,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "settled",
+      "observation": {
+        "final": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      },
+      "expected": "Nhận biết được đang tải rồi nội dung TD1; không hiển thị dữ liệu sản phẩm khác như kết quả cuối.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.13/14",
+          {
+            "line": 92,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:28.797Z",
+  "finishedAtUTC": "2026-11-09T19:01:32.318Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-039\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\pending.png",
+      "GUI-039\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\pending-email-url.png",
+      "GUI-039\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-039\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-039\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-039--default--D--VD/pending.png",
+      "sha256": "7198b46c26f44f3515415159c15741b60470b11dc0494ea7e117e5eb647a90b0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-039--default--D--VD/pending-email-url.png",
+      "sha256": "a5f5e89e290139028002d9d2ff25a2229e000855716e7da92f3c9722408e16b9"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-039--default--D--VD/final.png",
+      "sha256": "025a3ea8ffda349b33b0b7f7ec1d6ae4b9dc4b52983250c68dabbc588175e15f"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-039--default--D--VD/final-email-url.png",
+      "sha256": "67395c98b76b833ff2111080d84fd77fcca15098b372457fdd875b51be1f30de"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-039\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

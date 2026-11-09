@@ -1,0 +1,112 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-020",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-020--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Hiển thị MacBook Pro M3 và không đưa sản phẩm tên không chứa MacBook. Tìm chuỗi con là tiêu chí đề xuất, không phải quy tắc match được spec mô tả chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 59
+          },
+          "H: S13 tr.12; FR-05 làm bối cảnh"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: MacBook\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "result-set",
+      "observation": {
+        "names": [
+          "MacBook Pro M3"
+        ],
+        "q": "MacBook"
+      },
+      "expected": "Hiển thị MacBook Pro M3 và không đưa sản phẩm tên không chứa MacBook. Tìm chuỗi con là tiêu chí đề xuất, không phải quy tắc match được spec mô tả chi tiết.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12; FR-05 làm bối cảnh",
+          {
+            "line": 59,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:00:15.739Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:16.127Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "MacBook",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:16.204Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:15.283Z",
+  "finishedAtUTC": "2026-11-09T19:00:16.796Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-020\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-020\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-020\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-020--default--H--VD/final.png",
+      "sha256": "e600ad0627ec74c4f12d0688e3ff88806fd82279fe6a59c136f8395c64cde302"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-020--default--H--VD/final-email-url.png",
+      "sha256": "d5974302887883b5a1c9d2cf181559fdd27ef86bb3e3cbc25e4f9a9db6e6aca4"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-020\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

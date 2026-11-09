@@ -1,0 +1,158 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-051",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-051--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 102
+          },
+          "H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "initial-empty",
+      "observation": {
+        "empty": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: zzzz_no_match",
+        "cardCount": 0
+      },
+      "expected": "Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm",
+          {
+            "line": 102,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "empty-to-results",
+      "observation": {
+        "empty": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: zzzz_no_match",
+        "after": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm",
+        "sameURL": true,
+        "sameContext": true,
+        "noReload": true
+      },
+      "expected": "Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm",
+          {
+            "line": 102,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:20:06.504Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:20:06.924Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "zzzz_no_match",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:20:06.963Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:20:08.098Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:20:08.122Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:20:06.358Z",
+  "finishedAtUTC": "2026-11-09T18:20:09.113Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-051\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\empty-state.png",
+      "GUI-051\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\empty-state-window-email.png",
+      "GUI-051\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-051\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-051\\default--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-051--default--H--VD/empty-state.png",
+      "sha256": "90d1382c5ea25d476e37f12fabab3ff7ac860f8d3baf37ab35941d8a2ac4864a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-051--default--H--VD/empty-state-window-email.png",
+      "sha256": "48c884ef1f887d25fee2b6a5174b8681a3da3d155b63ad428dedab617c92ae32"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-051--default--H--VD/final.png",
+      "sha256": "fb058f79cf2677b2bf6635abeeb8c215cd86aea13f989d7074cc7b52a17eea5e"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-051--default--H--VD/final-window-email.png",
+      "sha256": "58bcaf36ee832b4d9d1e8f05376238f99841ea73e5f79e4341b25a520d7ef1ea"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-051\\default--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

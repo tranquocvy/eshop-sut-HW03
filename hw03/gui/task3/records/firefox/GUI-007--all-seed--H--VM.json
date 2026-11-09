@@ -1,0 +1,314 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-007",
+  "variant": "all-seed",
+  "page": "H",
+  "viewport": "VM",
+  "comparisonKey": "GUI-007--all-seed--H--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    },
+    {
+      "key": "H",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "ratio-comparison",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=iPhone+15",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 264.66668701171875,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 264.66668701171875,
+            "right": 357.3333282470703,
+            "bottom": 456.66668701171875,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=Samsung+S24",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 634,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 634,
+            "right": 357.3333282470703,
+            "bottom": 826,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=Macbook+Pro",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 1003.3333129882812,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 1003.3333129882812,
+            "right": 357.3333282470703,
+            "bottom": 1195.3333129882812,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=AirPods+Pro",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 1372.6666259765625,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 1372.6666259765625,
+            "right": 357.3333282470703,
+            "bottom": 1564.6666259765625,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=Keychron+Q1",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 1742,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 1742,
+            "right": 357.3333282470703,
+            "bottom": 1934,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "seed-text-crop-review",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=iPhone+15",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 264.66668701171875,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 264.66668701171875,
+            "right": 357.3333282470703,
+            "bottom": 456.66668701171875,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=Samsung+S24",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 634,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 634,
+            "right": 357.3333282470703,
+            "bottom": 826,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=Macbook+Pro",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 1003.3333129882812,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 1003.3333129882812,
+            "right": 357.3333282470703,
+            "bottom": 1195.3333129882812,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=AirPods+Pro",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 1372.6666259765625,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 1372.6666259765625,
+            "right": 357.3333282470703,
+            "bottom": 1564.6666259765625,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        },
+        {
+          "src": "https://placehold.co/300x300/png?text=Keychron+Q1",
+          "alt": "",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 32.66667175292969,
+            "y": 1742,
+            "width": 324.6666564941406,
+            "height": 192,
+            "top": 1742,
+            "right": 357.3333282470703,
+            "bottom": 1934,
+            "left": 32.66667175292969
+          },
+          "objectFit": "cover"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:21.533Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:21.112Z",
+  "finishedAtUTC": "2026-11-09T18:56:23.081Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\source-image-0.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\source-image-1.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\source-image-2.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\source-image-3.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\source-image-4.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-007--all-seed--H--VM/final.png",
+      "sha256": "f6b9cdd6a12338cc8501aa53a94694f73e9d8649c76a06bd5e1eea4b414c2583"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-007--all-seed--H--VM/final-email-url.png",
+      "sha256": "85312ecaca1d01edbb66097238e5a3ab25a5b348606b93fd346e20be389c96a7"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

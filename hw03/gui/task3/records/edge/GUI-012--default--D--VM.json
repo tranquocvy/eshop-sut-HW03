@@ -1,0 +1,195 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-012",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VM",
+  "comparisonKey": "GUI-012--default--D--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Không cần cuộn ngang toàn trang để đọc/thao tác; nút và form không ra ngoài viewport. Heading và form không ép nhau khiến tiêu đề bị bẻ thành cột từng từ; bố trí lại theo chiều dọc khi cần (tiêu chí H về layout/typography).",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 46
+          },
+          "H: S13 tr.7/22"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 390,
+          "innerWidth": 390,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "iPhone 15 Pro Max",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 445.3333435058594,
+                "width": 308.66668701171875,
+                "height": 36,
+                "top": 445.3333435058594,
+                "right": 349.3333549499512,
+                "bottom": 481.3333435058594,
+                "left": 40.66666793823242
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 602,
+                "width": 67.04167175292969,
+                "height": 24,
+                "top": 602,
+                "right": 107.70833969116211,
+                "bottom": 626,
+                "left": 40.66666793823242
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 123.70833587646484,
+                "y": 593.3333740234375,
+                "width": 80,
+                "height": 41.333335876464844,
+                "top": 593.3333740234375,
+                "right": 203.70833587646484,
+                "bottom": 634.6667098999023,
+                "left": 123.70833587646484
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66666793823242,
+                "y": 650.6666870117188,
+                "width": 184.2604217529297,
+                "height": 48,
+                "top": 650.6666870117188,
+                "right": 224.9270896911621,
+                "bottom": 698.6666870117188,
+                "left": 40.66666793823242
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "url": "http://localhost:5173/product/1",
+            "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Không cần cuộn ngang toàn trang để đọc/thao tác; nút và form không ra ngoài viewport. Heading và form không ép nhau khiến tiêu đề bị bẻ thành cột từng từ; bố trí lại theo chiều dọc khi cần (tiêu chí H về layout/typography).",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.7/22",
+          {
+            "line": 46,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:28:50.447Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:28:50.297Z",
+  "finishedAtUTC": "2026-11-09T18:28:52.068Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\bottom.png",
+      "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\bottom-window-email.png",
+      "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-012--default--D--VM/bottom.png",
+      "sha256": "1e9c0d75b6d89c23c1949335b1a6846fdd57e374d4cc52d50f4f578ba1cc3716"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-012--default--D--VM/bottom-window-email.png",
+      "sha256": "f9a3f0aa267d430dacef5b1dd7d44c55b4ae1a4765ea0752619f714a8edb331a"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-012--default--D--VM/final.png",
+      "sha256": "8b006ae94cd25fadad2365ebbe108e1504dac560de545c2393c1255b7411ffd4"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-012--default--D--VM/final-window-email.png",
+      "sha256": "f9a3f0aa267d430dacef5b1dd7d44c55b4ae1a4765ea0752619f714a8edb331a"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,158 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-051",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-051--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 102
+          },
+          "H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "initial-empty",
+      "observation": {
+        "empty": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: zzzz_no_match",
+        "cardCount": 0
+      },
+      "expected": "Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm",
+          {
+            "line": 102,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "empty-to-results",
+      "observation": {
+        "empty": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: zzzz_no_match",
+        "after": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm",
+        "sameURL": true,
+        "sameContext": true,
+        "noReload": true
+      },
+      "expected": "Thông báo không có kết quả biến mất; sản phẩm iPhone xuất hiện bình thường mà không cần tải lại trang.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14 (chuyển trạng thái/phục hồi); FR-05 làm bối cảnh tìm kiếm",
+          {
+            "line": 102,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:32:40.092Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:32:40.513Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "zzzz_no_match",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:32:40.540Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:32:41.374Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:32:41.386Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:32:39.915Z",
+  "finishedAtUTC": "2026-11-09T18:32:42.367Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-051\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\empty-state.png",
+      "GUI-051\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\empty-state-window-email.png",
+      "GUI-051\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-051\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-051\\default--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-051--default--H--VD/empty-state.png",
+      "sha256": "90d1382c5ea25d476e37f12fabab3ff7ac860f8d3baf37ab35941d8a2ac4864a"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-051--default--H--VD/empty-state-window-email.png",
+      "sha256": "b94e8110cac59d928510c5148940d87a201a122309a25e67146d8bd29884bd51"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-051--default--H--VD/final.png",
+      "sha256": "fb058f79cf2677b2bf6635abeeb8c215cd86aea13f989d7074cc7b52a17eea5e"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-051--default--H--VD/final-window-email.png",
+      "sha256": "02fc74865940aa4ad2dea32fc3c46c590e6d84a61da01f4a06461901a4c76626"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-051\\default--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

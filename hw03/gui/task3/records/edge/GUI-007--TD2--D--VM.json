@@ -1,0 +1,166 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-007",
+  "variant": "TD2",
+  "page": "D",
+  "viewport": "VM",
+  "comparisonKey": "GUI-007--TD2--D--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    },
+    {
+      "key": "H",
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 41
+          },
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/2",
+        "main": "Samsung Galaxy S24 Ultra\n\n28.000.000 ₫\n\nMàn hình hiển thị xuất sắc, camera siêu zoom\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "ratio-comparison",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=Samsung+S24",
+          "alt": "Samsung Galaxy S24 Ultra",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 40.66666793823242,
+            "y": 104.66667175292969,
+            "width": 293.3333435058594,
+            "height": 293.3333435058594,
+            "top": 104.66667175292969,
+            "right": 334.0000114440918,
+            "bottom": 398.00001525878906,
+            "left": 40.66666793823242
+          },
+          "objectFit": "fill"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    },
+    {
+      "assertionKey": "seed-text-crop-review",
+      "observation": [
+        {
+          "src": "https://placehold.co/300x300/png?text=Samsung+S24",
+          "alt": "Samsung Galaxy S24 Ultra",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "rect": {
+            "x": 40.66666793823242,
+            "y": 104.66667175292969,
+            "width": 293.3333435058594,
+            "height": 293.3333435058594,
+            "top": 104.66667175292969,
+            "right": 334.0000114440918,
+            "bottom": 398.00001525878906,
+            "left": 40.66666793823242
+          },
+          "objectFit": "fill"
+        }
+      ],
+      "expected": "Tỷ lệ nội dung ảnh không bị kéo méo (R); với ảnh seed, phần chữ nhận diện thiết bị trong ảnh không bị cắt mất bởi container (H). Không coi mọi crop là vi phạm nếu vẫn giữ nội dung cần nhận diện.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "R: FR-05 (tỷ lệ); H: S13 tr.7/16 (crop)",
+          {
+            "line": 41,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:28:28.241Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:28:28.097Z",
+  "finishedAtUTC": "2026-11-09T18:28:30.409Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-007\\TD2--D\\windows-microsoft-edge--VM\\attempt-001\\source-image-0.png",
+      "GUI-007\\TD2--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-007\\TD2--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-007\\TD2--D\\windows-microsoft-edge--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-007--TD2--D--VM/final.png",
+      "sha256": "20720a9b9f6a6df7b0b05c1b238915d90e04424f49777ddce80a7d0580ff815c"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-007--TD2--D--VM/final-window-email.png",
+      "sha256": "097e776abd7cece29a1161a7f2a4a5bbb31df7f7d3211cc804d6d21049a1ba5b"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-007\\TD2--D\\windows-microsoft-edge--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,183 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-009",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-009--default--D--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Nhãn/thông báo dùng tiếng Việt có dấu; tên thương hiệu và thuật ngữ kỹ thuật được giữ nguyên hợp lý.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 43
+          },
+          "R: FR-21"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "iPhone 15 Pro Max",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 736,
+                "y": 104.66667175292969,
+                "width": 455.33331298828125,
+                "height": 36,
+                "top": 104.66667175292969,
+                "right": 1191.3333129882812,
+                "bottom": 140.6666717529297,
+                "left": 736
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 736,
+                "y": 261.33331298828125,
+                "width": 67.03334045410156,
+                "height": 24,
+                "top": 261.33331298828125,
+                "right": 803.0333404541016,
+                "bottom": 285.33331298828125,
+                "left": 736
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 819.0333251953125,
+                "y": 252.6666717529297,
+                "width": 80,
+                "height": 41.33332824707031,
+                "top": 252.6666717529297,
+                "right": 899.0333251953125,
+                "bottom": 294,
+                "left": 819.0333251953125
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 736,
+                "y": 310,
+                "width": 184.25,
+                "height": 48,
+                "top": 310,
+                "right": 920.25,
+                "bottom": 358,
+                "left": 736
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "url": "http://localhost:5173/product/1",
+            "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Nhãn/thông báo dùng tiếng Việt có dấu; tên thương hiệu và thuật ngữ kỹ thuật được giữ nguyên hợp lý.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-21",
+          {
+            "line": 43,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:47.222Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:46.799Z",
+  "finishedAtUTC": "2026-11-09T18:56:47.996Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-009\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-009\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-009\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-009--default--D--VD/final.png",
+      "sha256": "025a3ea8ffda349b33b0b7f7ec1d6ae4b9dc4b52983250c68dabbc588175e15f"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-009--default--D--VD/final-email-url.png",
+      "sha256": "00dc29e6a44e1015adad487a0c330e58e1a76fa44524e0fc3793b520dc3af5b6"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-009\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

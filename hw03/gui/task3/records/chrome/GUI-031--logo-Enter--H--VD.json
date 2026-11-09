@@ -1,0 +1,103 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-031",
+  "variant": "logo-Enter",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-031--logo-Enter--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 77
+          },
+          "H: S13 tr.8/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "activation-success",
+      "observation": {
+        "method": "Enter",
+        "url": "http://localhost:5173/"
+      },
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.8/18",
+          {
+            "line": 77,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:17:00.299Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:17:00.736Z",
+      "kind": "Enter",
+      "target": "logo",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:17:00.167Z",
+  "finishedAtUTC": "2026-11-09T18:17:04.109Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-031\\logo-Enter--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-031\\logo-Enter--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-031\\logo-Enter--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-031--logo-Enter--H--VD/final.png",
+      "sha256": "080d58f5c6a18ab6581054cb9bc67fba3a340f6eaa0b3b696efadcc7f7a02feb"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-031--logo-Enter--H--VD/final-window-email.png",
+      "sha256": "8c35e9c1b10aabf4ec310a6f9768948be93395adf18fa4abf229e8375a1680ff"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-031\\logo-Enter--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

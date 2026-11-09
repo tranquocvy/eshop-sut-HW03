@@ -1,0 +1,131 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-031",
+  "variant": "add-click",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-031--add-click--D--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 77
+          },
+          "H: S13 tr.8/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "activation-success",
+      "observation": {
+        "method": "click",
+        "before": "Thêm vào giỏ hàng",
+        "after": "Thêm vào giỏ hàng",
+        "headerBefore": "EShop\nGiỏ hàng\nĐăng nhập\nĐăng ký",
+        "headerAfter": "EShop\nGiỏ hàng\nĐăng nhập\nĐăng ký",
+        "toast": []
+      },
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.8/18",
+          {
+            "line": 77,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:17:35.240Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:17:36.276Z",
+      "kind": "click",
+      "target": "add",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:17:35.091Z",
+  "finishedAtUTC": "2026-11-09T18:17:38.063Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\before-first-action.png",
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\before-first-action-window-email.png",
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\after-first-action.png",
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\after-first-action-window-email.png",
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/before-first-action.png",
+      "sha256": "6d10f6be7780101c5ff25ae8ea34d9072b49846984b7026b6f1b809f5a65f786"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/before-first-action-window-email.png",
+      "sha256": "d23d10a4e1eee9931407603b3daf60666bc63d8a8f84953dc7fc83a549b59adc"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/after-first-action.png",
+      "sha256": "0892b3106bc53b854a55992718f350d198eb370c0e5ab7d1793d76433baae2e9"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/after-first-action-window-email.png",
+      "sha256": "9c53b3a6668879e6d15e8119688503ee3e0cf4c857803b0d1d34aa599493fc21"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/final.png",
+      "sha256": "0892b3106bc53b854a55992718f350d198eb370c0e5ab7d1793d76433baae2e9"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/final-window-email.png",
+      "sha256": "9c53b3a6668879e6d15e8119688503ee3e0cf4c857803b0d1d34aa599493fc21"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

@@ -1,0 +1,117 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-006",
+  "variant": "all-seed",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-006--all-seed--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "R",
+      "expected": "Mỗi ảnh có alt không rỗng, mô tả đúng sản phẩm; không dùng alt chung chung cho tất cả ảnh.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 40
+          },
+          "R: FR-05/24"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "descriptive-alt",
+      "observation": {
+        "imgs": [
+          {
+            "src": "https://placehold.co/300x300/png?text=iPhone+15",
+            "alt": ""
+          },
+          {
+            "src": "https://placehold.co/300x300/png?text=Samsung+S24",
+            "alt": ""
+          },
+          {
+            "src": "https://placehold.co/300x300/png?text=Macbook+Pro",
+            "alt": ""
+          },
+          {
+            "src": "https://placehold.co/300x300/png?text=AirPods+Pro",
+            "alt": ""
+          },
+          {
+            "src": "https://placehold.co/300x300/png?text=Keychron+Q1",
+            "alt": ""
+          }
+        ]
+      },
+      "expected": "Mỗi ảnh có alt không rỗng, mô tả đúng sản phẩm; không dùng alt chung chung cho tất cả ảnh.",
+      "oracle": {
+        "class": "R",
+        "refs": [
+          "R: FR-05/24",
+          {
+            "line": 40,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "requirement-bug"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:11.219Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:10.802Z",
+  "finishedAtUTC": "2026-11-09T18:56:12.073Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-006\\all-seed--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-006\\all-seed--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-006\\all-seed--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-006--all-seed--H--VD/final.png",
+      "sha256": "653df97ec3862a0560ca78970116d55b74f8e46f3cc3d5622d4afc05d2ac87f9"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-006--all-seed--H--VD/final-email-url.png",
+      "sha256": "861f29adc00584882a8517c2c6424c758dfabccb38cb4c1d6ecbeb71e187d890"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-006\\all-seed--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

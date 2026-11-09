@@ -1,0 +1,112 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-031",
+  "variant": "search-Enter",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-031--search-Enter--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 77
+          },
+          "H: S13 tr.8/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: iPhone\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "activation-success",
+      "observation": {
+        "method": "Enter",
+        "names": [
+          "iPhone 15 Pro Max"
+        ]
+      },
+      "expected": "Link đến đúng đích; button kích hoạt cùng hành động như click mà không cần chuột. Với Thêm vào giỏ chỉ quan sát feedback tại H/D, không mở trang giỏ. Nếu click cũng không hoạt động, tách lỗi control khỏi lỗi keyboard.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.8/18",
+          {
+            "line": 77,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:30:35.392Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:35.784Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T18:30:35.817Z",
+      "kind": "Enter",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:30:35.238Z",
+  "finishedAtUTC": "2026-11-09T18:30:36.815Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-031\\search-Enter--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-031\\search-Enter--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-031\\search-Enter--H\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-031--search-Enter--H--VD/final.png",
+      "sha256": "b52b5c5f6543ea00ef5bd18c4eb592a47037118a33f2df2a6da37c0d6618b433"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-031--search-Enter--H--VD/final-window-email.png",
+      "sha256": "4b733cbedf0106547cbbdc03cd33ebd795e0ea420ad4d5b396878068b5ed9e40"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-031\\search-Enter--H\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

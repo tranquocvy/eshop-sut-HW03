@@ -1,0 +1,195 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-012",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VM",
+  "comparisonKey": "GUI-012--default--D--VM",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Không cần cuộn ngang toàn trang để đọc/thao tác; nút và form không ra ngoài viewport. Heading và form không ép nhau khiến tiêu đề bị bẻ thành cột từng từ; bố trí lại theo chiều dọc khi cần (tiêu chí H về layout/typography).",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 46
+          },
+          "H: S13 tr.7/22"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+          "scrollWidth": 390,
+          "innerWidth": 390,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "iPhone 15 Pro Max",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66667175292969,
+                "y": 136.6666717529297,
+                "width": 308.6666564941406,
+                "height": 36,
+                "top": 136.6666717529297,
+                "right": 349.3333282470703,
+                "bottom": 172.6666717529297,
+                "left": 40.66667175292969
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "LABEL",
+              "text": "Số lượng:",
+              "ariaLabel": null,
+              "id": "",
+              "for": "",
+              "rect": {
+                "x": 40.66667175292969,
+                "y": 293.33331298828125,
+                "width": 67.0333251953125,
+                "height": 24,
+                "top": 293.33331298828125,
+                "right": 107.69999694824219,
+                "bottom": 317.33331298828125,
+                "left": 40.66667175292969
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 123.69999694824219,
+                "y": 284.66668701171875,
+                "width": 80,
+                "height": 41.33332824707031,
+                "top": 284.66668701171875,
+                "right": 203.6999969482422,
+                "bottom": 326.00001525878906,
+                "left": 123.69999694824219
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ hàng",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 40.66667175292969,
+                "y": 342,
+                "width": 184.25,
+                "height": 48,
+                "top": 342,
+                "right": 224.9166717529297,
+                "bottom": 390,
+                "left": 40.66667175292969
+              },
+              "background": "rgb(22, 163, 74)",
+              "color": "rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "url": "http://localhost:5173/product/1",
+            "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+          }
+        ]
+      },
+      "expected": "Không cần cuộn ngang toàn trang để đọc/thao tác; nút và form không ra ngoài viewport. Heading và form không ép nhau khiến tiêu đề bị bẻ thành cột từng từ; bố trí lại theo chiều dọc khi cần (tiêu chí H về layout/typography).",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.7/22",
+          {
+            "line": 46,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:56:55.268Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:56:54.855Z",
+  "finishedAtUTC": "2026-11-09T18:56:55.932Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\bottom.png",
+      "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\bottom-email-url.png",
+      "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final.png",
+      "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-012--default--D--VM/bottom.png",
+      "sha256": "625c9c90e444c6187913ca395d9db13b0ac45ef41fa79095764f761e813235c0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-012--default--D--VM/bottom-email-url.png",
+      "sha256": "9b44543d0e39f564dcedaa3cee4cbf920d93030b82544d5d2811230f6b7bda9d"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-012--default--D--VM/final.png",
+      "sha256": "625c9c90e444c6187913ca395d9db13b0ac45ef41fa79095764f761e813235c0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-012--default--D--VM/final-email-url.png",
+      "sha256": "f671b58ea0ebb1bc8a62ea0d798aed6d818949d5939eccad65bd6b723a9acca8"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+  "sourceResult": "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

@@ -1,0 +1,457 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-011",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-011--default--H--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Các thẻ cùng cột có mép trái thẳng hàng; thẻ cùng hàng có mép trên thẳng hàng. Cụm input/nút Tìm và khối ảnh/thông tin không chồng lên nhau; không che nhãn hoặc control.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 45
+          },
+          "H: S13 tr.7/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm",
+          "scrollWidth": 1425,
+          "innerWidth": 1440,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "Danh sách sản phẩm",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 216.33334350585938,
+                "y": 82.66667175292969,
+                "width": 288.88543701171875,
+                "height": 36,
+                "top": 82.66667175292969,
+                "right": 505.2187805175781,
+                "bottom": 118.66667175292969,
+                "left": 216.33334350585938
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 943.3854370117188,
+                "y": 80,
+                "width": 198.6666717529297,
+                "height": 41.333335876464844,
+                "top": 80,
+                "right": 1142.0521087646484,
+                "bottom": 121.33333587646484,
+                "left": 943.3854370117188
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Tìm",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 1150.0521240234375,
+                "y": 80,
+                "width": 58.28125,
+                "height": 41.333335876464844,
+                "top": 80,
+                "right": 1208.3333740234375,
+                "bottom": 121.33333587646484,
+                "left": 1150.0521240234375
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "iPhone 15 Pro Max",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 233,
+                "y": 370,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 370,
+                "right": 514.3333435058594,
+                "bottom": 398,
+                "left": 233
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 233,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 369.6666717529297,
+                "bottom": 474,
+                "left": 233
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 377.66668701171875,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 514.3333587646484,
+                "bottom": 474,
+                "left": 377.66668701171875
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "Samsung Galaxy S24 Ultra",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 571.6666870117188,
+                "y": 370,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 370,
+                "right": 853.0000305175781,
+                "bottom": 398,
+                "left": 571.6666870117188
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 571.6666870117188,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 708.3333587646484,
+                "bottom": 474,
+                "left": 571.6666870117188
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 716.3333740234375,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 853.0000457763672,
+                "bottom": 474,
+                "left": 716.3333740234375
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "MacBook Pro M3",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 910.3333740234375,
+                "y": 370,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 370,
+                "right": 1191.6667175292969,
+                "bottom": 398,
+                "left": 910.3333740234375
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 910.3333740234375,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 1047.0000457763672,
+                "bottom": 474,
+                "left": 910.3333740234375
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 1055,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 1191.6666717529297,
+                "bottom": 474,
+                "left": 1055
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "Tai nghe AirPods Pro 2",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 233,
+                "y": 739.3333740234375,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 739.3333740234375,
+                "right": 514.3333435058594,
+                "bottom": 767.3333740234375,
+                "left": 233
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 233,
+                "y": 807.3333740234375,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333740234375,
+                "right": 369.6666717529297,
+                "bottom": 843.3333740234375,
+                "left": 233
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 377.66668701171875,
+                "y": 807.3333740234375,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333740234375,
+                "right": 514.3333587646484,
+                "bottom": 843.3333740234375,
+                "left": 377.66668701171875
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "Bàn phím cơ Keychron Q1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 571.6666870117188,
+                "y": 739.3333740234375,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 739.3333740234375,
+                "right": 853.0000305175781,
+                "bottom": 767.3333740234375,
+                "left": 571.6666870117188
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 571.6666870117188,
+                "y": 807.3333740234375,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333740234375,
+                "right": 708.3333587646484,
+                "bottom": 843.3333740234375,
+                "left": 571.6666870117188
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 716.3333740234375,
+                "y": 807.3333740234375,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333740234375,
+                "right": 853.0000457763672,
+                "bottom": 843.3333740234375,
+                "left": 716.3333740234375
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H1",
+              "text": "Hiển thị 5 sản phẩm",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 216.33334350585938,
+                "y": 892,
+                "width": 992,
+                "height": 20,
+                "top": 892,
+                "right": 1208.3333435058594,
+                "bottom": 912,
+                "left": 216.33334350585938
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(156, 163, 175)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "url": "http://localhost:5173/",
+            "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+          }
+        ]
+      },
+      "expected": "Các thẻ cùng cột có mép trái thẳng hàng; thẻ cùng hàng có mép trên thẳng hàng. Cụm input/nút Tìm và khối ảnh/thông tin không chồng lên nhau; không che nhãn hoặc control.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.7/16",
+          {
+            "line": 45,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:14:30.935Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:14:30.762Z",
+  "finishedAtUTC": "2026-11-09T18:14:32.849Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-011\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-011\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-011\\default--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-011--default--H--VD/final.png",
+      "sha256": "9451d36b40212b463fff4468a0050bcd582193d5cffb84cb845ac5b94af3f478"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-011--default--H--VD/final-window-email.png",
+      "sha256": "e2faa9032171e7b0551881430c17865b7259bda0c0451631a2852e13103b801b"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-011\\default--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

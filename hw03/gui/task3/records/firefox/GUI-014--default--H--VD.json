@@ -1,0 +1,1607 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-014",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-014--default--H--VD",
+  "assessment": "needs-review",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Control đang focus có chỉ báo nhìn thấy, phân biệt được với control chưa focus.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 48
+          },
+          "H: S13 tr.8/13/18"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "focusSequence": [
+          {
+            "tag": "A",
+            "text": "EShop",
+            "type": "",
+            "rect": {
+              "x": 16,
+              "y": 16,
+              "width": 70.21665954589844,
+              "height": 32,
+              "top": 16,
+              "right": 86.21665954589844,
+              "bottom": 48,
+              "left": 16
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Giỏ hàng",
+            "type": "",
+            "rect": {
+              "x": 1191.9833984375,
+              "y": 20,
+              "width": 64.2833251953125,
+              "height": 24,
+              "top": 20,
+              "right": 1256.2667236328125,
+              "bottom": 44,
+              "left": 1191.9833984375
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Đăng nhập",
+            "type": "",
+            "rect": {
+              "x": 1272.2666015625,
+              "y": 20,
+              "width": 77.83334350585938,
+              "height": 24,
+              "top": 20,
+              "right": 1350.0999450683594,
+              "bottom": 44,
+              "left": 1272.2666015625
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Đăng ký",
+            "type": "",
+            "rect": {
+              "x": 1366.0999755859375,
+              "y": 20,
+              "width": 57.899993896484375,
+              "height": 24,
+              "top": 20,
+              "right": 1423.9999694824219,
+              "bottom": 44,
+              "left": 1366.0999755859375
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "rect": {
+              "x": 946.7166748046875,
+              "y": 80,
+              "width": 203,
+              "height": 41.33332824707031,
+              "top": 80,
+              "right": 1149.7166748046875,
+              "bottom": 121.33332824707031,
+              "left": 946.7166748046875
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Tìm",
+            "type": "submit",
+            "rect": {
+              "x": 1157.7166748046875,
+              "y": 80,
+              "width": 58.28334045410156,
+              "height": 41.33332824707031,
+              "top": 80,
+              "right": 1216.000015258789,
+              "bottom": 121.33332824707031,
+              "left": 1157.7166748046875
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 240.6666717529297,
+              "y": 438,
+              "width": 136.66665649414062,
+              "height": 36,
+              "top": 438,
+              "right": 377.3333282470703,
+              "bottom": 474,
+              "left": 240.6666717529297
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ",
+            "type": "submit",
+            "rect": {
+              "x": 385.33331298828125,
+              "y": 438,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 438,
+              "right": 521.9999847412109,
+              "bottom": 474,
+              "left": 385.33331298828125
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 579.3333129882812,
+              "y": 438,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 438,
+              "right": 715.9999847412109,
+              "bottom": 474,
+              "left": 579.3333129882812
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ",
+            "type": "submit",
+            "rect": {
+              "x": 724,
+              "y": 438,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 438,
+              "right": 860.6666717529297,
+              "bottom": 474,
+              "left": 724
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 918,
+              "y": 438,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 438,
+              "right": 1054.6666717529297,
+              "bottom": 474,
+              "left": 918
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ",
+            "type": "submit",
+            "rect": {
+              "x": 1062.6666259765625,
+              "y": 438,
+              "width": 136.66665649414062,
+              "height": 36,
+              "top": 438,
+              "right": 1199.3332824707031,
+              "bottom": 474,
+              "left": 1062.6666259765625
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 240.6666717529297,
+              "y": 807.3333129882812,
+              "width": 136.66665649414062,
+              "height": 36,
+              "top": 807.3333129882812,
+              "right": 377.3333282470703,
+              "bottom": 843.3333129882812,
+              "left": 240.6666717529297
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ",
+            "type": "submit",
+            "rect": {
+              "x": 385.33331298828125,
+              "y": 807.3333129882812,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 807.3333129882812,
+              "right": 521.9999847412109,
+              "bottom": 843.3333129882812,
+              "left": 385.33331298828125
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 579.3333129882812,
+              "y": 807.3333129882812,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 807.3333129882812,
+              "right": 715.9999847412109,
+              "bottom": 843.3333129882812,
+              "left": 579.3333129882812
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ",
+            "type": "submit",
+            "rect": {
+              "x": 724,
+              "y": 807.3333129882812,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 807.3333129882812,
+              "right": 860.6666717529297,
+              "bottom": 843.3333129882812,
+              "left": 724
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BODY",
+            "text": "\n    EShopGiỏ hàngĐăng nhậpĐăng kýDanh sách sản phẩmTìmiPhone 15 Pro Max30.000.0",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 1016,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1016,
+              "left": 0
+            },
+            "outline": "rgb(0, 0, 0) 3px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "type": "text",
+            "rect": {
+              "x": 946.7166748046875,
+              "y": 80,
+              "width": 203,
+              "height": 41.33332824707031,
+              "top": 80,
+              "right": 1149.7166748046875,
+              "bottom": 121.33332824707031,
+              "left": 946.7166748046875
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Tìm",
+            "type": "submit",
+            "rect": {
+              "x": 1157.7166748046875,
+              "y": 80,
+              "width": 58.28334045410156,
+              "height": 41.33332824707031,
+              "top": 80,
+              "right": 1216.000015258789,
+              "bottom": 121.33332824707031,
+              "left": 1157.7166748046875
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 240.6666717529297,
+              "y": 438,
+              "width": 136.66665649414062,
+              "height": 36,
+              "top": 438,
+              "right": 377.3333282470703,
+              "bottom": 474,
+              "left": 240.6666717529297
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Thêm vào giỏ",
+            "type": "submit",
+            "rect": {
+              "x": 385.33331298828125,
+              "y": 438,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 438,
+              "right": 521.9999847412109,
+              "bottom": 474,
+              "left": 385.33331298828125
+            },
+            "outline": "rgb(255, 255, 255) auto 2.66667px",
+            "boxShadow": "none"
+          },
+          {
+            "tag": "A",
+            "text": "Xem chi tiết",
+            "type": "",
+            "rect": {
+              "x": 579.3333129882812,
+              "y": 438,
+              "width": 136.6666717529297,
+              "height": 36,
+              "top": 438,
+              "right": 715.9999847412109,
+              "bottom": 474,
+              "left": 579.3333129882812
+            },
+            "outline": "rgb(0, 0, 0) auto 2.66667px",
+            "boxShadow": "none"
+          }
+        ]
+      },
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "review-observation",
+      "observation": {
+        "dom": {
+          "text": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm",
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "controls": [
+            {
+              "tag": "H1",
+              "text": "Danh sách sản phẩm",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 224,
+                "y": 82.66667175292969,
+                "width": 288.95001220703125,
+                "height": 36,
+                "top": 82.66667175292969,
+                "right": 512.9500122070312,
+                "bottom": 118.66667175292969,
+                "left": 224
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 946.7166748046875,
+                "y": 80,
+                "width": 203,
+                "height": 41.33332824707031,
+                "top": 80,
+                "right": 1149.7166748046875,
+                "bottom": 121.33332824707031,
+                "left": 946.7166748046875
+              },
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Tìm",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 1157.7166748046875,
+                "y": 80,
+                "width": 58.28334045410156,
+                "height": 41.33332824707031,
+                "top": 80,
+                "right": 1216.000015258789,
+                "bottom": 121.33332824707031,
+                "left": 1157.7166748046875
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "iPhone 15 Pro Max",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 240.6666717529297,
+                "y": 370,
+                "width": 281.33331298828125,
+                "height": 28,
+                "top": 370,
+                "right": 521.9999847412109,
+                "bottom": 398,
+                "left": 240.6666717529297
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 240.6666717529297,
+                "y": 438,
+                "width": 136.66665649414062,
+                "height": 36,
+                "top": 438,
+                "right": 377.3333282470703,
+                "bottom": 474,
+                "left": 240.6666717529297
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 385.33331298828125,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 521.9999847412109,
+                "bottom": 474,
+                "left": 385.33331298828125
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "Samsung Galaxy S24 Ultra",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 579.3333129882812,
+                "y": 370,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 370,
+                "right": 860.6666564941406,
+                "bottom": 398,
+                "left": 579.3333129882812
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 579.3333129882812,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 715.9999847412109,
+                "bottom": 474,
+                "left": 579.3333129882812
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 724,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 860.6666717529297,
+                "bottom": 474,
+                "left": 724
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "MacBook Pro M3",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 918,
+                "y": 370,
+                "width": 281.33331298828125,
+                "height": 28,
+                "top": 370,
+                "right": 1199.3333129882812,
+                "bottom": 398,
+                "left": 918
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 918,
+                "y": 438,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 438,
+                "right": 1054.6666717529297,
+                "bottom": 474,
+                "left": 918
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 1062.6666259765625,
+                "y": 438,
+                "width": 136.66665649414062,
+                "height": 36,
+                "top": 438,
+                "right": 1199.3332824707031,
+                "bottom": 474,
+                "left": 1062.6666259765625
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "Tai nghe AirPods Pro 2",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 240.6666717529297,
+                "y": 739.3333129882812,
+                "width": 281.33331298828125,
+                "height": 28,
+                "top": 739.3333129882812,
+                "right": 521.9999847412109,
+                "bottom": 767.3333129882812,
+                "left": 240.6666717529297
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 240.6666717529297,
+                "y": 807.3333129882812,
+                "width": 136.66665649414062,
+                "height": 36,
+                "top": 807.3333129882812,
+                "right": 377.3333282470703,
+                "bottom": 843.3333129882812,
+                "left": 240.6666717529297
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 385.33331298828125,
+                "y": 807.3333129882812,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333129882812,
+                "right": 521.9999847412109,
+                "bottom": 843.3333129882812,
+                "left": 385.33331298828125
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H2",
+              "text": "Bàn phím cơ Keychron Q1",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 579.3333129882812,
+                "y": 739.3333129882812,
+                "width": 281.3333435058594,
+                "height": 28,
+                "top": 739.3333129882812,
+                "right": 860.6666564941406,
+                "bottom": 767.3333129882812,
+                "left": 579.3333129882812
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "A",
+              "text": "Xem chi tiết",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 579.3333129882812,
+                "y": 807.3333129882812,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333129882812,
+                "right": 715.9999847412109,
+                "bottom": 843.3333129882812,
+                "left": 579.3333129882812
+              },
+              "background": "rgb(229, 231, 235)",
+              "color": "rgb(0, 0, 0)"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Thêm vào giỏ",
+              "value": "",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 724,
+                "y": 807.3333129882812,
+                "width": 136.6666717529297,
+                "height": 36,
+                "top": 807.3333129882812,
+                "right": 860.6666717529297,
+                "bottom": 843.3333129882812,
+                "left": 724
+              },
+              "background": "rgb(37, 99, 235)",
+              "color": "rgb(255, 255, 255)"
+            },
+            {
+              "tag": "H1",
+              "text": "Hiển thị 5 sản phẩm",
+              "ariaLabel": null,
+              "id": "",
+              "rect": {
+                "x": 224,
+                "y": 892,
+                "width": 992,
+                "height": 20,
+                "top": 892,
+                "right": 1216,
+                "bottom": 912,
+                "left": 224
+              },
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(156, 163, 175)"
+            }
+          ]
+        },
+        "observations": [
+          {
+            "focusSequence": [
+              {
+                "tag": "A",
+                "text": "EShop",
+                "type": "",
+                "rect": {
+                  "x": 16,
+                  "y": 16,
+                  "width": 70.21665954589844,
+                  "height": 32,
+                  "top": 16,
+                  "right": 86.21665954589844,
+                  "bottom": 48,
+                  "left": 16
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Giỏ hàng",
+                "type": "",
+                "rect": {
+                  "x": 1191.9833984375,
+                  "y": 20,
+                  "width": 64.2833251953125,
+                  "height": 24,
+                  "top": 20,
+                  "right": 1256.2667236328125,
+                  "bottom": 44,
+                  "left": 1191.9833984375
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Đăng nhập",
+                "type": "",
+                "rect": {
+                  "x": 1272.2666015625,
+                  "y": 20,
+                  "width": 77.83334350585938,
+                  "height": 24,
+                  "top": 20,
+                  "right": 1350.0999450683594,
+                  "bottom": 44,
+                  "left": 1272.2666015625
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Đăng ký",
+                "type": "",
+                "rect": {
+                  "x": 1366.0999755859375,
+                  "y": 20,
+                  "width": 57.899993896484375,
+                  "height": 24,
+                  "top": 20,
+                  "right": 1423.9999694824219,
+                  "bottom": 44,
+                  "left": 1366.0999755859375
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "type": "text",
+                "rect": {
+                  "x": 946.7166748046875,
+                  "y": 80,
+                  "width": 203,
+                  "height": 41.33332824707031,
+                  "top": 80,
+                  "right": 1149.7166748046875,
+                  "bottom": 121.33332824707031,
+                  "left": 946.7166748046875
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Tìm",
+                "type": "submit",
+                "rect": {
+                  "x": 1157.7166748046875,
+                  "y": 80,
+                  "width": 58.28334045410156,
+                  "height": 41.33332824707031,
+                  "top": 80,
+                  "right": 1216.000015258789,
+                  "bottom": 121.33332824707031,
+                  "left": 1157.7166748046875
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 240.6666717529297,
+                  "y": 438,
+                  "width": 136.66665649414062,
+                  "height": 36,
+                  "top": 438,
+                  "right": 377.3333282470703,
+                  "bottom": 474,
+                  "left": 240.6666717529297
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ",
+                "type": "submit",
+                "rect": {
+                  "x": 385.33331298828125,
+                  "y": 438,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 438,
+                  "right": 521.9999847412109,
+                  "bottom": 474,
+                  "left": 385.33331298828125
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 579.3333129882812,
+                  "y": 438,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 438,
+                  "right": 715.9999847412109,
+                  "bottom": 474,
+                  "left": 579.3333129882812
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ",
+                "type": "submit",
+                "rect": {
+                  "x": 724,
+                  "y": 438,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 438,
+                  "right": 860.6666717529297,
+                  "bottom": 474,
+                  "left": 724
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 918,
+                  "y": 438,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 438,
+                  "right": 1054.6666717529297,
+                  "bottom": 474,
+                  "left": 918
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ",
+                "type": "submit",
+                "rect": {
+                  "x": 1062.6666259765625,
+                  "y": 438,
+                  "width": 136.66665649414062,
+                  "height": 36,
+                  "top": 438,
+                  "right": 1199.3332824707031,
+                  "bottom": 474,
+                  "left": 1062.6666259765625
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 240.6666717529297,
+                  "y": 807.3333129882812,
+                  "width": 136.66665649414062,
+                  "height": 36,
+                  "top": 807.3333129882812,
+                  "right": 377.3333282470703,
+                  "bottom": 843.3333129882812,
+                  "left": 240.6666717529297
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ",
+                "type": "submit",
+                "rect": {
+                  "x": 385.33331298828125,
+                  "y": 807.3333129882812,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 807.3333129882812,
+                  "right": 521.9999847412109,
+                  "bottom": 843.3333129882812,
+                  "left": 385.33331298828125
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 579.3333129882812,
+                  "y": 807.3333129882812,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 807.3333129882812,
+                  "right": 715.9999847412109,
+                  "bottom": 843.3333129882812,
+                  "left": 579.3333129882812
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ",
+                "type": "submit",
+                "rect": {
+                  "x": 724,
+                  "y": 807.3333129882812,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 807.3333129882812,
+                  "right": 860.6666717529297,
+                  "bottom": 843.3333129882812,
+                  "left": 724
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BODY",
+                "text": "\n    EShopGiỏ hàngĐăng nhậpĐăng kýDanh sách sản phẩmTìmiPhone 15 Pro Max30.000.0",
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 1016,
+                  "top": 0,
+                  "right": 1440,
+                  "bottom": 1016,
+                  "left": 0
+                },
+                "outline": "rgb(0, 0, 0) 3px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "INPUT",
+                "text": "",
+                "type": "text",
+                "rect": {
+                  "x": 946.7166748046875,
+                  "y": 80,
+                  "width": 203,
+                  "height": 41.33332824707031,
+                  "top": 80,
+                  "right": 1149.7166748046875,
+                  "bottom": 121.33332824707031,
+                  "left": 946.7166748046875
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Tìm",
+                "type": "submit",
+                "rect": {
+                  "x": 1157.7166748046875,
+                  "y": 80,
+                  "width": 58.28334045410156,
+                  "height": 41.33332824707031,
+                  "top": 80,
+                  "right": 1216.000015258789,
+                  "bottom": 121.33332824707031,
+                  "left": 1157.7166748046875
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 240.6666717529297,
+                  "y": 438,
+                  "width": 136.66665649414062,
+                  "height": 36,
+                  "top": 438,
+                  "right": 377.3333282470703,
+                  "bottom": 474,
+                  "left": 240.6666717529297
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "BUTTON",
+                "text": "Thêm vào giỏ",
+                "type": "submit",
+                "rect": {
+                  "x": 385.33331298828125,
+                  "y": 438,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 438,
+                  "right": 521.9999847412109,
+                  "bottom": 474,
+                  "left": 385.33331298828125
+                },
+                "outline": "rgb(255, 255, 255) auto 2.66667px",
+                "boxShadow": "none"
+              },
+              {
+                "tag": "A",
+                "text": "Xem chi tiết",
+                "type": "",
+                "rect": {
+                  "x": 579.3333129882812,
+                  "y": 438,
+                  "width": 136.6666717529297,
+                  "height": 36,
+                  "top": 438,
+                  "right": 715.9999847412109,
+                  "bottom": 474,
+                  "left": 579.3333129882812
+                },
+                "outline": "rgb(0, 0, 0) auto 2.66667px",
+                "boxShadow": "none"
+              }
+            ]
+          },
+          {
+            "url": "http://localhost:5173/",
+            "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+          }
+        ]
+      },
+      "expected": "Control đang focus có chỉ báo nhìn thấy, phân biệt được với control chưa focus.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.8/13/18",
+          {
+            "line": 48,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "needs-review",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:00:02.140Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:02.630Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:02.820Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:02.982Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.112Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.241Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.350Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.452Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.579Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.703Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.819Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:03.921Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.023Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.119Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.215Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.318Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.425Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.532Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.653Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.763Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.879Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:04.991Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:05.110Z",
+      "kind": "key",
+      "target": "document",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:01.731Z",
+  "finishedAtUTC": "2026-11-09T19:00:05.655Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-0.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-0-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-1.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-1-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-2.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-2-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-3.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-3-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-4.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-4-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-5.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-5-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-6.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-6-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-7.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-7-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-8.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-8-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-9.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-9-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-10.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-10-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-11.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-11-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-12.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-12-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-13.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-13-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-14.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-14-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-15.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-15-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-16.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-16-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-17.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-17-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-18.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-18-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-19.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-19-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-20.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-20-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-21.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\focus-21-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-0.png",
+      "sha256": "a0c98bc2a3b18e98679a331f81ed77145f81d5cb7452131dcdee33f3d20b6c61"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-0-email-url.png",
+      "sha256": "9b0552e57ce2143447c84246e0dfe151ac666f7f1fa6c01a5859498011dd3c23"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-1.png",
+      "sha256": "191bcffacb22f2f05afc45689b0c1ddcb84ad6564eb1c00fd7c9b45413deb085"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-1-email-url.png",
+      "sha256": "cd84831339d1f89619a08a9f8be67c24cd717f67f2b126a117b3592717939517"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-2.png",
+      "sha256": "3970f90bd0b9d17882b3c7f61d7ca25f48b3478ad6a57931c3952345bc30b1a3"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-2-email-url.png",
+      "sha256": "0de7a319db85ee81841566e3d9a2d957df1a92ea2892ff8abf025af966135f89"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-3.png",
+      "sha256": "1f028cfe55d868f80a9abe6517a78d5270a6f4b9981d43ddfb0a8aeadd80efdc"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-3-email-url.png",
+      "sha256": "0265ce8a3260601caee80037896e7e4151d4f265feed006463577ab250cf418a"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-4.png",
+      "sha256": "59a33fedd363cea2836bfe51c05e47621d16a5acb31c366e70bfea83e77bea6b"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-4-email-url.png",
+      "sha256": "45edc6393e69c4eaa25efe5eadcc829ab572a5dd691c2ba7d78943ac011e8cb5"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-5.png",
+      "sha256": "161792f2aede32cd67069082118ef99d37a77a89eba1d3b705d91f746ed9272b"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-5-email-url.png",
+      "sha256": "b13aaa36a284972f2a96743326ffe41f5033ec9c21fbb3eb7224356f4e7d8972"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-6.png",
+      "sha256": "04543c32b07f972e3e634d3276ada2ec762f9820c2754d5a402c52962fdbec59"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-6-email-url.png",
+      "sha256": "caf299bac44e2a91d16ed143c35c99b88ffc6924c930b78731cb8ac2109d7d64"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-7.png",
+      "sha256": "dabe63941fd9bd82fe11a35ac91995031aac51924a9c8ad40f59bddde42f4f31"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-7-email-url.png",
+      "sha256": "fe5b9a11689f30d5300ad43f61fca38fa3094929e557815a3072e242d5d521d9"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-8.png",
+      "sha256": "16b0e63a7c0565c1e0a988ede8bd4944ee98d8858b3ba105287b11d1b87f28f0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-8-email-url.png",
+      "sha256": "78fc438eee551d6c875290eb3bf81051b1b6f9374d1859ddb87031a244cd5f25"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-9.png",
+      "sha256": "f038d5cc0334866fc51f6c8398750fabac36c198985038c08d1bc4ad015611d1"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-9-email-url.png",
+      "sha256": "8b70817f020e429da567d441877c28036b488b6f50a3caafb8567deee65d6522"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-10.png",
+      "sha256": "774cea1663f2cc68d0b71add79acd59dc6e450e8105955246eaf4131012f4959"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-10-email-url.png",
+      "sha256": "247e78de335d628a052464565ff93b90f57027c37198fc17afee13b9a08009df"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-11.png",
+      "sha256": "008614023f7e55913180e17014ad57c7f61b83827ebb1c705a04bbccdbf17af8"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-11-email-url.png",
+      "sha256": "0071eb0e4c0dfa6d6f911bbcb6c82c596d66d8e09816e1c9cbfa2c2729d2c333"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-12.png",
+      "sha256": "ae5ae07b7b4f082413977bfb117c49557d9c431e32223c3b9b4b0ae2c232fccb"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-12-email-url.png",
+      "sha256": "63708c189490f06aaae77952b56b797196c00170e74d7bc8a035f8408d970f7d"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-13.png",
+      "sha256": "d29f084bb41980ae28aeecb911269029585be7dc76c59c1ccb0f3b92c95ff969"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-13-email-url.png",
+      "sha256": "3cfe614f9c1ef8a6598cfed2b1089fc092441f9165d7ba9d74d1217f79bc0f1d"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-14.png",
+      "sha256": "4dd3daa3c2726e02a8b176c5b51d84d71afb77ac11b4b3d8d1b1e240f4774815"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-14-email-url.png",
+      "sha256": "0683b1cf069812deba45bced16d8f517336f347e6ee3a6451b6111d949a94748"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-15.png",
+      "sha256": "27c5caf3730e46f1b3154e2fe4be1d69674c5328b768aa3d94b2c4d2e764167f"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-15-email-url.png",
+      "sha256": "410dca55892fc291ff06b75310e8332a946a9799819ecd1feb36ecc0164e07cb"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-16.png",
+      "sha256": "58fdafe15eefd562c5ae36717eea212503d675294e49bc2b843aa4c86aed3a30"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-16-email-url.png",
+      "sha256": "5bf454b1405462d0d91a5a7e35aa83478604eb5330546dad1994dd374295d3bb"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-17.png",
+      "sha256": "59a33fedd363cea2836bfe51c05e47621d16a5acb31c366e70bfea83e77bea6b"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-17-email-url.png",
+      "sha256": "45edc6393e69c4eaa25efe5eadcc829ab572a5dd691c2ba7d78943ac011e8cb5"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-18.png",
+      "sha256": "161792f2aede32cd67069082118ef99d37a77a89eba1d3b705d91f746ed9272b"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-18-email-url.png",
+      "sha256": "b13aaa36a284972f2a96743326ffe41f5033ec9c21fbb3eb7224356f4e7d8972"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-19.png",
+      "sha256": "04543c32b07f972e3e634d3276ada2ec762f9820c2754d5a402c52962fdbec59"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-19-email-url.png",
+      "sha256": "caf299bac44e2a91d16ed143c35c99b88ffc6924c930b78731cb8ac2109d7d64"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-20.png",
+      "sha256": "dabe63941fd9bd82fe11a35ac91995031aac51924a9c8ad40f59bddde42f4f31"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-20-email-url.png",
+      "sha256": "fe5b9a11689f30d5300ad43f61fca38fa3094929e557815a3072e242d5d521d9"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-21.png",
+      "sha256": "16b0e63a7c0565c1e0a988ede8bd4944ee98d8858b3ba105287b11d1b87f28f0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/focus-21-email-url.png",
+      "sha256": "78fc438eee551d6c875290eb3bf81051b1b6f9374d1859ddb87031a244cd5f25"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-014--default--H--VD/final.png",
+      "sha256": "16b0e63a7c0565c1e0a988ede8bd4944ee98d8858b3ba105287b11d1b87f28f0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-014--default--H--VD/final-email-url.png",
+      "sha256": "78fc438eee551d6c875290eb3bf81051b1b6f9374d1859ddb87031a244cd5f25"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "pending"
+}

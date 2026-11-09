@@ -1,0 +1,110 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-044",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-044--default--D--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Có thể lấy lại dữ liệu và dùng màn hình; lỗi cũ không che nội dung thành công. Không bắt buộc phải có nút Retry mới.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 97
+          },
+          "H: S13 tr.11/14"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "recovery",
+      "observation": {
+        "errorBefore": "Đang tải...",
+        "after": "iPhone 15 Pro Max\n\n30.000.000 ₫\n\nĐiện thoại cao cấp của Apple\n\nSố lượng:\nThêm vào giỏ hàng",
+        "sameContext": true
+      },
+      "expected": "Có thể lấy lại dữ liệu và dùng màn hình; lỗi cũ không che nội dung thành công. Không bắt buộc phải có nút Retry mới.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/14",
+          {
+            "line": 97,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:01:46.090Z",
+      "kind": "reload",
+      "target": "same-context recovery",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:01:44.445Z",
+  "finishedAtUTC": "2026-11-09T19:01:46.790Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-044\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-044\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\error-observation-email-url.png",
+      "GUI-044\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-044\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-044\\default--D\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-044--default--D--VD/error-observation.png",
+      "sha256": "7198b46c26f44f3515415159c15741b60470b11dc0494ea7e117e5eb647a90b0"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-044--default--D--VD/error-observation-email-url.png",
+      "sha256": "4b595bbee2183b4cde66da7f2b7178341a320eabab9f2c982b5984b609e96f83"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-044--default--D--VD/final.png",
+      "sha256": "025a3ea8ffda349b33b0b7f7ec1d6ae4b9dc4b52983250c68dabbc588175e15f"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-044--default--D--VD/final-email-url.png",
+      "sha256": "c40499a46ff223e25401c06ad93f7a234b7f3ea8d8554ff9a11a7661ba543987"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-044\\default--D\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

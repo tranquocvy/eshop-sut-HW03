@@ -1,0 +1,1181 @@
+{
+  "scope": "Selected failure/review evidence plus environment samples; full archive remains local",
+  "files": [
+    {
+      "path": "evidence/chrome/GUI-002--default--H--VD/final-window-email.png",
+      "sha256": "ca6500de5ca86ea406720c07a80c54c8a0171c015dc334a3174ee3370d496802",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-002\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-004--default--H--VD/final-window-email.png",
+      "sha256": "ca6500de5ca86ea406720c07a80c54c8a0171c015dc334a3174ee3370d496802",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-004\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-005--default--D--VD/final-window-email.png",
+      "sha256": "6528a5b66d4afb47d88b649b67af4f1a0fcf4f372f0db9e6a7230918932b3fa9",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-005\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-006--all-seed--H--VD/final-window-email.png",
+      "sha256": "12bce7bd4e8db0ecac081981d1ccdd197f398c1ae8b821f61ee538e2d0b57518",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-006\\all-seed--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--all-seed--H--VD/final-window-email.png",
+      "sha256": "12bce7bd4e8db0ecac081981d1ccdd197f398c1ae8b821f61ee538e2d0b57518",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\all-seed--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--all-seed--H--VM/final-window-email.png",
+      "sha256": "73db27b402b53d6f36a96231e04ff65d924b0437b6c32644d69c84a484927ed1",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\all-seed--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD1--D--VD/final-window-email.png",
+      "sha256": "41cc61c001d25a49c4bd968c29b3e520bd78ff453e08aef101c2d9960051e044",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD1--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD1--D--VM/final-window-email.png",
+      "sha256": "7e6a5c5d26f7e470d75acf52b26917cc9b538738500cbc8447b5e9448522803b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD1--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD2--D--VD/final-window-email.png",
+      "sha256": "543aedddc2e3a065d3e8dd12620831d364abb90ea7e3676b85f39f11aeabcf66",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD2--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD2--D--VM/final-window-email.png",
+      "sha256": "dd0b3d11b854ab9a6c4427db694498946b4d4daa4c48ff7dc3515591ea2a543c",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD2--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD3--D--VD/final-window-email.png",
+      "sha256": "1443916cd3bc598694f9c6c0993938de32e565e8969853caad795043faff5012",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD3--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD3--D--VM/final-window-email.png",
+      "sha256": "4e4b54f354f175da951a2f9c7c97a5c7b1a8d8bf751be4f76c35407ceda377f5",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD3--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD4--D--VD/final-window-email.png",
+      "sha256": "5bc37b9b967b18d31e103defa07e5829d4afeda4ed8ede608a18c13664709517",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD4--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD4--D--VM/final-window-email.png",
+      "sha256": "927460580f770785e1509e6232bc533399d5d50a8637311290932f6641ed13c4",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD4--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD5--D--VD/final-window-email.png",
+      "sha256": "a6ef0fcde07ee571db0030fbdb528e7ce8f583a9026cd8de5d889951eb32507b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD5--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-007--TD5--D--VM/final-window-email.png",
+      "sha256": "e8dd413ce7f3eca85c3096bf4f8891998fc50fec23864c46c567c15dd8b1be69",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-007\\TD5--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-008--default--H--VD/final-window-email.png",
+      "sha256": "e2faa9032171e7b0551881430c17865b7259bda0c0451631a2852e13103b801b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-008\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-009--default--D--VD/final-window-email.png",
+      "sha256": "e812c26222d5b1071485030609ecaccd562c46752d86e99cf9ce79e03861ddf4",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-009\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-009--default--H--VD/final-window-email.png",
+      "sha256": "e2faa9032171e7b0551881430c17865b7259bda0c0451631a2852e13103b801b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-009\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-010--default--D--VD/final-window-email.png",
+      "sha256": "e812c26222d5b1071485030609ecaccd562c46752d86e99cf9ce79e03861ddf4",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-010\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-010--default--H--VD/final-window-email.png",
+      "sha256": "772d5077fa902e11a59cbf301c9543696806b515070b8e4601e1db751077d330",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-010\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-011--default--D--VD/final-window-email.png",
+      "sha256": "6528a5b66d4afb47d88b649b67af4f1a0fcf4f372f0db9e6a7230918932b3fa9",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-011\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-011--default--H--VD/final-window-email.png",
+      "sha256": "e2faa9032171e7b0551881430c17865b7259bda0c0451631a2852e13103b801b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-011\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-012--default--D--VM/final-window-email.png",
+      "sha256": "7e6a5c5d26f7e470d75acf52b26917cc9b538738500cbc8447b5e9448522803b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-012\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-012--default--H--VM/final-window-email.png",
+      "sha256": "73db27b402b53d6f36a96231e04ff65d924b0437b6c32644d69c84a484927ed1",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-012\\default--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-013--TD2--H--VD/final-window-email.png",
+      "sha256": "0dbb948c6473fd0bb217765d758c4c081993692fbea6356b4cd95c36e434b986",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-013\\TD2--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-013--TD2--H--VM/final-window-email.png",
+      "sha256": "dd0b3d11b854ab9a6c4427db694498946b4d4daa4c48ff7dc3515591ea2a543c",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-013\\TD2--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-013--TD5--H--VD/final-window-email.png",
+      "sha256": "c2aa9670833cd1cea06246332bf353406806479dcf6375a96619804680893bfb",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-013\\TD5--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-013--TD5--H--VM/final-window-email.png",
+      "sha256": "e8dd413ce7f3eca85c3096bf4f8891998fc50fec23864c46c567c15dd8b1be69",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-013\\TD5--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-014--default--D--VD/final-window-email.png",
+      "sha256": "c2b4c0102a86f688354c0eaa3d755df7ce3c2e0c2b6ff3a4d4936584e92c8ddd",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-014\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-014--default--H--VD/final-window-email.png",
+      "sha256": "479f7943bc9b0ac8abbf591a635208071ea07f7b8328af2e5ab42f31d1fbc342",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-014\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-016--default--H--VD/final-window-email.png",
+      "sha256": "703925b4312b114666050abc899622daee8b7aae80f05639f08ab13f8582140c",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-016\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-019--default--H--VD/final-window-email.png",
+      "sha256": "d8279f97aec8c466b1b7186024a940d35f5e522ea46434406702bc5e291f6997",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-019\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-022--default--H--VD/final-window-email.png",
+      "sha256": "64cc4a53a5cfd0725c800b4bf401f81f6362ad9772080f4fde8a22b1a4223ed4",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-022\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-023--default--D--VD/final-window-email.png",
+      "sha256": "f4bf591e8fe5d6754d2d81e0abc42c4b3a3d981d04ee4bcc19dc5040edc8bff2",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-023\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-030--default--D--VD/final-window-email.png",
+      "sha256": "3b6331e3d7f1bedf259353651658d90afe75c170b1f8c5125d36912aaac169f6",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-030\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-031--add-click--D--VD/final-window-email.png",
+      "sha256": "9c53b3a6668879e6d15e8119688503ee3e0cf4c857803b0d1d34aa599493fc21",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-031\\add-click--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-031--add-click--H--VD/final-window-email.png",
+      "sha256": "4aacb8097538d934f77172c77c470a424edf6c1b6fd3696ef28ad61dc7fc2003",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-031\\add-click--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-031--add-Enter--D--VD/final-window-email.png",
+      "sha256": "05a45048bcd78225077829e72bf003881732abae4406ee412a10e04ed93ab189",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-031\\add-Enter--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-031--add-Enter--H--VD/final-window-email.png",
+      "sha256": "e56b88746784b20c7a7f646d7a10d783e63de4d58dd85490f7618f743c4704e8",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-031\\add-Enter--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-031--add-Space--D--VD/final-window-email.png",
+      "sha256": "05a45048bcd78225077829e72bf003881732abae4406ee412a10e04ed93ab189",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-031\\add-Space--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-031--add-Space--H--VD/final-window-email.png",
+      "sha256": "e56b88746784b20c7a7f646d7a10d783e63de4d58dd85490f7618f743c4704e8",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-031\\add-Space--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-032--default--D--VD/final-window-email.png",
+      "sha256": "c2b4c0102a86f688354c0eaa3d755df7ce3c2e0c2b6ff3a4d4936584e92c8ddd",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-032\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-032--default--D--VM/final-window-email.png",
+      "sha256": "85581e61a27a224edb77db1fb75f35b33a2ae81a4dcab8f257f06f0d95d6a913",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-032\\default--D\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-032--default--H--VD/final-window-email.png",
+      "sha256": "113b19dc785ee7c2327ffd83a65d578f84b191829f036f93810763140d664f00",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-032\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-032--default--H--VM/final-window-email.png",
+      "sha256": "142766c0e1455d95a62f3e485f2ae041b4d0a7054d468e72dc58757d083c06f6",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-032\\default--H\\windows-google-chrome--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-033--default--D--VD/final-window-email.png",
+      "sha256": "25ab6b52f57296229189b1e7bebd4bb055e4c32bf1f20323a1454d66f11b8177",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-033\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-033--default--H--VD/final-window-email.png",
+      "sha256": "b1c3af2cb942ca54afee488e6df2470911bf4fd8f9d459f902bf17b2b970f9eb",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-033\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-036--default--D--VD/final-window-email.png",
+      "sha256": "536a7bd71ba3c8e40af7f702622ebbf108fff7d7b7868e8b29abd7af3c40ec8e",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-036\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-036--default--H--VD/final-window-email.png",
+      "sha256": "703925b4312b114666050abc899622daee8b7aae80f05639f08ab13f8582140c",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-036\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-037--default--H--VD/final-window-email.png",
+      "sha256": "703925b4312b114666050abc899622daee8b7aae80f05639f08ab13f8582140c",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-037\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-038--default--H--VD/final-window-email.png",
+      "sha256": "58bcaf36ee832b4d9d1e8f05376238f99841ea73e5f79e4341b25a520d7ef1ea",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-038\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-040--default--H--VD/final-window-email.png",
+      "sha256": "3e06a544d751604de37d484a4ca70ff48fbc90f68327747d8eb866e3e670709d",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-040\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-041--initial--H--VD/final-window-email.png",
+      "sha256": "85b3ce2251d4c4be93b75d4ab9b0c654ee585114fc461fd9e27dd67fdfacdc15",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-041\\initial--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-041--search--H--VD/final-window-email.png",
+      "sha256": "9f329b2c1325d69e36eb32fdebeee72eed021785f82f1d6360227c176ce2b9ac",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-041\\search--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-043--default--D--VD/final-window-email.png",
+      "sha256": "12288b71745fad4ea75b11ee9cbd7816a49aaca8421066fefb14d54452b5d17b",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-043\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-045--default--H--VD/final-window-email.png",
+      "sha256": "7f4cde2f9ca6a03f643f999ba8580aad7d1c8e28120865a15595c9eefd1cbd87",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-046--default--H--VD/final-window-email.png",
+      "sha256": "2d6c0978ab0df5105a5dbd3387ec61a979c700a81c3f454a1789668b5682f5b2",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-046\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-047--default--D--VD/final-window-email.png",
+      "sha256": "69a4e63ea0622a605b8552b5f4c80a979a1f6e79b49d5e4ca076df9176c49321",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-047\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-047--default--H--VD/final-window-email.png",
+      "sha256": "9676ffbfec5f36c4fd1ebe884318975054cf078da8564a6e5745b0ba90ef2ad7",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-047\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-048--default--D--VD/final-window-email.png",
+      "sha256": "bdfdf9c1d9cf8eace08e6ef48197e63e7df675012f7a267b0b418d48b3a67032",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-048\\default--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-048--default--H--VD/final-window-email.png",
+      "sha256": "b749ee5c8ef1403d1f48ca662d153047abb168a7f34ec422e03b96c42170bb99",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-048\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-049--1--D--VD/final-window-email.png",
+      "sha256": "05a45048bcd78225077829e72bf003881732abae4406ee412a10e04ed93ab189",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-049\\1--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-049--empty--D--VD/final-window-email.png",
+      "sha256": "3a4756c0d7cbcd5d667f2b4bc231f101cf75b7221ffdb2202659e1f06ff292cd",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-049\\empty--D\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/chrome/GUI-052--default--H--VD/final-window-email.png",
+      "sha256": "85b3ce2251d4c4be93b75d4ab9b0c654ee585114fc461fd9e27dd67fdfacdc15",
+      "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+      "sourcePath": "GUI-052\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-001--default--H--VD/final.png",
+      "sha256": "f84be1b080e241188c11c2c28664634ddcd37cdda19bdc9fe75ad96efdd15e8f",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-001\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png"
+    },
+    {
+      "path": "evidence/edge/GUI-002--default--H--VD/final-window-email.png",
+      "sha256": "880127abf98c1439229260f9c547e089db15a8c2b875dcc14df09df9840a3efb",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-002\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-004--default--H--VD/final-window-email.png",
+      "sha256": "1361cc1ddd1289d4240ca38b2f804c6435fff5da94ddc80ebe24efc532594944",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-004\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-005--default--D--VD/final-window-email.png",
+      "sha256": "c4c0ada7daa62d8b213cca6ceb3c0d729c7f3c830336b5399b50b671e7d28247",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-005\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-006--all-seed--H--VD/final-window-email.png",
+      "sha256": "596f640558bfb811fd9feadddf79277716c473cb6cd51c1dc255e6f5e66f7874",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-006\\all-seed--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--all-seed--H--VD/final-window-email.png",
+      "sha256": "e458e70e533353cbaa9d1c068fa4f3bbb257b4a267898ddb7cc6291f8e2900d1",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\all-seed--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--all-seed--H--VM/final-window-email.png",
+      "sha256": "50daa12c982f0ed607af44d73ad914d2aa7d45b3e8430c82e1026c8291729bf7",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\all-seed--H\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD1--D--VD/final-window-email.png",
+      "sha256": "8ae9ea739417c0e51d7064f8e07d92f26876826a0cbedbe03f4c21d7af1b95c0",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD1--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD1--D--VM/final-window-email.png",
+      "sha256": "f9a3f0aa267d430dacef5b1dd7d44c55b4ae1a4765ea0752619f714a8edb331a",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD1--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD2--D--VD/final-window-email.png",
+      "sha256": "dbcd8916d1e8af41012fa6872de0d826ede284627532d4bfd68a0646bf9b1a3e",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD2--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD2--D--VM/final-window-email.png",
+      "sha256": "097e776abd7cece29a1161a7f2a4a5bbb31df7f7d3211cc804d6d21049a1ba5b",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD2--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD3--D--VD/final-window-email.png",
+      "sha256": "4608becda72f72b7f9a3ff4caa51c239166453253bf03ae6cf66eb579941fdc4",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD3--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD3--D--VM/final-window-email.png",
+      "sha256": "609360b3de8189de5b1668e926fc0d08cd235d8e7fdc2191a7fc9aa41c958132",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD3--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD4--D--VD/final-window-email.png",
+      "sha256": "5f7443c9f2dcdbcb1091eb7f9d56471151c8847417fd625f765999130e0084b7",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD4--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD4--D--VM/final-window-email.png",
+      "sha256": "530c7190a44aac292d0e36ad7bff7060bc6a97b5c27f0b446f169f20ca0b82db",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD4--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD5--D--VD/final-window-email.png",
+      "sha256": "f540c56ea752fe595fb42d5dba14899fee0c81d2ecbd126e718c8fd510341b3e",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD5--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-007--TD5--D--VM/final-window-email.png",
+      "sha256": "31eb9e919cd63345fba4b27b1c8852209838b1b30a94e8725d6ef2b2a38704eb",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-007\\TD5--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-008--default--H--VD/final-window-email.png",
+      "sha256": "ffd113275ec58826bb3010a1810d4bd0b7d4814faa1ec946a0c23f3de16e526b",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-008\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-009--default--D--VD/final-window-email.png",
+      "sha256": "3b514d45a61b7f1c82a2441d9802886edca9898ffea8275f71b30498c5e006df",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-009\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-009--default--H--VD/final-window-email.png",
+      "sha256": "8681e2c49ea50eb01553c3aa630330573a64ec425147bdb5259472e45b303537",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-009\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-010--default--D--VD/final-window-email.png",
+      "sha256": "5ef5b6d45eff8491f9c7970e7ee39bcfff092f15853d468a4dcb59affe8257a4",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-010\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-010--default--H--VD/final-window-email.png",
+      "sha256": "596f640558bfb811fd9feadddf79277716c473cb6cd51c1dc255e6f5e66f7874",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-010\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-011--default--D--VD/final-window-email.png",
+      "sha256": "3aea6e40b26b1f762192aa6276b7e2291247144a65354645bf84011e136a52fa",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-011\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-011--default--H--VD/final-window-email.png",
+      "sha256": "e5e4f012c82d46bdf4e18fae273110a577ce100cdbe151acaefdb81f3f1a061f",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-011\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-012--default--D--VM/final-window-email.png",
+      "sha256": "f9a3f0aa267d430dacef5b1dd7d44c55b4ae1a4765ea0752619f714a8edb331a",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-012\\default--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-012--default--H--VM/final-window-email.png",
+      "sha256": "50daa12c982f0ed607af44d73ad914d2aa7d45b3e8430c82e1026c8291729bf7",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-012\\default--H\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-013--TD2--H--VD/final-window-email.png",
+      "sha256": "63386a8020a112d2fe1fdd95e3b4f7d7bb65822d323804ea20dcc60f312e5d7b",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-013\\TD2--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-013--TD2--H--VM/final-window-email.png",
+      "sha256": "097e776abd7cece29a1161a7f2a4a5bbb31df7f7d3211cc804d6d21049a1ba5b",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-013\\TD2--H\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-013--TD5--H--VD/final-window-email.png",
+      "sha256": "aa75b54ba84c6b567ca8ffed32d7385d1eb29b5e8c40a74f356c240636a70afb",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-013\\TD5--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-013--TD5--H--VM/final-window-email.png",
+      "sha256": "31eb9e919cd63345fba4b27b1c8852209838b1b30a94e8725d6ef2b2a38704eb",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-013\\TD5--H\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-014--default--D--VD/final-window-email.png",
+      "sha256": "0fe93b0afdcca9202b72d0e591475afd0e85e8bc14714c6fac778603c0a698d1",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-014\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-014--default--H--VD/final-window-email.png",
+      "sha256": "1960280da660e6aebfdd5c1729c7a6d72ecf7b9b1205241abcafa3e478350d77",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-014\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-016--default--H--VD/final-window-email.png",
+      "sha256": "1acd24b83061c25dc061562f5c918153846a753842d2371982c4c576fa121cea",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-016\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-019--default--H--VD/final-window-email.png",
+      "sha256": "2e5cd6e2b885eb8d8d4f358752f2f6185295dbe88c081a568427371b726e99d8",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-019\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-022--default--H--VD/final-window-email.png",
+      "sha256": "ce59bff310aefe758aeac0ef346f88f684f6c4064223d94dfaa7126530738e64",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-022\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-023--default--D--VD/final-window-email.png",
+      "sha256": "6d90b65001afba55d4016d0b9261b7e7c0e9833e00b45b6332f5c2c5f9b60920",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-023\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-030--default--D--VD/final-window-email.png",
+      "sha256": "ef7e15d5b57c9e031dafb478addcb882f75db5b13dcb10ad42cc4dd813af8690",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-030\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-031--add-click--D--VD/final-window-email.png",
+      "sha256": "42796306f4a8cb61d2fe9228fa8b8b9a77cc585b37529763f4b336153b223008",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-031\\add-click--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-031--add-click--H--VD/final-window-email.png",
+      "sha256": "86409eee03721989376535710c28b03ed8fb8226b53d20389fc2070607eb71c3",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-031\\add-click--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-031--add-Enter--D--VD/final-window-email.png",
+      "sha256": "66bd1ebdec47f8b23f6fb1b42ce24898b2633f16df30fb1118b84374d4fc14c6",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-031\\add-Enter--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-031--add-Enter--H--VD/final-window-email.png",
+      "sha256": "b27c3aa85ab0cae75f8ae1555cbfa2a61bf2a9a406307e67df054aa419590b40",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-031\\add-Enter--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-031--add-Space--D--VD/final-window-email.png",
+      "sha256": "f30297d5af40b462e475066b033764ca0763418bff3c7b15c736a7f5a3afe4d6",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-031\\add-Space--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-031--add-Space--H--VD/final-window-email.png",
+      "sha256": "442c860c4406e4c35b198e325e1e2f634f9e6a70d512ebb90619511f3990c087",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-031\\add-Space--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-032--default--D--VD/final-window-email.png",
+      "sha256": "e3ffcd47ae421903ed67bdd411098acf29d4fbd02ba2fa12d4e63a1c04fa6224",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-032\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-032--default--D--VM/final-window-email.png",
+      "sha256": "53bd320c375f10846a2a19881c4e7ad313649890e51919a8de2436f07413d4d4",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-032\\default--D\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-032--default--H--VD/final-window-email.png",
+      "sha256": "56b7f6a17d59220b0c4632eac354417853a4459ed24a55ea4b8e70c8ee0c2f3b",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-032\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-032--default--H--VM/final-window-email.png",
+      "sha256": "dcd47039edaf203e52b1f04be450172d225f55790cf872cea57d3f91f1a4be3b",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-032\\default--H\\windows-microsoft-edge--VM\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-033--default--D--VD/final-window-email.png",
+      "sha256": "fdeaa22f255e1ab938bd2893531ac815a230d75bb359b597033c67a26cba5116",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-033\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-033--default--H--VD/final-window-email.png",
+      "sha256": "49490830765caa674841e69930bb3c9444e9a446bd79db13acdb409613274a67",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-033\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-036--default--D--VD/final-window-email.png",
+      "sha256": "159461f0eee2731d20684ad1c45c4f268b594e1a207c0d64bb6c2b022d17ec01",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-036\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-036--default--H--VD/final-window-email.png",
+      "sha256": "596f640558bfb811fd9feadddf79277716c473cb6cd51c1dc255e6f5e66f7874",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-036\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-037--default--H--VD/final-window-email.png",
+      "sha256": "fec22e0180afb7a2d13987b2e9cb35e3730b7e1d330eff8f5a03959876f4acd0",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-037\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-038--default--H--VD/final-window-email.png",
+      "sha256": "0459fd0989b65505bbdaf85f21aa2d06ba00036697e53ae41f8ed9f13200c62c",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-038\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-040--default--H--VD/final-window-email.png",
+      "sha256": "b6e7666a9a4cbd3cd38bb433f72af55a018aa742e2d65d322679e1f33aded8e7",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-040\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-041--initial--H--VD/final-window-email.png",
+      "sha256": "76889f54b39f8dd46802e9ec03a106b0017b62e322872f23efd52faa514d1e09",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-041\\initial--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-041--search--H--VD/final-window-email.png",
+      "sha256": "15ecb04b8c290bc04487c9a1d5ab1f5fd32faa0cdc3252fbf28a59ef17d06cd1",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-041\\search--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-043--default--D--VD/final-window-email.png",
+      "sha256": "79c7ad328c6c55066da38dd08e4409632a7d66abc74d53630d426f8f6373d336",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-045--default--H--VD/final-window-email.png",
+      "sha256": "b0d08d5ed02b3d66263f93dbc39c144cd877fa13c09f1881cf4dbddeaa146c52",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-045\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-046--default--H--VD/final-window-email.png",
+      "sha256": "a94fa301b164cbc27b4c6cca67c35d60e721bc7741a9ede165f35f52e17a2b3e",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-046\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-047--default--D--VD/final-window-email.png",
+      "sha256": "a0ca3fdd844edc2761ba3f3e357d2eeda075926b6b5b73bfff270d78c7935f79",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-047\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-047--default--H--VD/final-window-email.png",
+      "sha256": "80da1047099e5886a2268d49287918777992ec55571948b404f94aa8ac31c84e",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-047\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-048--default--D--VD/final-window-email.png",
+      "sha256": "5ef11c9d7399753565d16b43af80718741595d04caa0c3d375825a27b9e12b59",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-048\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-048--default--H--VD/final-window-email.png",
+      "sha256": "66a95c4a7a8f08f44107850731f33e051029a0919d3f9cdff051529a7350516d",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-048\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-049--1--D--VD/final-window-email.png",
+      "sha256": "d5d5c033f0421d3248b27190db898f6667257c310d4c306ea5c057a4fd3eaa46",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-049\\1--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-049--empty--D--VD/final-window-email.png",
+      "sha256": "55568bf3c86e23ebfa9693392b28f4b87c5f6542bc9e1ff8a19ec98b03d35298",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-049\\empty--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/edge/GUI-052--default--H--VD/final-window-email.png",
+      "sha256": "09194aa536770298200614e4091d79903d8ee29382062602cf227c3492340de9",
+      "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+      "sourcePath": "GUI-052\\default--H\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-002--default--H--VD/final-email-url.png",
+      "sha256": "b05ff1c56bb6e93ee7dad51842ac761e2c83730c4844f7980025c25e8b7c7d10",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-002\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-004--default--H--VD/final-email-url.png",
+      "sha256": "5f78bdd2424b37a9b1c010c3982a3787f2e9d56defaf965261196fc71fcfa686",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-004\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-005--default--D--VD/final-email-url.png",
+      "sha256": "e81432cc3876d53702aa883f2f81c0f9a3b635039790cf863e730fc44b4624dd",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-005\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-006--all-seed--H--VD/final-email-url.png",
+      "sha256": "861f29adc00584882a8517c2c6424c758dfabccb38cb4c1d6ecbeb71e187d890",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-006\\all-seed--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--all-seed--H--VD/final-email-url.png",
+      "sha256": "21ef99bc00493e6f6d9b4bb208631f40194d7c00b9b762b5444a4208d76897c1",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\all-seed--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--all-seed--H--VM/final-email-url.png",
+      "sha256": "85312ecaca1d01edbb66097238e5a3ab25a5b348606b93fd346e20be389c96a7",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\all-seed--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD1--D--VD/final-email-url.png",
+      "sha256": "8fab552588eb30a197fae807b86edbfa77a97abd1d9605a356a4fa9f60033324",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD1--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD1--D--VM/final-email-url.png",
+      "sha256": "8a43369a9f634c1d8ce7753584c91ae6be3b74a35dbc09525dab4a24367eda28",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD1--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD2--D--VD/final-email-url.png",
+      "sha256": "7f670209962b04c2c63f60c6c3d939200d9716b7a6b52bf9bcfb345a68c2f85d",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD2--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD2--D--VM/final-email-url.png",
+      "sha256": "667ff9a225bd51496fc15e2ffbcbd104c7df339f86fc976b0699e492a1918d1e",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD2--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD3--D--VD/final-email-url.png",
+      "sha256": "5d9e70ecc56fc1ec0b0bef89832cdc700ae7206e61093a21d495881bcc618ea2",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD3--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD3--D--VM/final-email-url.png",
+      "sha256": "f0087a3c97655eb914b8c5b05ab4aa8706d4b29d828fc98fd27a355f7ab3f119",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD3--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD4--D--VD/final-email-url.png",
+      "sha256": "cd39661845ddd03bdee15edc51a0fb9132c00cd2e0aad05141eb96f2c2a96e57",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD4--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD4--D--VM/final-email-url.png",
+      "sha256": "ac8e5834ea38063697cdfcfb81cc08c0aefb962859d6fb58ab19243898a5ae81",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD4--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD5--D--VD/final-email-url.png",
+      "sha256": "ab845f3a3c8c1eb744e3262a3d7cf7e80d92a05fe4bfbea57de21ed49b4c003d",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD5--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-007--TD5--D--VM/final-email-url.png",
+      "sha256": "d4146a52048d21e3f077572cb5e04bb1aeaeb05d465b35aa869b5b30000d02ff",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-007\\TD5--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-008--default--H--VD/final-email-url.png",
+      "sha256": "694c790f77ea7546de4cec7a5019fc0dd5cdbe62ceac339ec7c90c0d1dbc2e07",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-008\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-009--default--D--VD/final-email-url.png",
+      "sha256": "00dc29e6a44e1015adad487a0c330e58e1a76fa44524e0fc3793b520dc3af5b6",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-009\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-009--default--H--VD/final-email-url.png",
+      "sha256": "342d07c49a20ff86de5559011e2346e1510d2e88afbe21e9e6fbb538d39726f6",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-009\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-010--default--D--VD/final-email-url.png",
+      "sha256": "61b040cd8c6ecb243c5963472e45889115fd4780cb8aa9d626255837fc7b1f4c",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-010\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-010--default--H--VD/final-email-url.png",
+      "sha256": "0ed07f985b64c3a3162d5a9782151b28ae86a95183f95ecb4b4f4fbd2adcabce",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-010\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-011--default--D--VD/final-email-url.png",
+      "sha256": "39ea983049eb9c2d0c05dbcf7610be6014384b584e9cba27a751b7d78de88bc4",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-011\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-011--default--H--VD/final-email-url.png",
+      "sha256": "50332cc61956edef8b923b3193244930d93d682da8a81d37aa58dffee0afc461",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-011\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-012--default--D--VM/final-email-url.png",
+      "sha256": "f671b58ea0ebb1bc8a62ea0d798aed6d818949d5939eccad65bd6b723a9acca8",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-012\\default--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-012--default--H--VM/final-email-url.png",
+      "sha256": "39a69d9aebd897c3af1a100b9f69165959533fb1ae06d1eba78b9fdcdcd4cf92",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-012\\default--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-013--TD2--H--VD/final-email-url.png",
+      "sha256": "2d28cb0a9f535fcef818a491a4e5da31cb086ed915a170a9c82971ede8caa11f",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-013\\TD2--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-013--TD2--H--VM/final-email-url.png",
+      "sha256": "a9e5bf2ededaee874900daf07e732bcbed205b9fa0431bd1e8581a4fb4e8cf1d",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-013\\TD2--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-013--TD5--H--VD/final-email-url.png",
+      "sha256": "7cfec05126403d84485c70692b61be8e26fa274129b13704e657ce41b775f8cb",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-013\\TD5--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-048--default--D--VD/final-email-url.png",
+      "sha256": "e3c330bbb16bbbd67daacc2fa6ae4f38f9b5f5e795f65045de71f1b6e9faca49",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-048\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-048--default--H--VD/final-email-url.png",
+      "sha256": "1a3b2683abf3aa6797c5dcccdf51b9e8dcfb3494125b285aee8eec789db12bba",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-55-41-740Z",
+      "sourcePath": "GUI-048\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-013--TD5--H--VM/final-email-url.png",
+      "sha256": "e70decbff4e4e894cbcd3cd03bb0afd351edc513972a8bcde1df7fff0dfa4cfe",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-013\\TD5--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-014--default--D--VD/final-email-url.png",
+      "sha256": "9b5d431b7baf6118945e44134099fdf322c6f289cc6f5eeedaebe2245501ecce",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-014\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-014--default--H--VD/final-email-url.png",
+      "sha256": "78fc438eee551d6c875290eb3bf81051b1b6f9374d1859ddb87031a244cd5f25",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-014\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-016--default--H--VD/final-email-url.png",
+      "sha256": "a949565a750876be25b47bf1281d4cabc706082c01ee9fc21f01a334ff803b5a",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-016\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-019--default--H--VD/final-email-url.png",
+      "sha256": "c508c2ccc8eafe2800d07ac6306f454aaa8243d6311ac4c1eeaa602de8ffced5",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-019\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-022--default--H--VD/final-email-url.png",
+      "sha256": "e29be36d976ba4d9ed895d92739971bd3d44c55e979e2153caa1d11b6318a447",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-022\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-023--default--D--VD/final-email-url.png",
+      "sha256": "492723b0286583fe221a67cf86d8d75eeee6b3e757a41357c8b82c4523eafd15",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-023\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-030--default--D--VD/final-email-url.png",
+      "sha256": "7a65ebbd94dc98535b96f5636b104502b948539680b0fe40f8edd2f6e42cb5fe",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-030\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-031--add-click--D--VD/final-email-url.png",
+      "sha256": "cbc78ef4acd4e1b0a9ede4ec24273c581fe930ce15860231fb98c785efc70315",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-031\\add-click--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-031--add-click--H--VD/final-email-url.png",
+      "sha256": "0f7ebc993d4b305115710a5e9011e3b25f499e7f5ca55b86f81933bbee4d2efc",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-031\\add-click--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-031--add-Enter--D--VD/final-email-url.png",
+      "sha256": "e3797e045e6819914a626037d693866bf31147f5ec31734431e31b7d9835acaf",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-031\\add-Enter--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-031--add-Enter--H--VD/final-email-url.png",
+      "sha256": "b548676aca218a6bf2c4809c17d0163786705fb92dfbb9d9dbe8e7376421d001",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-031\\add-Enter--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-031--add-Space--D--VD/final-email-url.png",
+      "sha256": "e3797e045e6819914a626037d693866bf31147f5ec31734431e31b7d9835acaf",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-031\\add-Space--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-031--add-Space--H--VD/final-email-url.png",
+      "sha256": "b548676aca218a6bf2c4809c17d0163786705fb92dfbb9d9dbe8e7376421d001",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-031\\add-Space--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-032--default--D--VD/final-email-url.png",
+      "sha256": "e8246067264d997b608cd59d5a3c2f89ee3c97090086721cec24d3e132c23dc5",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-032\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-032--default--D--VM/final-email-url.png",
+      "sha256": "542d8bf383f2f8efdacb6e41ce7b8beef5d868a57a2aa2eedf2298e88d5c226c",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-032\\default--D\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-032--default--H--VD/final-email-url.png",
+      "sha256": "20e05e49b0435ad50e28110217d5d5dbf3ec4079c849b97ad3cee91e4a6fe5bf",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-032\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-032--default--H--VM/final-email-url.png",
+      "sha256": "5cdd5a728fb3ae1965b1263233aa39b2d738339055e76ff1d245da73c41cd43a",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-032\\default--H\\windows-playwright-firefox--VM\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-033--default--D--VD/final-email-url.png",
+      "sha256": "15b45fc0fa421bfec72b94ddebf5ccd0d7af2de77248f93701bac8289f7559fb",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-033\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-033--default--H--VD/final-email-url.png",
+      "sha256": "aea9aa62d805f21d50ca70d681bc4639ff551dae0cbb08808bf1cc730c700803",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-033\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-036--default--D--VD/final-email-url.png",
+      "sha256": "6c36e6d564f9221062b6eba167677a1659308c0f86450c368122cf66139ec58f",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-036\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-036--default--H--VD/final-email-url.png",
+      "sha256": "a80346d9ac4e2ee5d4c88562a95f5c21845c32ac2090c1c4a27c6ab55ec7cf14",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-036\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-037--default--H--VD/final-email-url.png",
+      "sha256": "e86532edc76f4121f5531bb48da36e38725febcbde7049b3dac0ef42fdeb91cb",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-037\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-038--default--H--VD/final-email-url.png",
+      "sha256": "c366d42f0eb0c4f1ff78fee39c00d84853d246f0de2f29f7589650ea8b30de62",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-038\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-040--default--H--VD/final-email-url.png",
+      "sha256": "35eee4502f1c50a1ba5ed136aa04e37a1a0ab8406edd2dfc7eeb8825aa3a0d38",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-040\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-041--initial--H--VD/final-email-url.png",
+      "sha256": "e52351a7c4287d67c9d6e075e4558cb25122c4aff7403b424157ea9af101135e",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-041\\initial--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-041--search--H--VD/final-email-url.png",
+      "sha256": "ef6c324287bea7ed9c3540da7d6d72252e3f8726f777afe9d1b55a23bf4d5c50",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-041\\search--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-043--default--D--VD/final-email-url.png",
+      "sha256": "c4dab10a8f4ee2ffd38927d052266dfd8debed7bf3773c3e397086cf8bd89ed0",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-043\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-045--default--H--VD/final-email-url.png",
+      "sha256": "c3115bf209113b555bd574962f34ce6e5265ab772f717cb04235c2ec4619926f",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-045\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-046--default--H--VD/final-email-url.png",
+      "sha256": "9a23c3efd8b03ee2b9327ff02228d22ecf2732d17bc6ba129aa1d7cd78bf3884",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-046\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-047--default--D--VD/final-email-url.png",
+      "sha256": "3885ab6abd1cb7b973eb8c0fad5a506c4157d7e86c2f43c8e9be1a6da1387789",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-047\\default--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-047--default--H--VD/final-email-url.png",
+      "sha256": "098bad625627d6b0469de33ad3bae49f913c86c089d1eb83a8d0edb06561883d",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-047\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-049--1--D--VD/final-email-url.png",
+      "sha256": "ef4573be270332d9c52c02b007cd23fc73a8c13c718fae74bcacf1d7cca37d08",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-049\\1--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-049--empty--D--VD/final-email-url.png",
+      "sha256": "8e8bedf670c3578b31566e014854379a49ab06eac522d34a77a049bb7f45a6a7",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-049\\empty--D\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    },
+    {
+      "path": "evidence/firefox/GUI-052--default--H--VD/final-email-url.png",
+      "sha256": "81c7b84a6f95619197c4d516f2d1f35229f0e9de2efad0f6b405b20d52a57529",
+      "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+      "sourcePath": "GUI-052\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png"
+    }
+  ]
+}

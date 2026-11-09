@@ -1,0 +1,129 @@
+{
+  "platform": "chrome",
+  "caseId": "GUI-045",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-045--default--H--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Sau khi cả hai xong, kết quả/nhãn cuối ứng với MacBook, response iPhone cũ không ghi đè. Throttling chung không đủ chứng minh điều kiện này; nếu không giữ/thả được từng request thì chưa thực thi.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 98
+          },
+          "H: S13 tr.12/14/20"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: MacBook\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "latest-wins",
+      "observation": {
+        "timeline": [
+          {
+            "event": "iPhone-held",
+            "at": 1794248399294
+          },
+          {
+            "event": "MacBook-finished",
+            "at": 1794248399392
+          },
+          {
+            "event": "iPhone-released",
+            "at": 1794248400292
+          },
+          {
+            "event": "iPhone-finished",
+            "at": 1794248400558
+          }
+        ],
+        "names": [
+          "iPhone 15 Pro Max"
+        ],
+        "main": "Danh sách sản phẩm\nTìm\nKết quả tìm kiếm cho: MacBook\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 1 sản phẩm"
+      },
+      "expected": "Sau khi cả hai xong, kết quả/nhãn cuối ứng với MacBook, response iPhone cũ không ghi đè. Throttling chung không đủ chứng minh điều kiện này; nếu không giữ/thả được từng request thì chưa thực thi.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14/20",
+          {
+            "line": 98,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T18:19:58.801Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:19:58.646Z",
+  "finishedAtUTC": "2026-11-09T18:20:01.340Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\macbook-finished-before-release.png",
+      "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\macbook-finished-before-release-window-email.png",
+      "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-045--default--H--VD/macbook-finished-before-release.png",
+      "sha256": "1d2e8668c53acbe86985674c783be2b542a4cb9832f2bb2c3f9e195c9fea8379"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-045--default--H--VD/macbook-finished-before-release-window-email.png",
+      "sha256": "a0cb6e50ff1e9c13f90dd56e8be57129bc366f889ce36b7fcfb1ca131e873afa"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/chrome/GUI-045--default--H--VD/final.png",
+      "sha256": "987d5a7bdb0fb41e760cbeed631dca181d5c1c4d23eccecaf194e4fa296f68b6"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/chrome/GUI-045--default--H--VD/final-window-email.png",
+      "sha256": "7f4cde2f9ca6a03f643f999ba8580aad7d1c8e28120865a15595c9eefd1cbd87"
+    }
+  ],
+  "sourceRun": "task3-chrome-20261110/runs/2026-11-09T18-12-09-870Z",
+  "sourceResult": "GUI-045\\default--H\\windows-google-chrome--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

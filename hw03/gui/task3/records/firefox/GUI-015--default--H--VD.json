@@ -1,0 +1,51 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-015",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-015--default--H--VD",
+  "assessment": "blocked",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Nội dung/control vẫn đọc và tiếp cận được, không chồng lấp khiến mất thao tác. Đây không phải tuyên bố đạt WCAG.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 49
+          },
+          "H: S13 tr.7/8/16"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": true
+    }
+  ],
+  "actual": {
+    "observations": [
+      "realBrowserZoom unavailable; no proxy used"
+    ]
+  },
+  "assertions": [],
+  "actions": [],
+  "reason": "realBrowserZoom unavailable; no proxy used",
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:08.004Z",
+  "finishedAtUTC": "2026-11-09T19:00:08.004Z",
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": []
+  },
+  "evidence": [],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-015\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

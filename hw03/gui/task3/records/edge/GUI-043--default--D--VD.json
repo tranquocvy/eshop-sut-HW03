@@ -1,0 +1,102 @@
+{
+  "platform": "edge",
+  "caseId": "GUI-043",
+  "variant": "default",
+  "page": "D",
+  "viewport": "VD",
+  "comparisonKey": "GUI-043--default--D--VD",
+  "assessment": "fail",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Thông báo lỗi tải khác trạng thái không tìm thấy; không để Đang tải vô hạn sau request thất bại.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 96
+          },
+          "H: S13 tr.11/16/27"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/product/1",
+        "main": "Đang tải..."
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "error-feedback",
+      "observation": {
+        "failed": "Đang tải...",
+        "simulation": "network abort"
+      },
+      "expected": "Thông báo lỗi tải khác trạng thái không tìm thấy; không để Đang tải vô hạn sau request thất bại.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.11/16/27",
+          {
+            "line": 96,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "fail",
+      "findingType": "heuristic-design"
+    }
+  ],
+  "actions": [],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T18:32:18.353Z",
+  "finishedAtUTC": "2026-11-09T18:32:21.220Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\error-observation.png",
+      "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\error-observation-window-email.png",
+      "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\screenshots\\final-window-email.png",
+      "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-043--default--D--VD/error-observation.png",
+      "sha256": "5021e756f6a825c8e4e5fbdee997d79adbc58ee9df7b5806477a3d753602c3e2"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-043--default--D--VD/error-observation-window-email.png",
+      "sha256": "53cd105f0d5ee84488322294b1eceefc5acf6a438c252733bd71cd559ffac4a3"
+    },
+    {
+      "kind": "screenshot",
+      "path": "evidence/edge/GUI-043--default--D--VD/final.png",
+      "sha256": "5021e756f6a825c8e4e5fbdee997d79adbc58ee9df7b5806477a3d753602c3e2"
+    },
+    {
+      "kind": "native-window-screenshot",
+      "path": "evidence/edge/GUI-043--default--D--VD/final-window-email.png",
+      "sha256": "79c7ad328c6c55066da38dd08e4409632a7d66abc74d53630d426f8f6373d336"
+    }
+  ],
+  "sourceRun": "task3-edge-20261110/runs/2026-11-09T18-27-08-246Z",
+  "sourceResult": "GUI-043\\default--D\\windows-microsoft-edge--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}

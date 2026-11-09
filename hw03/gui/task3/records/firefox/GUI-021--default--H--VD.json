@@ -1,0 +1,128 @@
+{
+  "platform": "firefox",
+  "caseId": "GUI-021",
+  "variant": "default",
+  "page": "H",
+  "viewport": "VD",
+  "comparisonKey": "GUI-021--default--H--VD",
+  "assessment": "pass",
+  "expected": [
+    {
+      "key": "H",
+      "expected": "Khôi phục tập 5 sản phẩm ban đầu, không giữ ngầm bộ lọc iPhone.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          {
+            "path": "hw03/gui/GUI_Checklist.md",
+            "line": 60
+          },
+          "H: S13 tr.12/14; FR-05 làm bối cảnh"
+        ],
+        "rationale": "Checklist v0.5 immutable expected; mixed assertions split by class in execution"
+      },
+      "reviewRequired": false
+    }
+  ],
+  "actual": {
+    "observations": [
+      {
+        "url": "http://localhost:5173/",
+        "main": "Danh sách sản phẩm\nTìm\niPhone 15 Pro Max\n\n30.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nSamsung Galaxy S24 Ultra\n\n28.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nMacBook Pro M3\n\n45.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nTai nghe AirPods Pro 2\n\n6.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nBàn phím cơ Keychron Q1\n\n4.000.000 VND\n\nXem chi tiết\nThêm vào giỏ\nHiển thị 5 sản phẩm"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "assertionKey": "restore",
+      "observation": {
+        "names": [
+          "iPhone 15 Pro Max",
+          "Samsung Galaxy S24 Ultra",
+          "MacBook Pro M3",
+          "Tai nghe AirPods Pro 2",
+          "Bàn phím cơ Keychron Q1"
+        ]
+      },
+      "expected": "Khôi phục tập 5 sản phẩm ban đầu, không giữ ngầm bộ lọc iPhone.",
+      "oracle": {
+        "class": "H",
+        "refs": [
+          "H: S13 tr.12/14; FR-05 làm bối cảnh",
+          {
+            "line": 60,
+            "path": "hw03/gui/GUI_Checklist.md"
+          }
+        ]
+      },
+      "assessment": "pass",
+      "findingType": "none"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-11-09T19:00:17.242Z",
+      "kind": "navigate",
+      "target": "route",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:17.666Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "iPhone",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:17.742Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:18.025Z",
+      "kind": "fill",
+      "target": "search",
+      "value": "",
+      "count": 1
+    },
+    {
+      "at": "2026-11-09T19:00:18.066Z",
+      "kind": "click",
+      "target": "Tìm",
+      "count": 1
+    }
+  ],
+  "reason": null,
+  "prerequisites": [],
+  "blockedBy": [],
+  "sourceCommit": "f12df694fd4797b15335d9754b2ca22ddf5a6b1d",
+  "startedAtUTC": "2026-11-09T19:00:16.831Z",
+  "finishedAtUTC": "2026-11-09T19:00:19.033Z",
+  "humanReview": {
+    "required": false,
+    "status": "not-required",
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidenceRefs": [
+      "GUI-021\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final.png",
+      "GUI-021\\default--H\\windows-playwright-firefox--VD\\attempt-001\\screenshots\\final-email-url.png",
+      "GUI-021\\default--H\\windows-playwright-firefox--VD\\attempt-001\\trace.zip"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "screenshot",
+      "path": "evidence/firefox/GUI-021--default--H--VD/final.png",
+      "sha256": "58fdafe15eefd562c5ae36717eea212503d675294e49bc2b843aa4c86aed3a30"
+    },
+    {
+      "kind": "content-screenshot-with-url-label",
+      "path": "evidence/firefox/GUI-021--default--H--VD/final-email-url.png",
+      "sha256": "c5e3fa798258839e6808e9ff37a3c60d72bdad306c25e627b9aa5ddfd36d3425"
+    }
+  ],
+  "sourceRun": "task3-firefox-content-full-20261110/runs/2026-11-09T18-59-52-389Z",
+  "sourceResult": "GUI-021\\default--H\\windows-playwright-firefox--VD\\attempt-001\\result.json",
+  "reviewStatus": "not-required"
+}
