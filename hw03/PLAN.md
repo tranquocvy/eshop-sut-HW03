@@ -100,3 +100,7 @@
 - [AI Audit](ai/AI_Audit_Report.md).
 - [Disclosure](ai/AI_Disclosure.md).
 - [Prompt Log](ai/PromptLog.md).
+
+## Task 3 — cập nhật 10/11/2026
+
+Đã chạy Chrome, Edge, Playwright Firefox: 52 ID / 122 biến thể mỗi browser, 366 records. Raw mỗi browser 44 Pass / 26 Fail / 14 Blocked / 38 needs-review. [Bộ tổng hợp](gui/task3/README.md). **Chưa đóng nghĩa vụ nộp:** còn 114 review, ngoại lệ Edge, Firefox URL dạng nhãn, identity thiếu họ tên và một ảnh native Edge GUI-001 checksum mismatch đã loại. Không thay trạng thái Task 2 hay lịch sử Task 1.

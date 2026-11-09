@@ -1,0 +1,401 @@
+[
+  {
+    "group": "R01",
+    "title": "Home prices use VND instead of ₫",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/1",
+    "caseIds": [
+      "GUI-004"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1,
+        "pass": 5
+      },
+      "edge": {
+        "fail": 1,
+        "pass": 5
+      },
+      "firefox": {
+        "fail": 1,
+        "pass": 5
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R02",
+    "title": "Product detail omits category",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/2",
+    "caseIds": [
+      "GUI-005"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R03",
+    "title": "Home product images have empty alternative text",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/3",
+    "caseIds": [
+      "GUI-006",
+      "GUI-047"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 2,
+        "pass": 5,
+        "needs-review": 1
+      },
+      "edge": {
+        "fail": 2,
+        "pass": 5,
+        "needs-review": 1
+      },
+      "firefox": {
+        "fail": 2,
+        "pass": 5,
+        "needs-review": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R04",
+    "title": "Home has two level-one headings",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/4",
+    "caseIds": [
+      "GUI-008"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "pass": 1,
+        "fail": 1
+      },
+      "edge": {
+        "pass": 1,
+        "fail": 1
+      },
+      "firefox": {
+        "pass": 1,
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R05",
+    "title": "Detail positive action uses green instead of blue",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/5",
+    "caseIds": [
+      "GUI-010"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "needs-review": 2
+      },
+      "edge": {
+        "needs-review": 2
+      },
+      "firefox": {
+        "needs-review": 2
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H01",
+    "title": "Narrow Home heading collapses into a word column",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/6",
+    "caseIds": [
+      "GUI-012"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "needs-review": 2
+      },
+      "edge": {
+        "needs-review": 2
+      },
+      "firefox": {
+        "needs-review": 2
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H02",
+    "title": "Search field has only a placeholder",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/7",
+    "caseIds": [
+      "GUI-016"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "needs-review": 1
+      },
+      "edge": {
+        "needs-review": 1
+      },
+      "firefox": {
+        "needs-review": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R06",
+    "title": "Search keyword is rendered as HTML",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/8",
+    "caseIds": [
+      "GUI-022"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H03",
+    "title": "Quantity spinbutton lacks an accessible name",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/9",
+    "caseIds": [
+      "GUI-023"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "needs-review": 1
+      },
+      "edge": {
+        "needs-review": 1
+      },
+      "firefox": {
+        "needs-review": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R07",
+    "title": "Detail breadcrumb is missing",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/10",
+    "caseIds": [
+      "GUI-030"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R08",
+    "title": "Add action produces no visible feedback on Home and Detail",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/11",
+    "caseIds": [
+      "GUI-031",
+      "GUI-048"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 8,
+        "pass": 9
+      },
+      "edge": {
+        "fail": 8,
+        "pass": 9
+      },
+      "firefox": {
+        "fail": 8,
+        "pass": 9
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R09",
+    "title": "Home has no route-dependent selected navigation state",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/12",
+    "caseIds": [
+      "GUI-036"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "needs-review": 2
+      },
+      "edge": {
+        "needs-review": 2
+      },
+      "firefox": {
+        "needs-review": 2
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R10",
+    "title": "Home list and search omit loading indication",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/13",
+    "caseIds": [
+      "GUI-037",
+      "GUI-038"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 2
+      },
+      "edge": {
+        "fail": 2
+      },
+      "firefox": {
+        "fail": 2
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R11",
+    "title": "No-result search lacks message and illustration",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/14",
+    "caseIds": [
+      "GUI-040"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H04",
+    "title": "Home request failures have no error feedback",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/15",
+    "caseIds": [
+      "GUI-041",
+      "GUI-052"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 3
+      },
+      "edge": {
+        "fail": 3
+      },
+      "firefox": {
+        "fail": 3
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H05",
+    "title": "Detail request failure remains loading",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/16",
+    "caseIds": [
+      "GUI-043"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H06",
+    "title": "Older search response overwrites newer results",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/17",
+    "caseIds": [
+      "GUI-045"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "H07",
+    "title": "Search label follows unsubmitted draft text",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/18",
+    "caseIds": [
+      "GUI-046"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 1
+      },
+      "edge": {
+        "fail": 1
+      },
+      "firefox": {
+        "fail": 1
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  },
+  {
+    "group": "R12",
+    "title": "Required quantity label lacks asterisk",
+    "issue": "https://github.com/tranquocvy/eshop-sut-HW03/issues/19",
+    "caseIds": [
+      "GUI-049"
+    ],
+    "task3Statuses": {
+      "chrome": {
+        "fail": 2
+      },
+      "edge": {
+        "fail": 2
+      },
+      "firefox": {
+        "fail": 2
+      }
+    },
+    "interpretation": "Same checklist area; raw Fail supports recurrence, pending review does not independently confirm recurrence; no new issue created."
+  }
+]
