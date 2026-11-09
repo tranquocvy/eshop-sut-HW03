@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "studyDate": "2026-11-10",
+  "kind": "internal-pilot",
+  "flow": "compact-screen-v1",
+  "probeVersion": "v0.4",
+  "sourceCommit": "5444b25aad5cd9942d3962f8beab3879dc1e10bb",
+  "phase": "done",
+  "sus": {
+    "validItems": 10,
+    "independentFormulaCheck": true,
+    "rawAndScore": "private-only"
+  },
+  "probes": {
+    "validChoiceFields": 4,
+    "text": "private-only"
+  },
+  "recording": {
+    "count": 1,
+    "container": "webm",
+    "bytes": 10736126,
+    "checksumMatches": true,
+    "videoTracks": 1,
+    "audioTracks": 0,
+    "metadataOnly": true,
+    "shortPlaybackCheck": true,
+    "fullContentReviewed": false
+  },
+  "observationNotesAvailable": false,
+  "verifiedTaskTiming": false,
+  "moderatorReviewed": false,
+  "studyFrozen": false,
+  "mainSessionsIncluded": 0,
+  "privateReports": [
+    "json",
+    "csv",
+    "markdown",
+    "html",
+    "pdf"
+  ],
+  "publicContainsRawAnswers": false
+}

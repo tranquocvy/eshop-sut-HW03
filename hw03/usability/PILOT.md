@@ -2,6 +2,10 @@
 
 **Chưa có pilot đủ điều kiện được review/freeze.** Mẫu không chứa feedback hoặc xác nhận người thật. Theo [plan online](ONLINE-STUDY-PLAN.md), pilot chạy đủ luồng web, participant dùng recorder screen-only trên portal rồi upload; file quay ngoài là fallback; checklist/change record/freeze được đưa vào moderator UI. Không yêu cầu người tham gia điền Markdown.
 
+## Phiên đã ghi nhận
+
+- [Pilot nội bộ v0.4 — 10/11/2026](pilot/2026-11-10-internal-v04/README.md): đã nhận khảo sát và video; biên bản Markdown/PDF và receipt kỹ thuật riêng. Chưa review toàn bộ nội dung, chưa freeze và không gộp vào bảy phiên chính. Raw responses/video/report đầy đủ giữ ngoài Git.
+
 ## Pilot nội bộ và điều kiện mẫu
 
 Pilot nội bộ với người thuộc lớp/người thiết kế chỉ dùng diễn tập quy trình và thu lỗi kỹ thuật; ghi rõ exposure, không tính vào bảy phiên chính và không coi là pilot đại diện đã đạt yêu cầu. Đề §6 không nói rõ ngoại lệ cho pilot đối với quy định ngoài lớp; phương án an toàn là pilot thêm với người ngoài lớp đúng profile hoặc xin giảng viên xác nhận. Với compact, moderator đánh dấu accommodation `INTERNAL-PILOT:` cho phiên kind=pilot mới cho phép screening Không tiếp tục; lưu nguyên câu trả lời Không, không đổi eligibility thành Có. Main/legacy không có ngoại lệ này. Consent vẫn do participant chọn. Chưa có live observer thì không ghi đã quan sát think-aloud.
