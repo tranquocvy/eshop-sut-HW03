@@ -1,5 +1,5 @@
 # HW03 — Prompt Log trích tuyển theo artifact
-**Phạm vi:** bản trích tuyển gồm **6 tương tác** P-000, P-002, P-004, P-005, P-006 và P-007, bao gồm phần chuẩn bị/thiết kế (A-00–A-02) và tạo skill/harness GUI (A-03). Không phải toàn bộ lịch sử AI HW03 theo §9. Các lượt vận hành, ôn tập và AI-to-AI review không được chép toàn văn; đóng góp AI review/sửa đổi vẫn được khai. P-000/P-005 có phần cuối nguồn bị cắt; P-004/P-006/P-007 có giới hạn nguồn ghi tại từng mục.
+**Phạm vi:** bản trích tuyển gồm **8 tương tác** P-000, P-002, P-004, P-005, P-006, P-007, P-008 và P-009, bao gồm phần chuẩn bị/thiết kế (A-00–A-02), skill/harness GUI (A-03), khả thi portal và review câu hỏi (A-06/A-07); sổ đối chiếu cuối file ghi thêm bằng chứng A-04–A-07. Không phải toàn bộ lịch sử AI HW03 theo §9. Các lượt vận hành, ôn tập và AI-to-AI review không được chép toàn văn; đóng góp AI review/sửa đổi vẫn được khai. P-000/P-005 có phần cuối nguồn bị cắt; P-004/P-006/P-007 có giới hạn nguồn ghi tại từng mục.
 
 
 ## P-000 — A-01: Đọc đề và cơ sở lập kế hoạch
@@ -537,3 +537,131 @@ Ví dụ GUI-045: đang tìm **MacBook** nhưng response cũ ghi đè thành **i
 - Main AI đã sửa feedback oracle, provenance của lỗi kỹ thuật/oracle, phân biệt technical/dependency block và verifier schema/artifact sau tự kiểm và AI review. Các chỉnh sửa code là AI thực hiện, không khai là sinh viên tự viết.
 - Phản hồi tổng kết có ảnh `02-both-responses-complete.png` (1440×900), thuộc GUI-045 của run tham chiếu. Screenshot/trace/video và native report ở kho evidence local; raw artifacts chưa bảo đảm redacted để export.
 - Đây là fixed pilot adapter, không full JSON contract/generic DAG compiler; chưa full 50 ID, ≥3 nền tảng, real zoom, IME, browser chrome hoặc identity overlay. Source SUT/DB được kiểm tra không đổi; không có dữ liệu usability người thật mới.
+
+
+<a id="doi-chieu-20261109"></a>
+## Đối chiếu bổ sung — 09/11/2026
+
+Đây là **trích tuyển và sổ bằng chứng kỹ thuật**, không phải toàn bộ lịch sử theo HW03 §9. Đã đối chiếu lịch sử hội thoại qua công cụ tìm kiếm/lịch sử, Git log và verification JSON trên đĩa; không đọc raw transcript. Trường contentTruncated=true vẫn xuất hiện khi lấy riêng một thông điệp nên không chứng nhận đã khôi phục toàn bộ turn. Không phục dựng prompt hoặc output còn thiếu; không đổi nội dung các mục P-000–P-007. Không chép trao đổi riêng, quản lý quyền, dữ liệu người tham gia hoặc nội dung video.
+
+<a id="p-008"></a>
+## P-008 — A-06: Khả thi portal local dùng SUT
+
+- Timestamp prompt: 2026-11-09 00:54:13 (UTC+07:00).
+- Công cụ/model: OpenClaw main / OpenAI gpt-6.1-sol.
+- Nguồn: thông điệp user kỹ thuật truy xuất từ lịch sử; API có cờ contentTruncated ở cửa sổ lịch sử. Không khẳng định đây là prompt duy nhất tạo toàn bộ portal.
+
+### Prompt nguyên văn — văn bản truy xuất được
+
+
+```text
+tôi muốn làm theo kiểu build web hay gì đó local, có dùng source SUT, rồi có quay screen shot. chạy local, sau đó tôi sẽ tunnel ra, liệu có khả thi không? hoặc cách nào đó cho bạn tôi vào 1 link web nào đó và thực hiện? khả thi không
+```
+
+### Output và artifact
+
+Chưa khôi phục phản hồi trực tiếp tương ứng thành một cặp đầy đủ; **không điền lời tóm tắt sau này vào ô output nguyên văn**. Artifact hiện hành: [CONTRACT](../tools/usability-study/CONTRACT.md), [VERIFICATION](../tools/usability-study/VERIFICATION.md), source portal/server/scripts/tests. Scope đã chuyển từ upload video ngoài sang compact screen-only recorder trong các lượt sau; không quy recorder cho riêng P-008.
+
+<a id="p-009"></a>
+## P-009 — A-05/A-07: Review SUS và brainstorm probes
+
+- Timestamp prompt: 2026-11-09 21:47:21 (UTC+07:00).
+- Timestamp phản hồi nguồn: 2026-11-09 21:48:30 (UTC+07:00).
+- Công cụ/model: OpenClaw main / OpenAI gpt-6.1-sol.
+- Prompt và phần output dưới đây là văn bản truy xuất được; source history có contentTruncated=true. Output **trích nguyên văn phần kỹ thuật**, kết thúc trước đoạn phối hợp riêng; không phải toàn bộ turn. Không công bố raw answers hoặc dữ liệu pilot.
+
+### Prompt nguyên văn
+
+```text
+check lại 1 tí, các câu hỏi hiện tại là bạn tự nghĩ hã. còn SUS là phần câu hỏi nào? tôi thấy có 1 số câu kì cục khó trả lời quá, brainstorm lại câu hỏi giúp tôi (giữ SUS và nói tôi biết SUS/UEQ-S mà bạn dùng là những câu hỏi nào)
+```
+
+### Output nguyên văn — trích đoạn kỹ thuật
+
+```text
+**Đúng một phần: những câu hỏi mở là mình tự soạn; 10 câu SUS thì dựa trên thang có sẵn, không phải mình tự nghĩ.** Mình đã rút câu hỏi mở quá mạnh nên có câu vừa cụt vừa khó trả lời — cần sửa.
+
+## 1. Hiện đang dùng SUS, không dùng UEQ-S
+
+Đề §6 yêu cầu **SUS hoặc UEQ-S**, cộng câu hỏi mở về **độ rõ ràng, phục hồi khi gặp lỗi, tốc độ và sự tin tưởng**. Không cần dùng cả hai thang.
+
+Phần **“Đánh giá EShop” với 10 câu chọn mức 1–5** chính là SUS:
+
+1. Tôi nghĩ rằng tôi muốn sử dụng hệ thống này thường xuyên.
+2. Tôi thấy hệ thống này phức tạp một cách không cần thiết.
+3. Tôi nghĩ hệ thống này dễ sử dụng.
+4. Tôi nghĩ tôi cần sự hỗ trợ của một người có chuyên môn kỹ thuật để có thể sử dụng hệ thống này.
+5. Tôi thấy các chức năng khác nhau trong hệ thống này được tích hợp tốt với nhau.
+6. Tôi nghĩ hệ thống này có quá nhiều điểm không nhất quán.
+7. Tôi hình dung rằng hầu hết mọi người sẽ học cách sử dụng hệ thống này rất nhanh.
+8. Tôi thấy hệ thống này rất rườm rà khi sử dụng.
+9. Tôi cảm thấy rất tự tin khi sử dụng hệ thống này.
+10. Tôi cần học nhiều thứ trước khi có thể bắt đầu sử dụng hệ thống này.
+
+**Lưu ý:** đây là bản Việt làm việc do AI hỗ trợ dịch, **chưa phải bản tiếng Việt đã được xác thực tâm trắc**. Những từ như “tích hợp”, “không nhất quán” đúng là khó hiểu, nhưng không nên tùy tiện viết lại rồi vẫn xem như thang chuẩn không thay đổi.
+
+Nguồn đối chiếu: [SUS — MeasuringU](https://measuringu.com/sus/), thang gốc của John Brooke.
+
+## 2. Phần mình tự soạn có vấn đề gì?
+
+Phần **“Chia sẻ thêm”** không phải SUS hay UEQ-S:
+
+- **“Điều gì khó hiểu…?”** ngầm giả định người dùng phải gặp chỗ khó hiểu.
+- **“Chỗ nào nhanh, chậm hoặc tốn công?”** hỏi nhiều ý cùng lúc, khó biết cần trả lời gì.
+- **“Bạn tin lựa chọn của mình phù hợp đến đâu?”** khá trừu tượng; người chưa chọn được sản phẩm càng khó trả lời.
+- Chọn **“Không gặp”** rồi vẫn phải gõ “không gặp” là thao tác thừa.
+
+## 3. Bộ câu hỏi mở mình đề xuất thay thế
+
+Giữ nguyên SUS, sau đó chỉ hỏi **4 câu chính**, với ô giải thích xuất hiện khi phù hợp:
+
+| Nhóm | Câu đề xuất | Hỏi thêm khi có tình huống |
+|---|---|---|
+| **Dễ hiểu** | **Trong lúc tìm điện thoại, có thông tin hoặc nút nào bạn chưa hiểu rõ không?** | Đó là chỗ nào? Bạn nghĩ nó có nghĩa gì? |
+| **Phục hồi** | **Trong lúc làm, bạn có bấm nhầm, gặp lỗi hoặc bị kẹt ở bước nào không?** | Bạn đã làm gì tiếp theo? Có tiếp tục được không? |
+| **Tốc độ** | **Có bước nào mất nhiều thời gian hơn bạn mong đợi không?** | Đó là bước nào? Điều gì làm bạn mất thời gian? |
+| **Tin tưởng** | **Thông tin trên EShop đã đủ để bạn quyết định chọn một chiếc điện thoại chưa?** | Thông tin nào giúp bạn quyết định, hoặc bạn còn cần biết thêm điều gì? |
+
+Cách trả lời:
+- Cho phép **Có / Không / Không chắc** tùy câu.
+- Không gặp thì **không bắt gõ giải thích**.
+- Câu mở cho phép bỏ qua; không bắt người dùng nghĩ ra một vấn đề.
+- Các câu này là **phỏng vấn bổ sung**, không cộng thành điểm SUS.
+
+Câu cuối **không bắt buộc**:
+> **Nếu được thay đổi một điều trên EShop, bạn muốn thay đổi điều gì?**
+```
+
+### Artifact và kết quả sau revision — không phải output nguyên văn của lượt brainstorm
+
+- [INSTRUMENTS](../usability/INSTRUMENTS.md), [probes-v04.mjs](../tools/usability-study/portal/probes-v04.mjs) và [probe tests](../tools/usability-study/tests/probes-v04.test.mjs). Câu chữ do AI soạn; review của sinh viên không chuyển tác giả thành sinh viên tự viết.
+- Giữ nguyên SUS 10 câu/thang/scoring; không triển khai UEQ-S. Probes tự soạn không cộng SUS; Có/Không/Không chắc/Bỏ qua, optional follow-up, không chọn sẵn và không gửi text ẩn. Snapshot/raw v0.3 không đổi theo v0.4.
+- Build và 54/54 node:test đạt theo VERIFICATION. Evidence synthetic v0.4 10 nhóm và v0.3 9 nhóm đều PASS; native display picker vẫn UNVERIFIED, humanParticipants=0 trong hai run này.
+- Test đầu lấy snapshot sai ở admin session thay vì export; sửa assertion theo contract rồi chạy lại. Failed evidence compact-e2e-1794236178039 được giữ, không ghi đè thành PASS.
+
+### Sổ bằng chứng A-04–A-07
+
+Mốc dưới là lịch sử kiểm chứng, không phải chứng nhận đã chạy lại toàn bộ vào ngày đối chiếu. Artifact ngoài Git dùng đường dẫn tương đối từ thư mục HW03 cha repo; không liên kết/đính kèm private DB hoặc video.
+
+| Artifact / kiểm chứng | Kết quả có bằng chứng | Nguồn / giới hạn |
+|---|---|---|
+| A-04 Task 1 export | 52 ID/122 variants; effective 75 Pass/31 Fail/15 Blocked/1 needs-review; 31 Fail ánh xạ 19 nhóm | [Bộ Task 1](../gui/task1/START-HERE.md), [mapping](../gui/task1/findings/mapping.json). 19 nhóm triệu chứng không tự chứng minh 19 root causes; native passed không phải GUI Pass. Bản report tiến độ 73/31/15/3 trước review không thay số cuối. |
+| A-05 bộ chuẩn bị | Protocol, scenario, SUS, templates, pilot và analysis | [Usability index](../usability/README.md). Thông điệp nguồn chuẩn bị ghi kiểm 17 local links/16 bảng/công thức SUS; đó là snapshot lịch sử, không phải chỉ số hiện hành sau mọi revision. |
+| A-06 runtime/recorder | 62 fingerprint SUT không đổi; startup dùng run-* riêng; các lỗi CSP/race/autosave/withdrawal/retry đã có regression | [VERIFICATION](../tools/usability-study/VERIFICATION.md). Các count 31→32→50→54 là các revision khác nhau, không cộng thành số test/participant. AI worker review không phải human acceptance. |
+| A-07 compact v0.4 | PASS; 10 nhóm browser; syntheticOnly=true, humanParticipants=0 | _working/eshop-sut-HW03/online-study/compact-e2e-1794236257548/verification.json. Native picker chưa kiểm thật. |
+| A-07 snapshot v0.3 | PASS; 9 nhóm browser; syntheticOnly=true, humanParticipants=0 | _working/eshop-sut-HW03/online-study/compact-e2e-1794236316214/verification.json. Không migrate đáp án cũ. |
+| A-07 report v0.4 | PASS; 10 headings, 12 tables; PDF 92,164 bytes; printWidthOverflow=false | compact-e2e-1794236257548/report-render-verification.json trong cùng work root. allPagesManuallyInspected=false. |
+| A-07 question-preview | Build + 4 targeted node tests PASS; HTTPS browser kiểm 4 probes/10 SUS, reset, 0 API nghiên cứu; private/admin route 404 | _working/eshop-sut-HW03/online-study/question-preview-20261109/verification.json. Lỗi syntax regex của static server lượt đầu đã được sửa bằng whitelist asset rồi kiểm lại; không coi server lỗi là PASS. Không ghi URL tunnel tạm vào hồ sơ nộp. |
+
+**Còn thiếu:** cặp prompt/output đầy đủ của phần full execution/export Task 1, chuẩn bị Task 2, triển khai/runtime/recorder và worker review. Các artifact có thể truy nguồn kỹ thuật nhưng bản trích tuyển này **chưa đáp ứng log mọi tương tác**. Không dùng tóm tắt để giả thành nguyên văn, không tự điền AI Critique hoặc chữ ký. Lượt thử nội bộ không được tính thay bảy người ngoài lớp, pilot đạt tiêu chí tuyển người hay moderated evaluation hoàn tất.
+
+
+## Sổ bằng chứng A-08 — 10/11/2026
+
+Đây là **bản ghi kỹ thuật**, không phải prompt/output nguyên văn và không tăng số tương tác trích tuyển. Chưa nhập cặp transcript đầy đủ của lượt xuất pilot; không dùng mô tả công việc thay nguyên văn. Không chép trao đổi riêng, đáp án, điểm cá nhân, hình video hoặc invitation.
+
+- Artifact: [biên bản pilot nội bộ Markdown/PDF/receipt](../usability/pilot/2026-11-10-internal-v04/README.md), commit 8fd1147.
+- Kiểm nhận: phase done, 10 SUS hợp lệ, bốn trường lựa chọn probes và một WebM; SUS tính lại local khớp export; hash video khớp, container 1 video track/0 audio. Short decode/playback tiến lên; chưa review hết nội dung hoặc đo duration hữu hạn. Đây là kiểm kỹ thuật, không phải K1 hoặc moderation observation.
+- Export riêng: JSON/CSV/Markdown/HTML/PDF và Git log; PDF private 10 mục, không print-width overflow, chưa kiểm tay mọi trang. PDF biên bản không dữ liệu cá nhân được kiểm 6 mục/1 bảng và mẫu render đầu. Validator 17 Markdown files không lỗi ở lượt pilot.
+- Raw answers/video không đưa vào AI/Git. Report không tự tạo findings/severity, notes hoặc timing. Review/verified/frozen vẫn chưa được đánh; main sample contribution=0.
+- Theo đề §6/§12/§14, hồ sơ này ghi pilot và evidence hiện có nhưng chưa chứng nhận đủ refine hoặc toàn bộ Phase 1. Việc chưa có bảy phiên và roster vẫn được ghi đúng thực tế.

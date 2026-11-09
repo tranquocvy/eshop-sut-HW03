@@ -39,13 +39,29 @@
 | Nội dung | Bằng chứng / trạng thái thực tế |
 | :---- | :---- |
 | Công cụ AI | OpenClaw main/worker reviewer / OpenAI gpt-6.1-sol và PDF extractor / gpt-6-astra. Mục “Claude Pro” trong mẫu không áp dụng cho các công cụ này; HW03 §8 cho phép chọn công cụ AI bất kỳ. |
-| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-00 VALID; A-01, A-02 và A-03 INCOMPLETE (chấp nhận sau sửa). Checklist đầu 48 mục, hiện hành v0.5 có 52 mục. AI review/sửa và phát hiện GUI-049/050; sinh viên đã review, chọn giữ hai mục đó và bổ sung GUI-051/052 cùng lý do AI bỏ sót. A-02 INCOMPLETE vì bản AI được sửa/bổ sung, không phải vì thiếu review/bổ sung của sinh viên. A-03 ghi skill/harness trong phạm vi pilot; A-04 INCOMPLETE ghi execution/report Task 1 và giới hạn coverage/log. 5 artifact có verdict, không chứng nhận toàn bộ bài nộp. |
-| Log tương tác | [PromptLog](PromptLog.md) là bản trích tuyển 6 tương tác P-000/P-002/P-004/P-005/P-006/P-007, không phải toàn bộ lịch sử theo HW03 §9. P-000/P-005 thiếu cuối; P-004/P-006/P-007 có giới hạn nguồn ghi tại từng mục. Chưa xác nhận log đủ mọi prompt/phản hồi. |
+| Hồ sơ artifact | [Audit](AI_Audit_Report.md): A-00 VALID; A-01, A-02 và A-03 INCOMPLETE (chấp nhận sau sửa). Checklist đầu 48 mục, hiện hành v0.5 có 52 mục. AI review/sửa và phát hiện GUI-049/050; sinh viên đã review, chọn giữ hai mục đó và bổ sung GUI-051/052 cùng lý do AI bỏ sót. A-02 INCOMPLETE vì bản AI được sửa/bổ sung, không phải vì thiếu review/bổ sung của sinh viên. A-03 ghi skill/harness trong phạm vi pilot; A-04 INCOMPLETE ghi execution/report Task 1 và giới hạn coverage/log. 9 artifact A-00–A-08 có verdict (1 VALID, 8 INCOMPLETE), không chứng nhận toàn bộ bài nộp. |
+| Log tương tác | [PromptLog](PromptLog.md) là bản trích tuyển 8 tương tác P-000/P-002/P-004/P-005/P-006/P-007/P-008/P-009, không phải toàn bộ lịch sử theo HW03 §9. P-000/P-005 thiếu cuối; P-004/P-006/P-007 có giới hạn nguồn ghi tại từng mục. Chưa xác nhận log đủ mọi prompt/phản hồi. |
 | Code và thực thi | Không sửa code SUT. AI tạo launcher READONLY, skill/harness và test pilot riêng; không tải initializer/seed. Pilot 13 instance/7 ID trên Windows Chromium desktop có 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đã xử lý lượt Task 1 đủ 52 ID/122 biến thể (119 có UI observations), effective 75 Pass/31 Fail/15 Blocked/1 needs-review. Blocked và applicability chưa được coi là đạt; chưa hoàn tất Task 3 cross-platform hoặc phiên usability. |
 | AI Critique và Mandatory Disclosure | Đã xuất bộ report Task 1 Markdown/HTML/PDF và Excel; AI Critique 200–300 từ và Mandatory Disclosure vẫn cần hoàn thiện đúng trách nhiệm tác giả, không tự ký hay giả nhận xét cá nhân của sinh viên. |
 | Disclosure | [AI_Disclosure.md](AI_Disclosure.md) đi cùng hồ sơ này; chữ ký chưa điền. |
 | Evidence pilot | Raw screenshot/trace/video/native report được giữ local-only; chưa bảo đảm redacted để export. Sinh viên xác nhận evidence từng GUI đầy đủ ngày 07/11/2026. Trong snapshot pilot lịch sử, hai instance GUI-032 còn needs-review; không dùng trạng thái lịch sử này thay kết quả full run hiện hành; xác nhận evidence không thay kết luận Tab-order hoặc chứng nhận tính xác thực từ bytes đơn lẻ. |
-| Dữ liệu cá nhân | Hồ sơ hiện có họ tên, MSSV và lớp của sinh viên; chưa có dữ liệu người tham gia usability. |
+| Dữ liệu cá nhân | Hồ sơ hiện có họ tên, MSSV và lớp của sinh viên; lượt thử nội bộ có dữ liệu riêng ngoài repository, không được tính là mẫu chính hoặc pilot đủ điều kiện; không đưa raw answers, contact hoặc video vào hồ sơ AI. |
+
+### Cập nhật kiểm soát Task 2 — 09/11/2026
+
+- A-05–A-07 trong [Audit](AI_Audit_Report.md) và [Disclosure](AI_Disclosure.md) ghi tài liệu, công cụ và revision probes. Không tự đánh dấu các checkbox tổng quát là đạt chỉ từ technical checks.
+- Private DB, mật khẩu, invite/token, video và contact mapping phải nằm ngoài Git/webroot. Không chép transcript nguyên khối, URL invitation, credentials hoặc câu trả lời cá nhân vào PromptLog. Hồ sơ này chỉ giữ trích đoạn nhiệm vụ kỹ thuật và kết quả kiểm công cụ; không xuất dữ liệu lượt thử nội bộ.
+- Compact không thu danh tính; danh sách xác minh theo đề cần thu/lưu riêng sau consent. Không dựng danh tính hoặc coi screening exception nội bộ là eligibility cho mẫu chính.
+- Recorder screen-only, audio=false; file chưa gửi chỉ ở RAM, không bảo đảm sống qua reload/crash. Metadata WebM/MP4 có giới hạn; không chứng minh nội dung đúng người/đúng màn hình. Free text và video cần **human privacy review** trước chia sẻ; test synthetic không thay consent.
+- Evidence synthetic v0.4/v0.3 và preview được giữ ngoài repository. Không dùng video canvas/test vector SUS làm phản hồi người thật. Không đổi snapshot hoặc đáp án lịch sử khi đổi probes.
+- Bảy phiên chính, pilot đạt điều kiện tuyển người, freeze sau review và báo cáo cuối **chưa được chứng nhận**. Chữ ký, cấp độ AI, AI Critique và tính đầy đủ log vẫn cần hoàn thiện đúng trách nhiệm; không tự xác nhận thay sinh viên.
+
+### Kiểm soát biên bản pilot — 10/11/2026
+
+- A-08 ghi [pilot nội bộ](../usability/pilot/2026-11-10-internal-v04/README.md): bản nộp đã nhận, chưa có full content review/freeze. Không đổi các checkbox chưa đủ căn cứ.
+- Script local đọc riêng export/video để tính lại score, đối chiếu checksum và thử decode; tool chỉ trả metadata kiểm nhận, không raw responses, điểm cá nhân hoặc frame video. Không công khai evidence khi consent không cho public sharing.
+- Biên bản Git là Markdown/PDF/receipt tối thiểu. JSON/CSV/Markdown/HTML/PDF đầy đủ, video, DB, credential và Git log xuất nộp giữ riêng ngoài Git. PDF đã kiểm kỹ thuật, chưa kiểm tay mọi trang; text tự do/video vẫn cần human privacy review.
+- Không đánh một pilot nội bộ thành một người trong mẫu bảy phiên hoặc tự chứng nhận đã đạt pilot đại diện theo rubric.
 
 ## **4\. Cam đoan Cuối cùng**
 

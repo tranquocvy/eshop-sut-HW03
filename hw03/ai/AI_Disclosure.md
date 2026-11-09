@@ -18,7 +18,7 @@
 | **Mã bài tập:** | HW03-AI |
 | **Tên bài tập:** | GUI & Usability |
 | **Cấp độ AI (1–5):** | Cấp \_\_\_\_ |
-| **Ngày:** | 07/11/2026 |
+| **Ngày:** | 10/11/2026 |
 | **Họ tên sinh viên:** | TRẦN QUỐC VỸ |
 |  |  |
 | **MSSV:** | 23120410 |
@@ -60,7 +60,7 @@ bước 1 hãy chọn "Màn hình chính và luồng usability không được t
 hãy thực hiện T01 theo plan, tôi đã đính kèm "S13_GUI Testing & Usability Testing.pdf" ở root của src code
 ```
 
-[Prompt Log](PromptLog.md) là **bản trích tuyển 6 tương tác** P-000/P-002/P-004/P-005/P-006/P-007, không phải toàn bộ lịch sử. P-000/P-005 bị cắt ở cuối; nguồn P-004/P-006/P-007 có cờ cắt hoặc độ đầy đủ chưa xác minh như ghi tại từng mục. Ba prompt ở trên là các ví dụ đại diện; P-005–P-007 bổ sung quá trình chọn công cụ, dependency và tạo skill/harness. AI review không chép toàn văn nhưng đóng góp vẫn được khai.
+[Prompt Log](PromptLog.md) là **bản trích tuyển 8 tương tác** P-000/P-002/P-004/P-005/P-006/P-007/P-008/P-009, không phải toàn bộ lịch sử. P-000/P-005 bị cắt ở cuối; nguồn P-004/P-006/P-007 có cờ cắt hoặc độ đầy đủ chưa xác minh như ghi tại từng mục. Ba prompt ở trên là các ví dụ đại diện; P-005–P-007 bổ sung quá trình chọn công cụ, dependency và tạo skill/harness. AI review không chép toàn văn nhưng đóng góp vẫn được khai.
 
 ### **4\. Phần cụ thể AI đóng góp:**
 
@@ -72,7 +72,7 @@ AI đề xuất Home / Product Listing & Search (FR-05), với Product Detail (F
 
 **A-03 — Skill/harness GUI (P-005–P-007):** AI khảo sát framework/skill/plugin, đề xuất Playwright Test và cấu trúc evidence theo ID/variant/platform/attempt; sinh viên góp ý dependency và chọn runner. AI tạo repository-owned skill, contract/adapter, materializer/source template, harness và các test pilot; worker AI hỗ trợ authoring/review. AI sửa launcher/Tailwind và các vấn đề oracle/verifier sau tự kiểm/AI review rồi thực thi lại. Pilot cuối có 13 instance/7 ID trên Windows Chromium desktop: 3 Pass, 3 Fail, 5 Blocked, 2 needs-review; 44/44 unit/DOM regression checks đạt. Đây không phải full execution checklist 52 ID, ≥3 nền tảng hoặc human review của hai instance GUI-032.
 
-Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI tạo riêng. Chưa có dữ liệu người tham gia hoặc phiên usability mới. Raw screenshot/trace/video/native report được bảo toàn riêng, không mặc định đưa toàn bộ vào Git. Bộ xuất Task 1 gồm report, Excel và evidence Failed được chọn có mapping; chỉ có thể coi đã sẵn sàng xuất bản sau kiểm tra privacy, checksum và links.
+Code SUT giữ nguyên từ nguồn giảng viên; helper/harness là code AI tạo riêng. Dữ liệu của lượt thử nội bộ được giữ riêng ngoài repository; không đồng nhất lượt thử nội bộ với mẫu chính hoặc pilot đạt tiêu chí tuyển người của rubric. Không đưa raw answers, video hoặc liên hệ vào bộ AI. Raw screenshot/trace/video/native report được bảo toàn riêng, không mặc định đưa toàn bộ vào Git. Bộ xuất Task 1 gồm report, Excel và evidence Failed được chọn có mapping; chỉ có thể coi đã sẵn sàng xuất bản sau kiểm tra privacy, checksum và links.
 
 ### **5\. Cách tôi rà soát / chỉnh sửa / xác minh đầu ra AI:**
 
@@ -90,7 +90,23 @@ Tôi đã kiểm tra pilot/evidence và xác nhận evidence từng GUI đầy �
 
 AI tạo adapter local, thu observation, đối chiếu ảnh/DOM/network, rà false Pass và tổng hợp báo cáo/Excel/findings từ kết quả đã lưu. Native collector báo 122 passed không phải 122 GUI Pass. Raw assessment ban đầu là 44 Pass/26 Fail/14 Blocked/38 needs-review; effective assessment hiện hành là 75/31/15/1. GUI-033 Home/Detail được chốt theo xác nhận kiểm thủ công của sinh viên, không khai là agent đã chạy bổ sung reverse traversal đầy đủ. GUI-036 Detail còn applicability; phần recovery của GUI-051 đạt nhưng message-disappearance bị chặn do không có message ban đầu.
 
-[Report Task 1](../gui/task1/START-HERE.md) là bộ xuất dẫn xuất; không sửa SUT hoặc ghi đè attempt gốc. Transcript cho giai đoạn mới chưa được bổ sung đầy đủ vào PromptLog; không tự dựng prompt/output lịch sử. AI không khai đã thực hiện usability với người thật.
+[Report Task 1](../gui/task1/START-HERE.md) là bộ xuất dẫn xuất; không sửa SUT hoặc ghi đè attempt gốc. Transcript cho giai đoạn mới chưa được bổ sung đầy đủ vào PromptLog; không tự dựng prompt/output lịch sử. Phần A-04 không chứng nhận usability; cập nhật Task 2 dưới đây tách lượt thử nội bộ khỏi bảy phiên chính.
+
+### Bổ sung A-05–A-07 — Công cụ và câu hỏi Task 2 (09/11/2026)
+
+AI soạn bộ thiết kế/protocol/instruments/templates/pilot/analysis; viết runtime ngoài SUT, portal tiếng Việt, dịch vụ lưu phiên/video riêng, moderator review/freeze và export DRAFT. Bản compact bổ sung recorder **chỉ màn hình, không mic/camera/audio**. AI kiểm source fingerprints và sửa launcher, race/phase contamination, CSP playback, autosave, withdrawal và retry sau review kỹ thuật. Không sửa production SUT để làm test đạt.
+
+Phản hồi review chỉ ra probes khó hiểu là đầu vào cho revision; **câu chữ probes v0.4 do AI soạn và triển khai**, không khai là sinh viên tự viết. Giữ nguyên 10 SUS, thứ tự, thang và scoring; không dùng UEQ-S. Bản Việt SUS chưa được xác thực tâm trắc. Bốn probes là câu tự soạn có nhánh và giải thích tùy chọn; snapshot cũ/raw cũ không bị đổi theo câu mới.
+
+[Audit](AI_Audit_Report.md) hiện có **9 artifact A-00–A-08: 1 VALID, 8 INCOMPLETE**. [Verification](../tools/usability-study/VERIFICATION.md) ghi build, 54/54 tests, 10 nhóm browser v0.4 và 9 nhóm v0.3; report synthetic có 10 headings/12 tables, PDF 92,164 bytes, chưa kiểm tay mọi trang. Trang xem thử riêng dùng cùng component, không lưu đáp án hoặc gọi API nghiên cứu; build và 4 targeted tests cùng browser check đã đạt. Những checks này do AI chạy; không phải bảy phiên thật hoặc review nguồn toàn bộ của sinh viên.
+
+Lượt thử nội bộ không được coi là mẫu chính hoặc chắc chắn đáp ứng pilot theo rubric; không nhập câu trả lời/video vào hồ sơ AI này. Chưa khai hoàn tất tuyển bảy người ngoài lớp, moderated sessions, human privacy review hoặc báo cáo cuối. Trích tuyển P-008/P-009 và sổ đối chiếu có ghi giới hạn nguồn; chưa xác nhận log đủ mọi tương tác. Không tự ký, chọn cấp độ AI hay viết AI Critique như nhận xét cá nhân của sinh viên.
+
+### Bổ sung A-08 — Kiểm nhận và báo cáo pilot nội bộ (10/11/2026)
+
+AI chỉ xử lý kỹ thuật bằng script local: xác nhận bản nộp, kiểm video/hash/track, tính lại SUS và xuất report. **Không gửi raw responses, điểm cá nhân hoặc nội dung video vào context AI**; không khai AI đã quan sát đầy đủ hành vi. [Biên bản Git](../usability/pilot/2026-11-10-internal-v04/README.md) giữ số lượng dữ liệu nhận và giới hạn, không chứa đáp án cá nhân; export đầy đủ và video vẫn ở vùng private ngoài Git.
+
+Biên nhận có 10 SUS, 4 lựa chọn probes và 1 WebM; formula check/checksum/short decode đạt. Không tự xác nhận moderator review, K1, timing, findings, severity hoặc freeze. A-08 INCOMPLETE vì mới kiểm nhận và tạo report, thiếu review nội dung/notes và log nguyên văn đầy đủ. Pilot nội bộ không thay mẫu chính; bản ghi này không tuyên bố đạt toàn bộ Phase 1 hoặc bảy phiên. Phần phản hồi thật do người tham gia cung cấp; AI không sinh hoặc sửa đáp án.
 
 ### **6\. Trích dẫn (nếu môn yêu cầu):**
 

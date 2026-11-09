@@ -18,7 +18,7 @@
 | **MSSV:** | 23120410 |
 | **Lớp / Khoá:** | 23_3 |
 | **Mã bài tập (ví dụ HW\#00, HW\#02):** | HW03-AI — GUI & Usability |
-| **Ngày làm bài:** | 07/11/2026 |
+| **Ngày làm bài:** | 04–10/11/2026; đối chiếu hồ sơ 10/11/2026 |
 | **Công cụ AI đã dùng:** | OpenClaw main và worker reviewer — OpenAI gpt-6.1-sol; PDF extractor — OpenAI gpt-6-astra (đối chiếu đề/slide) |
 | **Công cụ AI đã dùng:** | [x] Có  [ ] Không |
 
@@ -47,22 +47,40 @@
 |---|---|---|---|---|
 | OpenClaw main/worker / gpt-6.1-sol; đối chiếu đề bằng PDF extractor gpt-6-astra. Nguồn prompt/output nguyên văn giai đoạn này chưa được nhập đầy đủ vào PromptLog; không dựng lại lịch sử hoặc coi mô tả này là prompt nguyên văn. | Adapter local full run, raw/native evidence; [report Task 1 và Excel](../gui/task1/START-HERE.md), [findings](../gui/task1/findings/README.md). | **INCOMPLETE** | HW03 §6 yêu cầu execution và bug report; §14 yêu cầu Excel/test summary và Markdown/PDF. Native 122 passed chỉ xác nhận collection, không phải GUI acceptance. Raw 44/26/14/38 được rà lại thành effective 75/31/15/1; 15 Blocked và 1 applicability pending chưa được kiểm chứng đầy đủ. | AI rà ảnh/DOM/network và dependency, sửa false Pass bằng lớp assessment dẫn xuất, không ghi đè ảnh/result gốc. Review kiểm thủ công GUI-033 Home/Detail được khai riêng. Bộ xuất chỉ có Task 1 Windows Chromium, không chứng nhận Task 3 hoặc usability người thật. Không khai toàn bộ sửa kỹ thuật của AI là sinh viên tự viết. |
 
+### A-05–A-07 — Bổ sung Task 2 và revision câu hỏi (09/11/2026)
+
+Bổ sung theo lịch sử truy xuất được và artifact hiện hành; không coi đây là snapshot đầy đủ của mọi bản AI đầu. Công cụ: OpenClaw main/worker, OpenAI gpt-6.1-sol. Các kiểm chứng dưới đây do AI thực thi, không gán thành code hoặc kiểm thử do sinh viên tự làm.
+
+| (1) Prompt + Công cụ | (2) Output AI | (3) Verdict | (4) Lý do / căn cứ | (5) Bản sửa và xác minh |
+|---|---|---|---|---|
+| **A-05 — Thiết kế đánh giá và instruments.** Log chuẩn bị chưa đủ nguyên văn; xem [sổ đối chiếu](PromptLog.md#doi-chieu-20261109). | [Thiết kế](../usability/EVALUATION-DESIGN.md), [protocol](../usability/PROTOCOL.md), [instruments](../usability/INSTRUMENTS.md), [pilot](../usability/PILOT.md), [analysis](../usability/ANALYSIS.md). | **INCOMPLETE** | HW03 §6: moderated usability, scenario theo mục tiêu, SUS hoặc UEQ-S và probes clarity/recovery/speed/trust. Có tài liệu không chứng minh đủ pilot hoặc bảy phiên thật. Bản Việt SUS là bản làm việc AI hỗ trợ, chưa xác thực tâm trắc. | AI viết protocol, mẫu và hướng dẫn scoring; giữ **SUS 10 câu**, không triển khai UEQ-S. Câu hỏi mở ban đầu có giả định vấn đề xảy ra và tăng gánh nặng trả lời; được sửa ở A-07. Không tự điền câu trả lời, notes quan sát hay thành công nhiệm vụ. |
+| **A-06 — Portal, dịch vụ riêng, runtime và recorder.** [P-008](PromptLog.md#p-008). Prompt triển khai/worker chưa được chép đầy đủ. | [Contract](../tools/usability-study/CONTRACT.md), [kiểm chứng](../tools/usability-study/VERIFICATION.md), source portal/server/scripts/tests trong usability-study. | **INCOMPLETE** | HW03 §6 yêu cầu dữ liệu người thật có điều phối, consent và evidence; công cụ hỗ trợ không thay phương pháp hoặc chứng minh participant hợp lệ. Kiểm bounded metadata video không phải codec validation hay chứng minh nội dung màn hình. | AI xây participant/moderator tách listener, private storage, draft/submitted, provenance snapshot, DRAFT export và screen-only recorder. **Sửa startup bằng run-* mới**, không sửa ACL; sửa **blob CSP, phase contamination/autosave, failed withdrawal và failed-draft retry loop**. Review AI độc lập có phát hiện và regression, không phải human review toàn bộ source. 62 fingerprint SUT giữ nguyên trong các lượt được ghi. Các lượt fail được giữ riêng. |
+| **A-07 — Probes v0.4 và trang xem thử.** [P-009](PromptLog.md#p-009); output là trích đoạn xác minh được, không toàn bộ turn. | [Probes](../tools/usability-study/portal/probes-v04.mjs), [compact UI](../tools/usability-study/portal/compact-view.jsx), [instrument](../usability/INSTRUMENTS.md), [tests](../tools/usability-study/tests/probes-v04.test.mjs). Preview tại route /question-preview trong portal/src.jsx. | **INCOMPLETE** | HW03 §6 và nguồn SUS đã dẫn trong INSTRUMENTS. Probes là câu tự soạn, không phải SUS/UEQ-S và không cộng điểm SUS. Phiên bản câu chữ phải gắn với snapshot, không áp câu mới lên raw cũ. | **Giữ SUS, thay bốn probes** bằng Có/Không/Không chắc/Bỏ qua, không chọn sẵn; follow-up tùy nhánh và không bắt giải thích. Text ẩn không gửi; recoveryObserved là mapping tự báo, không phải quan sát moderator. **54/54 node:test**, compact v0.4 **10 nhóm**, v0.3 **9 nhóm** đạt theo evidence; report synthetic 10 headings/12 tables, 92,164 bytes, không overflow, chưa đọc mọi trang. Sửa assertion test lấy snapshot sai vị trí rồi rerun; không sửa raw để đạt. Preview build và 4 targeted tests đạt, browser kiểm 4 probes/10 SUS, reset và 0 API nghiên cứu. Lỗi syntax server preview đầu đã sửa; native picker/participant off-host vẫn không được chứng nhận từ các test này. |
+
+### A-08 — Biên bản và kiểm nhận pilot nội bộ v0.4 (10/11/2026)
+
+| (1) Prompt + Công cụ | (2) Output AI | (3) Verdict | (4) Lý do / căn cứ | (5) Bản sửa và xác minh |
+|---|---|---|---|---|
+| OpenClaw main / OpenAI gpt-6.1-sol; đối chiếu đề bằng PDF extractor gpt-6-astra. Đây là bản ghi công việc kỹ thuật, chưa có cặp prompt/output nguyên văn đầy đủ; không coi mô tả này là prompt. | [Biên bản Markdown/PDF và receipt](../usability/pilot/2026-11-10-internal-v04/README.md), commit 8fd1147; export đầy đủ giữ riêng ngoài Git. | **INCOMPLETE** | HW03 §6: pilot và refine trước phiên chính; §12: commit theo bước/session; §14: report Markdown/PDF và session evidence. Pilot nội bộ không thay bảy người ngoài lớp. Chưa có observation/timing hoặc review toàn bộ video để xác nhận K1, findings hoặc freeze. | AI kiểm cấu trúc bản nộp: **10 SUS, 4 trường probes, 1 WebM**; tính lại SUS bằng script local khớp export mà không đưa raw/điểm cá nhân vào context AI. Kiểm hash/metadata: **1 video, 0 audio**, decode đoạn ngắn đạt; không chứng minh toàn bộ nội dung đúng task. Xuất JSON/CSV/Markdown/HTML/PDF riêng; PDF private 10 mục, không tràn ngang, chưa kiểm tay mọi trang. Biên bản Git không có raw answers/video/contact/invite. **Không tự đánh reviewed/verified/frozen**, không sinh notes, thời gian hoặc severity còn thiếu. |
+
 ## **4\. Tổng kết Độ chính xác AI**
 
 Tổng hợp verdict từ Mục 3 và điền vào bảng dưới.
 
-Bảng Mục 3 có **5 artifact A-00–A-04**, đều có verdict. A-04 còn giới hạn coverage/applicability và chưa đủ prompt/output nguyên văn; việc có verdict không thay nghĩa vụ log đầy đủ. Verdict A-03 đánh giá bản AI đầu phải sửa và bản pilot hiện hành được chấp nhận trong phạm vi đã kiểm, không chứng nhận toàn bộ nghĩa vụ bài nộp.
+Bảng Mục 3 có **9 artifact A-00–A-08**, đều có verdict. A-04 còn giới hạn coverage/applicability và chưa đủ prompt/output nguyên văn; việc có verdict không thay nghĩa vụ log đầy đủ. Verdict A-03 đánh giá bản AI đầu phải sửa và bản pilot hiện hành được chấp nhận trong phạm vi đã kiểm, không chứng nhận toàn bộ nghĩa vụ bài nộp.
 
 | Chỉ số | Số lượng | Tỉ lệ |
 | :---- | :---- | :---- |
-| **Tổng artifact AI sinh đã audit** | 5 | 100% |
-| **VALID (đúng, dùng nguyên)** | 1 | 20% |
+| **Tổng artifact AI sinh đã audit** | 9 | 100% |
+| **VALID (đúng, dùng nguyên)** | 1 | 11,11% |
 | **INVALID (sai; loại bỏ)** | 0 | 0% |
-| **INCOMPLETE (chấp nhận sau khi sửa, hoặc còn giới hạn ghi rõ)** | 4 | 80% |
+| **INCOMPLETE (chấp nhận sau khi sửa, hoặc còn giới hạn ghi rõ)** | 8 | 88,89% |
 
 ## **5\. Kết luận — Khi nào nên / không nên dùng AI?**
 
-Trong các artifact đã audit, đề xuất phạm vi được giữ nguyên; kế hoạch, checklist và skill/harness trong phạm vi pilot được chấp nhận sau sửa. Checklist ban đầu 48 mục đã phủ bốn nhóm nhưng vẫn thiếu đối chiếu dấu trường bắt buộc và badge; một số oracle/điều kiện cần làm rõ. AI reviewer và main AI phát hiện, tích hợp các sửa đổi kỹ thuật và GUI-049/050; sinh viên đã review, chọn giữ hai mục này, đồng thời bổ sung GUI-051/052 cùng lý do AI bỏ sót. AI chỉ chuẩn hóa phần bổ sung của sinh viên vào checklist. A-02 giữ INCOMPLETE — chấp nhận sau sửa/bổ sung, vì bản AI ban đầu chưa bao phủ đầy đủ các trường hợp được phát hiện qua cả AI review và sinh viên review. Verdict A-02 chỉ đánh giá thiết kế checklist 52 mục; phần review/bổ sung của sinh viên đã được ghi nhận, không chứng nhận execution hoặc skill/harness. A-03 là INCOMPLETE vì bản đầu có lỗi launcher và thiếu safeguards oracle/verifier; AI đã sửa, kiểm thử lại và sinh viên xác nhận evidence pilot ổn ngày 07/11/2026. Việc xác nhận này không biến hai instance needs-review thành Pass, không chứng nhận toàn bộ source, setup một lệnh, reuse flow khác hoặc full cross-platform. PromptLog đi kèm là bản trích tuyển sáu tương tác P-000/P-002/P-004/P-005/P-006/P-007, không phải log đầy đủ theo HW03 §9. P-005–P-007 ghi thêm quá trình tạo skill/harness và pilot 13 instance/7 ID; không có dữ liệu usability người thật mới.
+Trong các artifact đã audit, đề xuất phạm vi được giữ nguyên; kế hoạch, checklist và skill/harness trong phạm vi pilot được chấp nhận sau sửa. Checklist ban đầu 48 mục đã phủ bốn nhóm nhưng vẫn thiếu đối chiếu dấu trường bắt buộc và badge; một số oracle/điều kiện cần làm rõ. AI reviewer và main AI phát hiện, tích hợp các sửa đổi kỹ thuật và GUI-049/050; sinh viên đã review, chọn giữ hai mục này, đồng thời bổ sung GUI-051/052 cùng lý do AI bỏ sót. AI chỉ chuẩn hóa phần bổ sung của sinh viên vào checklist. A-02 giữ INCOMPLETE — chấp nhận sau sửa/bổ sung, vì bản AI ban đầu chưa bao phủ đầy đủ các trường hợp được phát hiện qua cả AI review và sinh viên review. Verdict A-02 chỉ đánh giá thiết kế checklist 52 mục; phần review/bổ sung của sinh viên đã được ghi nhận, không chứng nhận execution hoặc skill/harness. A-03 là INCOMPLETE vì bản đầu có lỗi launcher và thiếu safeguards oracle/verifier; AI đã sửa, kiểm thử lại và sinh viên xác nhận evidence pilot ổn ngày 07/11/2026. Việc xác nhận này không biến hai instance needs-review thành Pass, không chứng nhận toàn bộ source, setup một lệnh, reuse flow khác hoặc full cross-platform. PromptLog đi kèm hiện có tám tương tác P-000/P-002/P-004/P-005/P-006/P-007/P-008/P-009 và sổ bằng chứng A-04–A-07; vẫn không phải log đầy đủ theo HW03 §9. P-005–P-007 ghi thêm quá trình tạo skill/harness và pilot 13 instance/7 ID; phần A-03 chỉ ghi GUI pilot, không ghi dữ liệu usability người thật. Lượt thử nội bộ Task 2 được tách khỏi hồ sơ này và không tính thay mẫu chính.
+
+**Cập nhật 09/11/2026:** A-05–A-07 đều INCOMPLETE trong phạm vi nêu trên. Hồ sơ không kết luận Task 2 hoặc bảy phiên chính hoàn tất. Log bổ sung hai tương tác kỹ thuật P-008/P-009 và sổ bằng chứng; vẫn là trích tuyển, không phải toàn bộ lịch sử. Không chuyển lỗi/sửa của AI thành đóng góp tự viết của sinh viên.
 
 ## **6\. Mandatory Disclosure (dán nguyên văn)**
 
