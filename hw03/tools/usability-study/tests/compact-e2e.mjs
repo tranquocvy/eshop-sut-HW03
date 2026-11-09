@@ -1,0 +1,103 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import net from 'node:net';
+import {createRequire} from 'node:module';
+import {createStudyService} from '../server/index.mjs';
+import {prepareSut,startSutGateway} from '../runtime/index.mjs';
+import {repoRoot,ensureWork} from '../scripts/environment.mjs';
+import {sourceFingerprints,verifyFingerprints} from '../scripts/integrity.mjs';
+const req=createRequire(path.resolve(repoRoot,'../_working/eshop-sut-HW03/t02-harness/package.json'));
+process.env.PLAYWRIGHT_BROWSERS_PATH ||= path.resolve(repoRoot,'../_working/eshop-sut-HW03/t02-harness/.browsers');
+const {chromium}=req('playwright');
+async function port(){const s=net.createServer();await new Promise(r=>s.listen(0,'127.0.0.1',r));const p=s.address().port;await new Promise(r=>s.close(r));return p;}
+const probeVersion=process.env.STUDY_PROBE_VERSION??'v0.4';
+const work=path.join(ensureWork(),'compact-e2e-'+Date.now());await fs.mkdir(work,{recursive:true});
+const p=await port(),a=await port(),t=await port(),pc='http://127.0.0.1:'+p,ac='http://127.0.0.1:'+a,sc='http://localhost:'+t;
+const before=sourceFingerprints(),report={syntheticOnly:true,humanParticipants:0,nativePicker:'UNVERIFIED: display stream is a synthetic canvas; real browser MediaRecorder/File/upload/playback are exercised',checks:[],screenshots:[]};
+let service,sut,browser,page,admin;
+function pass(s){report.checks.push(s);console.log('PASS '+s);}
+try{
+ const prepared=await prepareSut({repoRoot,workDir:path.join(work,'sut')});sut=await startSutGateway({prepared,port:t});
+ service=createStudyService({dataDir:path.join(work,'private'),portalDir:path.join(ensureWork(),'portal-dist'),participantPort:p,adminPort:a,config:{participantFlow:'compact-screen-v1',probeVersion,studyOrigin:pc,adminOrigin:ac,sutOrigin:sc,organizer:'SYNTHETIC PRIVATE ORGANIZER',organizerContact:'private-organizer@example.invalid',storageDescription:'Thư mục kiểm thử riêng, không có người thật',accessDescription:'SYNTHETIC PRIVATE ORGANIZER private-organizer@example.invalid',withdrawBy:'2099-12-30',deleteBy:'2099-12-31',maxVideoMB:32}});
+ const started=await service.start();browser=await chromium.launch({headless:true});
+ const ctx=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true});
+ admin=await ctx.newPage();await admin.goto(ac+'/moderator');await admin.getByLabel('Mật khẩu điều phối',{exact:true}).fill((await fs.readFile(started.adminPasswordFile,'utf8')).trim());await admin.getByRole('button',{name:'Đăng nhập',exact:true}).click();await admin.getByRole('heading',{name:'Tạo lời mời riêng',exact:true}).waitFor();
+ async function adminApi(route,data){return admin.evaluate(async({route,data})=>{const state=await(await fetch('/api/admin/state')).json();const r=await fetch(route,{method:data===undefined?'GET':'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':state.csrf},...(data===undefined?{}:{body:JSON.stringify(data)})});return {status:r.status,data:await r.json()};},{route,data});}
+ const inv=await adminApi('/api/admin/invitations',{kind:'pilot',code:'PILOT-01',expiresHours:1});assert.equal(inv.status,201);
+ const participantCtx=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true});
+ await participantCtx.addInitScript(()=>{
+  globalThis.__screenTest={calls:[],micCalls:0,frames:0,mode:'denied',tracks:[]};
+  navigator.mediaDevices.getUserMedia=async()=>{__screenTest.micCalls++;throw new Error('Microphone/camera must never be requested');};
+  navigator.mediaDevices.getDisplayMedia=async constraints=>{
+   __screenTest.calls.push(constraints);
+   if(__screenTest.mode==='denied')throw new DOMException('Synthetic cancellation','NotAllowedError');
+   const canvas=document.createElement('canvas');canvas.width=960;canvas.height=540;const c=canvas.getContext('2d');
+   const draw=()=>{__screenTest.frames++;c.fillStyle='#173f3c';c.fillRect(0,0,960,540);c.fillStyle='white';c.font='30px sans-serif';c.fillText('SYNTHETIC SCREEN ONLY '+__screenTest.frames,40,100);};draw();
+   const stream=canvas.captureStream(15);const timer=setInterval(draw,60);__screenTest.tracks.push(...stream.getTracks());__screenTest.stream=stream;
+   const stop=stream.getVideoTracks()[0].stop.bind(stream.getVideoTracks()[0]);stream.getVideoTracks()[0].stop=()=>{clearInterval(timer);stop();};
+   return stream;
+  };
+ });
+ page=await participantCtx.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.route('https://placehold.co/**',r=>r.abort());
+ await page.goto(inv.data.inviteUrl);await page.getByRole('heading',{name:'1. Trước khi tham gia',exact:true}).waitFor();
+ assert.equal(await page.getByRole('radio',{checked:true}).count(),0);assert.equal(await page.getByRole('list',{name:'Năm bước'}).locator('li').count(),5);
+ await page.getByRole('radio',{name:'Có',exact:true}).check();
+ async function next(heading){await page.getByRole('button',{name:'Tiếp tục',exact:true}).click();await page.getByRole('heading',{name:heading,exact:true}).waitFor();}
+ await next('1. Đồng ý tham gia');
+ const publicState=await page.evaluate(async()=>await(await fetch('/api/session')).json());assert.equal(publicState.config.participantFlow,'compact-screen-v1');assert(!JSON.stringify(publicState.config).includes('SYNTHETIC PRIVATE ORGANIZER'));assert(!JSON.stringify(publicState.config).includes('private-organizer@example.invalid'));
+ assert.equal(await page.getByRole('textbox').count(),0);const choices=page.locator('.choice');assert.equal(await choices.count(),2);for(let i=0;i<2;i++)await choices.nth(i).getByRole('radio',{name:'Có',exact:true}).check();
+ const consentShot=path.join(work,'compact-consent.png');await page.screenshot({path:consentShot,fullPage:true});report.screenshots.push(consentShot);
+ await next('2. Chuẩn bị');await page.getByRole('checkbox',{name:'Tôi đang dùng máy tính và người điều phối đã sẵn sàng',exact:true}).check();await next('2. Nhiệm vụ của bạn');
+ await page.getByRole('checkbox',{name:'Tôi đã hiểu nhiệm vụ',exact:true}).check();const released=await adminApi('/api/admin/sessions/'+inv.data.session.id+'/review',{releaseTask:true});assert.equal(released.status,200);await page.getByRole('button',{name:'Cập nhật',exact:true}).click();await page.getByText('Người điều phối đã cho phép bắt đầu.',{exact:true}).waitFor();await next('2. Trải nghiệm EShop');
+ const saved=await adminApi('/api/admin/state');const raw=saved.data.sessions[0].answers;assert.equal(raw.consent.audio,false);assert.equal(raw.consent.publicEvidence,false);assert(!Object.hasOwn(raw.consent,'name'));assert(!Object.hasOwn(raw.consent,'maskedContact'));assert.equal(raw.prepare.recorderChecked,false);assert.equal(raw.prepare.playbackChecked,false);pass('compact five-group flow, explicit choices, no identity entry or organizer PII, audio false without fabricated recorder checks');
+ const popupPromise=participantCtx.waitForEvent('page');await page.getByRole('link',{name:'Mở EShop ↗',exact:true}).click();const popup=await popupPromise;await popup.getByRole('heading',{name:'Danh sách sản phẩm',exact:true}).waitFor();assert.equal(await popup.evaluate(()=>opener===null),true);await popup.close();
+ await page.getByRole('button',{name:'Quay màn hình',exact:true}).click();await page.getByText('Bạn đã hủy hoặc chưa cho phép chia sẻ màn hình. Có thể thử lại.',{exact:true}).waitFor();
+ await page.evaluate(()=>{__screenTest.mode='canvas';});await page.getByRole('button',{name:'Quay màn hình',exact:true}).click();await page.getByText('Đang quay màn hình',{exact:true}).waitFor();assert.equal(await page.getByRole('button',{name:'Sang đánh giá',exact:true}).isDisabled(),true);
+ await page.setViewportSize({width:650,height:900});await page.getByText('Đang quay màn hình',{exact:true}).waitFor();await page.setViewportSize({width:1440,height:1000});
+ await page.waitForFunction(()=>__screenTest.frames>=20);await page.getByRole('button',{name:'Dừng quay',exact:true}).click();await page.getByRole('link',{name:'Tải bản dự phòng',exact:true}).waitFor();
+ const preview=page.getByLabel('Xem lại video màn hình',{exact:true});const decoded=await preview.evaluate(async v=>{v.muted=true;await v.play();await new Promise(r=>setTimeout(r,150));const captured=v.captureStream();const audio=captured.getAudioTracks().length;captured.getTracks().forEach(t=>t.stop());v.pause();return {ready:v.readyState,audio};});assert(decoded.ready>=2);assert.equal(decoded.audio,0);
+ const capture=await page.evaluate(()=>({calls:__screenTest.calls,micCalls:__screenTest.micCalls,liveTracks:__screenTest.tracks.filter(t=>t.readyState!=='ended').length}));assert.equal(capture.micCalls,0);assert.equal(capture.liveTracks,0);assert(capture.calls.every(c=>c.video===true&&c.audio===false));
+ const downloadPromise=page.waitForEvent('download');await page.getByRole('link',{name:'Tải bản dự phòng',exact:true}).click();const download=await downloadPromise;await download.saveAs(path.join(work,download.suggestedFilename()));report.recording={...capture,decoded,filename:download.suggestedFilename()};pass('permission cancellation/retry, real browser MediaRecorder playable silent file, all tracks ended, resize keeps recorder mounted, backup download');
+ await page.getByText('Dừng tham gia / yêu cầu rút dữ liệu',{exact:true}).click();await page.getByRole('checkbox',{name:'Tôi muốn rút dữ liệu của phiên này',exact:true}).check();
+ await page.route('**/api/session/step',route=>route.request().postDataJSON().step==='withdraw'?route.fulfill({status:409,contentType:'application/json',body:JSON.stringify({error:'Synthetic withdrawal conflict'})}):route.continue());
+ await page.getByRole('button',{name:'Gửi yêu cầu rút dữ liệu',exact:true}).click();await page.getByRole('alert').filter({hasText:'Synthetic withdrawal conflict'}).waitFor();assert.equal(await page.getByRole('link',{name:'Tải bản dự phòng',exact:true}).count(),1);await page.unroute('**/api/session/step');await page.getByRole('checkbox',{name:'Tôi muốn rút dữ liệu của phiên này',exact:true}).uncheck();await page.getByText('Dừng tham gia / yêu cầu rút dữ liệu',{exact:true}).click();pass('failed withdrawal stops safely but preserves unsent recording and session');
+ const taskShot=path.join(work,'compact-recording-ready.png');await page.screenshot({path:taskShot,fullPage:true});report.screenshots.push(taskShot);
+ await page.getByRole('radio',{name:'Đã hoàn thành',exact:true}).check();await page.getByLabel('Bạn chọn sản phẩm nào?',{exact:true}).fill('iPhone 15 Pro Max');await page.getByLabel('Giá bạn thấy là bao nhiêu?',{exact:true}).fill('30 triệu');await page.getByLabel('Thông tin nào giúp bạn lựa chọn?',{exact:true}).fill('Synthetic: tên và giá');
+ let sawDraft;const draftSeen=new Promise(r=>sawDraft=r);let releaseDraft;const draftGate=new Promise(r=>releaseDraft=r);let heldDraft=false;
+ await page.route('**/api/session/step',async route=>{const b=route.request().postDataJSON();if(b.step==='task'&&b.draft&&!heldDraft){heldDraft=true;sawDraft();await draftGate;}await route.continue();});
+ await Promise.race([draftSeen,new Promise((_,reject)=>setTimeout(()=>reject(new Error('Draft save was not observed')),15000))]);await page.getByLabel('Giá bạn thấy là bao nhiêu?',{exact:true}).fill('30.000.000 sau thay đổi');releaseDraft();
+ await page.waitForFunction(async()=>{const r=await fetch('/api/session');return (await r.json()).session.drafts?.task?.price==='30.000.000 sau thay đổi';});await page.unroute('**/api/session/step');pass('edits during pending draft are automatically saved after busy clears');
+ let failedDraftCalls=0,failDraft=true;await page.route('**/api/session/step',route=>{const b=route.request().postDataJSON();if(b.draft&&failDraft){failedDraftCalls++;return route.fulfill({status:409,contentType:'application/json',body:JSON.stringify({error:'Synthetic persistent draft conflict'})});}return route.continue();});
+ await page.getByLabel('Giá bạn thấy là bao nhiêu?',{exact:true}).fill('30.000.000 kiểm retry');await page.getByRole('alert').filter({hasText:'Synthetic persistent draft conflict'}).waitFor();
+ // Observe more than two autosave intervals: no unsolicited retry of the same failed edit.
+ await page.waitForTimeout(3200);assert.equal(failedDraftCalls,1);failDraft=false;await page.getByRole('button',{name:'Lưu nháp',exact:true}).click();await page.waitForFunction(async()=>{const r=await fetch('/api/session');return(await r.json()).session.drafts?.task?.price==='30.000.000 kiểm retry';});await page.unroute('**/api/session/step');pass('persistent failed draft does not loop; explicit manual retry saves retained answers');
+ let sawFinal;const finalSeen=new Promise(r=>sawFinal=r);let releaseFinal;const finalGate=new Promise(r=>releaseFinal=r);
+ await page.route('**/api/session/step',async route=>{const b=route.request().postDataJSON();if(b.step==='task'&&!b.draft){sawFinal();await finalGate;}await route.continue();});
+ await page.getByRole('button',{name:'Sang đánh giá',exact:true}).click();await finalSeen;assert.equal(await page.getByLabel('Giá bạn thấy là bao nhiêu?',{exact:true}).isDisabled(),true);releaseFinal();await page.getByRole('heading',{name:'3. Đánh giá EShop',exact:true}).waitFor();await page.unroute('**/api/session/step');pass('final submission locks answers and cannot contaminate next phase payload');
+ const sus=page.locator('.choice');assert.equal(await sus.count(),10);assert.equal(await page.getByRole('radio',{checked:true}).count(),0);for(let i=0;i<10;i++)await sus.nth(i).getByRole('radio',{name:'3',exact:true}).check();await next('3. Chia sẻ thêm');
+ if(probeVersion==='v0.4'){
+  const groups=page.locator('.choice');assert.equal(await groups.count(),4);assert.equal(await page.getByRole('radio',{checked:true}).count(),0);
+  await groups.nth(0).getByRole('radio',{name:'Có',exact:true}).check();await page.getByLabel('Đó là chỗ nào? Bạn nghĩ nó có nghĩa gì? (không bắt buộc)',{exact:true}).fill('SYNTHETIC hidden after No');
+  await groups.nth(0).getByRole('radio',{name:'Không',exact:true}).check();assert.equal(await page.getByLabel('Đó là chỗ nào? Bạn nghĩ nó có nghĩa gì? (không bắt buộc)',{exact:true}).count(),0);
+  await groups.nth(1).getByRole('radio',{name:'Không chắc',exact:true}).check();await page.getByLabel('Bạn đã làm gì tiếp theo? Có tiếp tục được không? (không bắt buộc)',{exact:true}).waitFor();
+  await groups.nth(2).getByRole('radio',{name:'Bỏ qua câu này',exact:true}).check();await groups.nth(3).getByRole('radio',{name:'Không',exact:true}).check();
+  await page.getByLabel('Thông tin nào giúp bạn quyết định, hoặc bạn còn cần biết thêm điều gì? (không bắt buộc)',{exact:true}).fill('SYNTHETIC information insufficient');
+  await page.getByRole('button',{name:'Lưu nháp',exact:true}).click();await page.waitForFunction(async()=>{const s=await(await fetch('/api/session')).json();return s.session.drafts?.probes?.trustChoice==='no';});const restored=await participantCtx.newPage();await restored.goto(pc+'/');await restored.getByRole('heading',{name:'3. Chia sẻ thêm',exact:true}).waitFor();assert.equal(await restored.locator('.choice').nth(0).getByRole('radio',{name:'Không',exact:true}).isChecked(),true);await restored.close();
+  const shot=path.join(work,'probes-v04.png');await page.screenshot({path:shot,fullPage:true});report.screenshots.push(shot);await next('4. Gửi video');
+  const submitted=(await adminApi('/api/admin/state')).data.sessions[0];assert.equal((await adminApi('/api/admin/export')).data.snapshots[0].provenance.instruments,'INSTRUMENTS-v0.4');assert.equal(submitted.answers.probes.clarity,'');assert.equal(submitted.answers.probes.recoveryChoice,'unsure');assert.equal(submitted.answers.probes.recoveryObserved,null);assert.equal(submitted.answers.probes.recovery,'');assert.equal(submitted.answers.probes.speedChoice,'skip');pass('v0.4 four neutral probes: optional followups, no/unsure/skip, hidden text excluded, draft restored in new tab, version provenance');
+ }else{
+ await page.getByLabel('Điều gì khó hiểu khi tìm và lựa chọn?',{exact:true}).fill('Synthetic clarity');await page.getByRole('radio',{name:'Không gặp',exact:true}).check();await page.getByLabel('Nếu có, bạn đã xử lý thế nào? Nếu không gặp, ghi “không gặp”.',{exact:true}).fill('Không gặp');await page.getByLabel('Chỗ nào nhanh, chậm hoặc tốn công?',{exact:true}).fill('Synthetic speed');await page.getByLabel('Bạn tin lựa chọn của mình phù hợp đến đâu? Vì sao?',{exact:true}).fill('Synthetic trust');await next('4. Gửi video');
+ }
+ assert.equal((await adminApi('/api/admin/state')).data.sessions[0].evidence.length,0);
+ let uploadCalls=0;await page.route('**/api/evidence',route=>{uploadCalls++;return uploadCalls===1?route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'Synthetic upload failure'})}):route.continue();});
+ await page.getByRole('button',{name:'Gửi video đã quay',exact:true}).click();await page.getByRole('alert').filter({hasText:'Synthetic upload failure'}).waitFor();assert.equal(await page.getByRole('link',{name:'Tải bản dự phòng',exact:true}).count(),1);
+ await page.getByRole('button',{name:'Gửi video đã quay',exact:true}).click();await page.getByText('Đã nhận video, chờ người điều phối kiểm tra.',{exact:true}).waitFor();assert.equal(uploadCalls,2);await page.getByRole('button',{name:'Hoàn tất',exact:true}).click();await page.getByRole('heading',{name:'5. Đã nhận khảo sát',exact:true}).waitFor();
+ await page.reload();await page.getByRole('heading',{name:'5. Đã nhận khảo sát',exact:true}).waitFor();
+ const state=await adminApi('/api/admin/state'),current=state.data.sessions[0];assert.equal(current.phase,'done');assert.equal(current.evidence.length,1);assert.equal(current.evidence[0].status,'received');assert.equal(current.review.reviewed??false,false);assert.deepEqual(current.answers.sus.values,Array(10).fill(3));assert.equal(current.answers.finish.videoLater,false);assert.deepEqual(errors,[]);pass('recorded file persists across surveys; explicit upload only; failure/retry retains file; receipt/reload and no auto task success');
+ const receipt=path.join(work,'compact-receipt.png');await page.screenshot({path:receipt,fullPage:true});report.screenshots.push(receipt);
+ const reviewed=await adminApi('/api/admin/sessions/'+current.id+'/review',{reviewed:true});assert.equal(reviewed.status,200);assert.equal((await adminApi('/api/admin/config',{config:{pilotReview:true,frozen:true}})).status,200);
+ const negative=await adminApi('/api/admin/invitations',{kind:'main',code:'P01',expiresHours:1});assert.equal(negative.status,201);const nc=await browser.newContext({viewport:{width:390,height:844}});const np=await nc.newPage();let exchanges=0;np.on('request',r=>{if(r.url().endsWith('/api/exchange'))exchanges++;});await np.goto(negative.data.inviteUrl);await np.getByRole('heading',{name:'Hãy mở phiên trên máy tính',exact:true}).waitFor();assert.equal(exchanges,0);await np.setViewportSize({width:1440,height:1000});await np.getByRole('heading',{name:'1. Trước khi tham gia',exact:true}).waitFor();await np.getByRole('radio',{name:'Có',exact:true}).check();await np.getByRole('button',{name:'Tiếp tục',exact:true}).click();await np.getByRole('heading',{name:'1. Đồng ý tham gia',exact:true}).waitFor();await np.locator('.choice').nth(0).getByRole('radio',{name:'Không',exact:true}).check();await np.locator('.choice').nth(1).getByRole('radio',{name:'Không',exact:true}).check();await np.getByRole('button',{name:'Tiếp tục',exact:true}).click();await np.getByRole('heading',{name:'Phiên đã kết thúc',exact:true}).waitFor();await np.getByText('Dừng tham gia / yêu cầu rút dữ liệu',{exact:true}).click();await np.getByRole('checkbox',{name:'Tôi muốn rút dữ liệu của phiên này',exact:true}).check();await np.getByRole('button',{name:'Gửi yêu cầu rút dữ liệu',exact:true}).click();await np.getByText('Yêu cầu rút dữ liệu đã được tiếp nhận theo chính sách nghiên cứu.',{exact:false}).waitFor();await nc.close();pass('compact refusal and withdrawal; narrow screen does not redeem invitation');
+ assert.equal((await fetch(pc+'/api/admin/state')).status,404);verifyFingerprints(before);pass('public admin API denied and all original SUT fingerprints unchanged');report.result='PASS';
+}catch(e){report.result='FAIL';report.error=e.message;console.error(e.stack);process.exitCode=1;if(page)await page.screenshot({path:path.join(work,'failure.png'),fullPage:true}).catch(()=>{});}
+finally{await browser?.close();await service?.close();await sut?.close();await fs.writeFile(path.join(work,'verification.json'),JSON.stringify(report,null,2));console.log('Compact E2E evidence: '+path.join(work,'verification.json'));}

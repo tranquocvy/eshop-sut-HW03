@@ -1,0 +1,11 @@
+node_modules/
+portal/node_modules/
+dist/
+*.log
+.env
+.env.*
+!*.example
+*.sqlite*
+*.mp4
+*.webm
+*.partial

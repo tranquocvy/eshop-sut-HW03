@@ -1,0 +1,24 @@
+{
+  "name": "hw03-usability-study",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "start": "node scripts/start.mjs",
+    "integrity": "node scripts/integrity.mjs",
+    "test:e2e": "node tests/e2e.mjs",
+    "test:report": "node tests/report-render.mjs",
+    "test:compact": "node tests/compact-e2e.mjs"
+  },
+  "devDependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "vite": "8.0.12"
+  }
+}
