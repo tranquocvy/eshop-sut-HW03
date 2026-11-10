@@ -1,6 +1,8 @@
-# Task 2 — Bộ chuẩn bị và plan web study online
+# Task 2 — Usability evaluation
 
-**Cập nhật:** 09/11/2026. **Đã implement luồng rút gọn quay màn hình trên web, không mic/camera; đã kiểm tích hợp local: 54 tests; compact v0.4 10 nhóm, snapshot v0.3 9 nhóm và legacy 11 nhóm browser đạt; native picker trên máy participant chưa kiểm. Chưa có pilot được review/freeze hoặc bảy phiên chính hoàn tất.** Thiết kế D1-A / D2-A / K1 giữ nguyên; các tài liệu dưới đây là specification cho web, không bắt participant điền Markdown.
+**Cập nhật 10/11/2026:** đã thu và review P01–P07, tính SUS, nhóm pain points và xếp severity theo dữ liệu hiện có. **[Báo cáo kết quả Markdown](Task2_Report.md) · [PDF](Task2_Report.pdf)**. Mean SUS 43,57/100; không phải task-success. Private evidence có raw responses, roster và 7 video; không đưa lên Git. Pilot chỉ là diễn tập nội bộ; K1/timing và notes chi tiết chưa kiểm chứng. Không tuyên bố đủ mọi nghĩa vụ nộp bài.
+
+Các phần dưới là hồ sơ thiết kế/lịch sử trước collection; trạng thái “chưa có phiên” trong chúng không thay kết quả hiện hành ở báo cáo.
 
 ## Bắt đầu tại đây
 

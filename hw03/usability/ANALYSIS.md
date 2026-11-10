@@ -1,4 +1,6 @@
-# Task 2 — Kế hoạch phân tích (chưa có kết quả)
+# Task 2 — Phương pháp phân tích
+
+**Kết quả hiện hành 10/11/2026:** xem [Task2_Report.md](Task2_Report.md) và [PDF](Task2_Report.pdf). Bảy phiên chính đã thu/review; mean SUS 43,57, severity findings đã tổng hợp. Các bảng dự kiến dưới đây là specification ban đầu, không thay kết quả thực tế. K1/timing chưa có nguồn kiểm chứng; pilot nội bộ giữ giới hạn.
 
 Nguồn yêu cầu: HW03 §6 Task 2, §14/15; slide S13 “Summarizing performance results”, “Summarizing preference results”, “Analyzing Data”. Task 2 có 40 điểm cho scenario + 7 sessions + analysis, không có phân bổ con được đề công bố. Bản này là cách thực hiện, không phải scoring rubric tự đặt cho bài.
 
